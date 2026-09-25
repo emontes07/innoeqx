@@ -1,0 +1,2128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="INNOEQX Service Opportunity Report for Central America: service ideas, flagship offers, country playbook and 12-month roadmap. Informe de oportunidades de servicio.">
+<title>INNOEQX | Service Opportunity Report · Central America</title>
+<style>
+:root{
+  --bg:#F4F2EC;--paper:#FFFEFA;--text:#122022;--muted:#56625F;--line:#D6DAD2;--soft:#E9EEE6;
+  --ink:#0B1A1C;--ink-2:#12272A;--on-ink:#F1F5EC;--on-ink-muted:#AFC0B8;--ink-line:#28413F;
+  --accent:#0B7A6E;--accent-2:#1D4ED8;--lime:#C9F06B;--warn:#B45309;
+  --grad:linear-gradient(100deg,#38BDF8 0%,#10B8A6 48%,#B6F24A 100%);
+  --radius:18px;--shadow:0 10px 28px -16px rgba(18,32,34,.28);
+  --font:"Inter","Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  --serif:Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#0C1617;--paper:#132224;--text:#EEF3EA;--muted:#B3C2BB;--line:#2E4744;--soft:#172B2C;--accent:#5EE0CF;--accent-2:#93B4FF;--warn:#F5B35A;--shadow:0 10px 28px -16px rgba(0,0,0,.6)}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-block-start:120px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.62 var(--font);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+button,input,select{font:inherit}
+:focus-visible{outline:3px solid var(--accent-2);outline-offset:3px;border-radius:6px}
+svg{display:block}
+.wrap{max-inline-size:1240px;margin-inline:auto;padding-inline:clamp(20px,4vw,56px)}
+.skip{position:absolute;inset-inline-start:16px;inset-block-start:-80px;z-index:100;background:#fff;color:#000;padding:10px 16px;border-radius:10px;font-weight:700}
+.skip:focus{inset-block-start:12px}
+.boot{min-block-size:100vh;display:grid;place-content:center;text-align:center;background:var(--ink);color:var(--on-ink-muted);gap:6px}
+.boot-logo{font-size:40px;font-weight:800;letter-spacing:-.03em;color:#fff}
+.boot-logo span,.brand .x{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* top bar */
+.top{position:sticky;inset-block-start:0;z-index:40;background:rgba(11,26,28,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:var(--on-ink);border-block-end:1px solid var(--ink-line)}
+.top .row{display:flex;align-items:center;gap:18px;block-size:62px}
+.brand{font-size:21px;font-weight:850;letter-spacing:-.03em;color:#fff;text-decoration:none}
+.top .label{color:var(--on-ink-muted);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.top .grow{flex:1}
+.lang{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}
+.lang button{position:relative;z-index:1;border:0;background:none;color:var(--on-ink-muted);font-weight:750;font-size:13px;padding:5px 13px;border-radius:999px;letter-spacing:.05em;cursor:pointer;transition:color .3s}
+.lang button[aria-pressed="true"]{color:#04121A}
+.lang .thumb{position:absolute;inset-block:4px;inset-inline-start:4px;inline-size:calc(50% - 4px);border-radius:999px;background:#fff;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.lang[data-lang="es"] .thumb{transform:translateX(100%)}
+.pbtn{border:1px solid rgba(255,255,255,.22);background:transparent;color:var(--on-ink);border-radius:999px;padding:7px 15px;font-size:13px;font-weight:650;cursor:pointer}
+.pbtn:hover{background:rgba(255,255,255,.08)}
+.nav{position:sticky;inset-block-start:62px;z-index:39;background:var(--paper);border-block-end:1px solid var(--line)}
+.nav .wrap{display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin;padding-block:8px}
+.nav a{flex:none;font-size:13px;font-weight:650;color:var(--muted);text-decoration:none;padding:6px 11px;border-radius:999px;white-space:nowrap}
+.nav a:hover{background:var(--soft);color:var(--text)}
+.nav a b{color:var(--accent);margin-inline-end:5px;font-weight:800}
+
+/* cover */
+.cover{position:relative;overflow:hidden;background:var(--ink);color:var(--on-ink);padding-block:64px 56px;isolation:isolate}
+.cover::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(640px 420px at 88% 10%,rgba(16,184,166,.28),transparent 62%),radial-gradient(520px 380px at 8% 100%,rgba(56,189,248,.18),transparent 62%)}
+.cover .meta{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--lime)}
+.cover h1{font-size:clamp(36px,5vw,66px);line-height:1.05;letter-spacing:-.035em;font-weight:720;margin:18px 0 20px;max-inline-size:1000px}
+.cover h1 em{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--lime)}
+.cover .lede{font-size:clamp(17px,1.5vw,20px);color:var(--on-ink-muted);max-inline-size:760px;margin:0}
+.cover-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:end}
+.decision{border:1px solid var(--ink-line);background:rgba(255,255,255,.04);border-radius:20px;padding:24px}
+.decision .k{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
+.decision h2{font-size:22px;line-height:1.3;margin:10px 0 8px;letter-spacing:-.01em;color:#fff}
+.decision p{margin:0;color:var(--on-ink-muted);font-size:15px}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);margin-block-start:44px;border-block-start:1px solid var(--ink-line)}
+.kpi{padding:18px 16px 0 0}
+.kpi b{display:block;font-size:34px;letter-spacing:-.03em;line-height:1.1;color:#fff}
+.kpi span{font-size:13px;color:var(--on-ink-muted)}
+.scope{margin-block-start:30px;font-size:13px;color:var(--on-ink-muted);border:1px solid var(--ink-line);border-radius:12px;padding:14px 18px}
+.scope strong{color:#fff}
+
+/* sections */
+.section{padding-block:64px;border-block-end:1px solid var(--line)}
+.shead{display:grid;grid-template-columns:72px 1fr;gap:16px;margin-block-end:32px}
+.num{font:italic 38px/1 var(--serif);color:var(--accent)}
+h2{font-size:clamp(28px,3vw,42px);letter-spacing:-.025em;line-height:1.15;margin:0 0 12px;font-weight:720}
+h3{font-size:20px;letter-spacing:-.01em;line-height:1.3;margin:0 0 10px}
+.shead p{margin:0;color:var(--muted);max-inline-size:820px;font-size:17px}
+.muted{color:var(--muted)}
+.note{border-inline-start:3px solid var(--accent);padding-inline-start:16px;color:var(--muted);font-size:14px;margin-block:24px 0}
+.ref{font-size:12px;font-weight:700;white-space:nowrap;text-decoration:none}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.panel p:last-child{margin-block-end:0}
+.panel .k{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.msg h3{font-size:22px;margin-block-start:10px}
+.msg .n{font:italic 30px/1 var(--serif);color:var(--accent)}
+.situation{font-size:18px;max-inline-size:900px;margin:0 0 28px}
+.decide{margin-block-start:26px;background:var(--ink);color:var(--on-ink);border-radius:22px;padding:clamp(22px,3vw,36px)}
+.decide .k{color:var(--lime);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.decide h3{font:clamp(24px,2.6vw,34px)/1.2 var(--serif);margin:12px 0 18px;color:#fff}
+.decide ol{margin:0;padding-inline-start:22px;display:grid;gap:8px;color:var(--on-ink)}
+.decide li::marker{color:var(--lime);font-weight:800}
+
+/* signals */
+.signals{display:grid;gap:14px}
+.signal{display:grid;grid-template-columns:1.1fr 1fr .8fr;gap:22px;padding:20px 22px;background:var(--paper);border:1px solid var(--line);border-radius:16px}
+.signal .k{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-block-end:6px}
+.signal h3{font-size:17px;margin:0 0 6px}
+.signal p{margin:0;font-size:15px}
+.idchips{display:flex;flex-wrap:wrap;gap:6px}
+.idchip{font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px;border:1px solid var(--line);background:var(--soft);color:var(--text);cursor:pointer}
+.idchip:hover{border-color:var(--accent);color:var(--accent)}
+
+/* map */
+.mapgrid{display:grid;grid-template-columns:1.5fr 1fr;gap:24px;align-items:start}
+.chart{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:16px}
+.chart svg{inline-size:100%;block-size:auto}
+.chart .ax{stroke:var(--line);stroke-width:1}
+.chart .mid{stroke:var(--muted);stroke-width:1;stroke-dasharray:4 5;opacity:.6}
+.chart .ql{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;fill:var(--muted);font-family:var(--font)}
+.chart .ql.hot{fill:var(--accent)}
+.chart .axl{font-size:12px;fill:var(--muted);font-family:var(--font);font-weight:650}
+.chart .tick{font-size:11px;fill:var(--muted);font-family:var(--font)}
+.pt{cursor:pointer;transition:opacity .25s}
+.pt circle{stroke:var(--paper);stroke-width:2;transition:r .2s}
+.pt text{font-size:9.5px;font-weight:800;fill:#fff;font-family:var(--font);pointer-events:none}
+.pt.dim{opacity:.13}
+.pt.sel circle{stroke:var(--text);stroke-width:3}
+.pt:hover circle,.pt:focus circle{stroke:var(--text)}
+.pt:focus{outline:none}
+.legend{display:flex;flex-wrap:wrap;gap:6px;margin-block-start:12px}
+.lg{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:650;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--text);cursor:pointer}
+.lg i{inline-size:10px;block-size:10px;border-radius:50%}
+.lg[aria-pressed="true"]{border-color:var(--text);box-shadow:inset 0 0 0 1px var(--text)}
+.detail{position:sticky;inset-block-start:130px}
+.detail .fam{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.detail .fam i{inline-size:10px;block-size:10px;border-radius:50%}
+.detail h3{font-size:22px;margin:10px 0}
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-block:14px}
+.score{background:var(--soft);border-radius:12px;padding:10px 12px}
+.score span{display:block;font-size:11px;font-weight:750;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.score b{font-size:20px}
+.dots{display:inline-flex;gap:3px;margin-inline-start:6px;vertical-align:middle}
+.dots i{inline-size:8px;block-size:8px;border-radius:50%;background:var(--line)}
+.dots i.on{background:var(--accent)}
+.bars{display:grid;gap:9px}
+.barrow{display:grid;grid-template-columns:minmax(120px,1.1fr) 2fr 30px;gap:10px;align-items:center;font-size:13.5px}
+.bartrack{block-size:10px;border-radius:6px;background:var(--soft);overflow:hidden}
+.barfill{block-size:100%;border-radius:6px}
+.barrow b{text-align:end}
+.mini3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-block-start:24px}
+
+/* catalog */
+.filters{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-block-end:14px}
+.field{display:flex;flex-direction:column;gap:5px;flex:1;min-inline-size:160px}
+.field.wide{flex:2;min-inline-size:240px}
+.field label{font-size:12px;font-weight:750}
+.field input,.field select{background:var(--paper);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px 12px;inline-size:100%}
+.btn2{border:1px solid var(--line);background:var(--paper);color:var(--text);border-radius:999px;padding:10px 16px;font-weight:650;cursor:pointer;white-space:nowrap}
+.btn2:hover{border-color:var(--accent)}
+.count{font-size:13.5px;color:var(--muted);margin:0 0 16px}
+.catalog{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;border-block-start:4px solid var(--c);transition:box-shadow .25s,transform .25s}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.card.flash{animation:flash 1.6s ease}
+.card-h{display:block;inline-size:100%;text-align:start;background:none;border:0;color:inherit;padding:20px 22px;cursor:pointer}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-block-end:10px}
+.cid{font:26px/1 var(--serif);color:var(--c)}
+.badges{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.badge{font-size:11px;font-weight:750;border:1px solid var(--line);border-radius:999px;padding:3px 9px;white-space:nowrap}
+.badge.launch{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.famlabel{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.card-h h3{font-size:19px;margin:6px 0 6px}
+.card-h p{margin:0;font-size:14.5px;color:var(--muted)}
+.more{display:inline-block;margin-block-start:10px;font-size:12.5px;font-weight:750;color:var(--accent)}
+.card[data-open="false"] .card-b{display:none}
+.card[data-hide="true"]{display:none}
+.card-b{padding:0 22px 20px;font-size:14.5px;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
+.card-b div.full{grid-column:1/-1}
+.card-b b{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-block-end:2px}
+.card-b p{margin:0}
+.gate{background:var(--soft);border-radius:10px;padding:10px 12px}
+.empty{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:16px;grid-column:1/-1}
+
+/* offers */
+.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.offer{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
+.offer::before{content:"";position:absolute;inset-inline:0;inset-block-start:0;block-size:4px;background:var(--grad)}
+.offer .k{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.offer h3{font-size:21px;margin:0}
+.offer .pitch{margin:0;color:var(--muted);font-size:15px}
+.chain{display:grid;gap:8px;margin-block-start:4px}
+.stage{display:grid;grid-template-columns:70px 1fr;gap:10px;align-items:start;font-size:14px}
+.stage .st{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 0;color:var(--muted)}
+.stage.land .st{color:var(--accent-2)}.stage.expand .st{color:var(--accent)}.stage.run .st{color:var(--warn)}
+.stage ul{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+.stage li{padding:6px 10px;background:var(--soft);border-radius:8px}
+.offer .why{margin-block-start:auto;padding-block-start:12px;border-block-start:1px solid var(--line);font-size:13px;color:var(--muted)}
+
+/* heatmap */
+.heat{inline-size:100%;border-collapse:separate;border-spacing:4px;font-size:13px}
+.heat th{font-size:11px;font-weight:750;letter-spacing:.04em;color:var(--muted);text-align:center;padding:6px 4px;vertical-align:bottom}
+.heat th.rowh{text-align:start;font-size:14px;color:var(--text);font-weight:700;letter-spacing:0;min-inline-size:170px}
+.heat td{text-align:center;border-radius:8px;padding:12px 4px;font-weight:800;font-size:12px}
+.h0{background:transparent;color:var(--muted)}
+.h1{background:rgba(16,184,166,.12);color:var(--muted)}
+.h2{background:rgba(16,184,166,.38);color:var(--text)}
+.h3{background:#0B7A6E;color:#fff}
+.heatwrap{overflow-x:auto;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:12px}
+.hlegend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-block-start:12px}
+.hlegend span{display:inline-flex;align-items:center;gap:6px}
+.hlegend i{inline-size:16px;block-size:12px;border-radius:4px;display:inline-block}
+
+/* countries */
+.ctable{inline-size:100%;border-collapse:collapse;font-size:14.5px;background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.ctable th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--soft);text-align:start;padding:12px 14px}
+.ctable td{padding:16px 14px;border-block-start:1px solid var(--line);vertical-align:top}
+.ctable td strong{display:block;font-size:16px}
+.role{display:inline-block;font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px;margin-block-start:6px;background:var(--soft);color:var(--muted)}
+.role.r1{background:var(--accent);color:var(--paper)}
+.role.r2{background:rgba(29,78,216,.14);color:var(--accent-2)}
+
+/* revenue */
+.flywheel{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--paper)}
+.fw{padding:26px;border-inline-end:1px solid var(--line);position:relative}
+.fw:last-child{border-inline-end:0}
+.fw .big{font:44px/1 var(--serif);color:var(--accent)}
+.fw .k{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.fw h3{margin:10px 0 6px}
+.fw ul{margin:12px 0 0;padding-inline-start:18px;font-size:14px;color:var(--muted)}
+.fw ul li{padding-block:2px}
+.list{padding-inline-start:20px;margin:0}
+.list li{padding-block:4px}
+
+/* roadmap */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.phase{padding:22px;background:var(--paper);border-inline-end:1px solid var(--line)}
+.phase:last-child{border-inline-end:0}
+.phase .k{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.phase h3{margin:10px 0 10px}
+.phase ul{margin:0;padding-inline-start:18px;font-size:14px}
+.phase li{padding-block:3px}
+.phase .exit{margin:14px 0 0;font-size:13px;padding:10px 12px;border-radius:10px;background:var(--soft)}
+
+/* risks */
+.rtable{inline-size:100%;border-collapse:collapse;font-size:14.5px}
+.rtable th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--soft);text-align:start;padding:12px 14px}
+.rtable td{padding:14px;border-block-end:1px solid var(--line);vertical-align:top}
+.rtable td:first-child{font-weight:700;inline-size:30%}
+
+/* sources */
+.sources{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.source{font-size:13.5px;padding-block-start:14px;border-block-start:1px solid var(--line);overflow-wrap:anywhere}
+.source .k{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.source strong{display:block;font-size:14.5px;margin-block:4px}
+.source p{margin:4px 0}
+.footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-block:26px 48px;font-size:12.5px;color:var(--muted)}
+
+@keyframes flash{0%{box-shadow:0 0 0 0 rgba(16,184,166,.0)}20%{box-shadow:0 0 0 6px rgba(16,184,166,.45)}100%{box-shadow:0 0 0 0 rgba(16,184,166,0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.fade{animation:fadeUp .35s ease both}
+
+@media (max-width:1000px){
+  .cover-grid,.mapgrid,.grid3,.offers,.signal,.sources,.grid2,.mini3{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(3,1fr)}
+  .timeline{grid-template-columns:1fr 1fr}
+  .phase:nth-child(2){border-inline-end:0}
+  .phase:nth-child(-n+2){border-block-end:1px solid var(--line)}
+  .detail{position:static}
+  .top .label{display:none}
+}
+@media (max-width:700px){
+  .catalog,.card-b,.flywheel,.timeline{grid-template-columns:1fr}
+  .fw,.phase{border-inline-end:0;border-block-end:1px solid var(--line)}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .shead{grid-template-columns:44px 1fr;gap:10px}
+  .num{font-size:28px}
+  .ctable thead,.rtable thead{display:none}
+  .ctable tr,.rtable tr{display:block;border-block-start:1px solid var(--line);padding-block:10px}
+  .ctable td,.rtable td{display:block;border:0;padding:6px 14px;inline-size:auto!important}
+  .ctable td::before,.rtable td::before{content:attr(data-label);display:block;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .pbtn{display:none}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media print{
+  :root{--bg:#fff;--paper:#fff;--text:#111;--muted:#444;--line:#bbb;--soft:#f0f0f0}
+  .top,.nav,.filters,.legend,.no-print,.more,.skip{display:none!important}
+  .wrap{max-inline-size:none;padding-inline:0}
+  .cover{padding-block:10px 20px}
+  .section{padding-block:26px}
+  .card,.panel,.offer,.phase,.signal,.source,.fw{break-inside:avoid;box-shadow:none}
+  .detail{position:static}
+  .cover,.decide{background:#fff!important;color:#111!important;border:1px solid #bbb;border-radius:12px}
+  .cover *,.decide *{color:#111!important}
+  .card[data-hide="true"]{display:block!important}
+  .card-b{display:grid!important}
+  @page{margin:14mm}
+}
+
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="boot" role="status">
+    <div class="boot-logo">INNO<span>EQX</span></div>
+    <p>Loading · Cargando…</p>
+    <noscript><p>Este sitio necesita JavaScript. · This site needs JavaScript enabled.</p></noscript>
+  </div>
+</div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script>
+(function() {
+  if (!window.React || !window.ReactDOM) {
+    var r = document.getElementById("root");
+    if (r)
+      r.innerHTML = '<div class="boot"><div class="boot-logo">INNO<span>EQX</span></div><p>The report could not load. Please check your internet connection and try again.<br>No se pudo cargar el informe. Revisa tu conexión a internet y vuelve a intentarlo.</p></div>';
+    return;
+  }
+  const { useState, useEffect, useContext, createContext } = React;
+  const LANG_KEY = "innoeqx-report-lang";
+  const L = (en, es) => ({ en, es });
+  const LangCtx = createContext("en");
+  const useT = () => {
+    const lang = useContext(LangCtx);
+    return (v) => v && typeof v === "object" && !Array.isArray(v) && ("en" in v) ? v[lang] : v;
+  };
+  const pad = (n) => String(n).padStart(2, "0");
+  const FAMILIES = [
+    { id: "sap", c: "#0B8F82", n: L("SAP strategy & ERP", "Estrategia SAP y ERP") },
+    { id: "int", c: "#2563EB", n: L("Integration & BTP", "Integración y BTP") },
+    { id: "tax", c: "#D97706", n: L("E-invoicing & fiscal operations", "Facturación electrónica y operación fiscal") },
+    { id: "data", c: "#7C3AED", n: L("Data & analytics", "Datos y analítica") },
+    { id: "ai", c: "#DB2777", n: L("Automation & AI", "Automatización e IA") },
+    { id: "sec", c: "#DC2626", n: L("Cloud, security & resilience", "Nube, seguridad y resiliencia") },
+    { id: "ind", c: "#16A34A", n: L("Industry solutions", "Soluciones por industria") },
+    { id: "run", c: "#475569", n: L("Talent, PMO & managed services", "Talento, PMO y servicios gestionados") }
+  ];
+  const FAM = {};
+  FAMILIES.forEach((f) => {
+    FAM[f.id] = f;
+  });
+  const PRI = {
+    launch: L("Launch first", "Lanzar primero"),
+    build: L("Build next", "Construir después"),
+    partner: L("Partner-led", "Con socios")
+  };
+  const MODEL = {
+    diag: L("Fixed-fee diagnostic", "Diagnóstico de tarifa fija"),
+    project: L("Milestone project", "Proyecto por hitos"),
+    recur: L("Recurring service", "Servicio recurrente"),
+    train: L("Cohort training", "Capacitación por cohorte")
+  };
+  const DELIV = {
+    own: L("Own capability", "Capacidad propia"),
+    partner: L("Specialist partner", "Socio especializado"),
+    hybrid: L("Own + partner", "Propia + socio")
+  };
+  const COUNTRIES = [
+    { id: "gt", n: L("Guatemala", "Guatemala") },
+    { id: "bz", n: L("Belize", "Belice") },
+    { id: "hn", n: L("Honduras", "Honduras") },
+    { id: "sv", n: L("El Salvador", "El Salvador") },
+    { id: "ni", n: L("Nicaragua", "Nicaragua") },
+    { id: "cr", n: L("Costa Rica", "Costa Rica") },
+    { id: "pa", n: L("Panama", "Panamá") }
+  ];
+  const CTRY = {};
+  COUNTRIES.forEach((c) => {
+    CTRY[c.id] = c;
+  });
+  const ALL = ["gt", "bz", "hn", "sv", "ni", "cr", "pa"];
+  const IDEAS = [
+    {
+      f: "sap",
+      pri: "launch",
+      m: "diag",
+      d: "hybrid",
+      e: 4,
+      v: 5,
+      c: ALL,
+      t: L("S/4HANA readiness and decision roadmap", "Preparación y hoja de ruta de decisión S/4HANA"),
+      b: L("CIO + CFO", "CIO + CFO"),
+      p: L("An ECC estate without an agreed transition decision.", "Un entorno ECC sin una decisión de transición acordada."),
+      s: L("Inventory releases, interfaces and custom code; compare conversion, reimplementation and selective transition; assess data exposure; produce a phased business case.", "Inventariar versiones, interfaces y desarrollos; comparar conversión, reimplementación y transición selectiva; evaluar datos; elaborar un caso de negocio por fases."),
+      k: L("Decision approved; critical dependencies owned.", "Decisión aprobada; dependencias críticas con responsable."),
+      g: L("Senior SAP architect and customer-specific maintenance verification with SAP.", "Arquitecto SAP senior y verificación del mantenimiento específico del cliente con SAP.")
+    },
+    {
+      f: "sap",
+      pri: "build",
+      m: "diag",
+      d: "own",
+      e: 3,
+      v: 4,
+      c: ALL,
+      t: L("Cloud ERP subscription advisory", "Asesoría de suscripción de ERP en la nube"),
+      b: L("CFO + procurement", "CFO + compras"),
+      p: L("Subscription proposals (for example RISE with SAP or GROW with SAP) are hard to compare with current costs and needs.", "Las propuestas de suscripción (por ejemplo RISE with SAP o GROW with SAP) son difíciles de comparar con los costos y necesidades actuales."),
+      s: L("Independent review of scope, entitlements, total cost, contract terms and transition assumptions; negotiation brief for leadership.", "Revisión independiente de alcance, derechos de uso, costo total, términos contractuales y supuestos de transición; guía de negociación para la dirección."),
+      k: L("Decision memo with validated total cost of ownership.", "Memorando de decisión con costo total validado."),
+      g: L("Disclose any resale incentives; confirm offering names and entitlements with SAP.", "Declarar cualquier incentivo de reventa; confirmar nombres y derechos de la oferta con SAP.")
+    },
+    {
+      f: "sap",
+      pri: "partner",
+      m: "project",
+      d: "partner",
+      e: 3,
+      v: 3,
+      c: ALL,
+      t: L("SAP Business One for growing SMEs", "SAP Business One para pymes en crecimiento"),
+      b: L("CEO + finance lead", "CEO + líder de finanzas"),
+      p: L("A growing company has outgrown spreadsheets and entry-level accounting.", "Una empresa en crecimiento superó las hojas de cálculo y la contabilidad básica."),
+      s: L("Fit-to-standard, localization check, partner selection and implementation PMO; data migration and key-user training.", "Fit-to-standard, revisión de localización, selección de socio y PMO de implementación; migración de datos y capacitación de usuarios clave."),
+      k: L("Go-live on agreed scope; month-end close duration.", "Salida en vivo en el alcance acordado; duración del cierre mensual."),
+      g: L("Licensed implementation partner and country localization confirmed.", "Socio de implementación licenciado y localización del país confirmada.")
+    },
+    {
+      f: "sap",
+      pri: "partner",
+      m: "project",
+      d: "hybrid",
+      e: 2,
+      v: 4,
+      c: ALL,
+      t: L("Clean-core and custom-code remediation", "Clean core y remediación de código a la medida"),
+      b: L("SAP center-of-excellence lead", "Líder del centro de excelencia SAP"),
+      p: L("Years of modifications block upgrades and raise testing effort.", "Años de modificaciones bloquean actualizaciones y elevan el esfuerzo de pruebas."),
+      s: L("Classify custom code; retire unused objects; move extensions to side-by-side patterns; build an upgrade test plan.", "Clasificar el código; retirar objetos sin uso; mover extensiones a patrones side-by-side; preparar un plan de pruebas de actualización."),
+      k: L("Custom objects retired; upgrade-blocking items closed.", "Objetos retirados; bloqueos de actualización cerrados."),
+      g: L("Access to code analysis tools and a stable test environment.", "Acceso a herramientas de análisis de código y un ambiente de pruebas estable.")
+    },
+    {
+      f: "sap",
+      pri: "partner",
+      m: "project",
+      d: "partner",
+      e: 1,
+      v: 5,
+      c: ALL,
+      t: L("Multi-country ERP rollout template", "Plantilla de rollout ERP multi-país"),
+      b: L("Regional CIO", "CIO regional"),
+      p: L("Subsidiaries run different processes, charts of accounts and reports.", "Las subsidiarias operan con procesos, catálogos de cuentas y reportes distintos."),
+      s: L("Regional process template, country gap packs, master-data ownership, intercompany controls and staged deployments.", "Plantilla regional de procesos, paquetes de brechas por país, responsables de datos maestros, controles intercompañía y despliegues por etapas."),
+      k: L("Template adoption; reconciliation exceptions; cutover acceptance.", "Adopción de la plantilla; excepciones de conciliación; aceptación del cutover."),
+      g: L("Country finance specialists; never promise one regional tax configuration.", "Especialistas financieros por país; nunca prometer una sola configuración fiscal regional.")
+    },
+    {
+      f: "int",
+      pri: "build",
+      m: "diag",
+      d: "own",
+      e: 4,
+      v: 4,
+      c: ALL,
+      t: L("Integration architecture assessment", "Evaluación de arquitectura de integración"),
+      b: L("CIO + enterprise architect", "CIO + arquitecto empresarial"),
+      p: L("Point-to-point interfaces fail silently and nobody owns them.", "Las interfaces punto a punto fallan sin aviso y nadie es responsable."),
+      s: L("Map interfaces, volumes and failure points; define a target architecture on SAP Integration Suite or existing middleware; design monitoring.", "Mapear interfaces, volúmenes y puntos de falla; definir arquitectura objetivo en SAP Integration Suite o el middleware actual; diseñar el monitoreo."),
+      k: L("Interfaces inventoried; critical failures monitored.", "Interfaces inventariadas; fallas críticas monitoreadas."),
+      g: L("Read-only access to integration logs and system owners.", "Acceso de lectura a bitácoras de integración y a los dueños de sistemas.")
+    },
+    {
+      f: "int",
+      pri: "build",
+      m: "project",
+      d: "hybrid",
+      e: 3,
+      v: 4,
+      c: ALL,
+      t: L("SAP BTP extensions and low-code apps", "Extensiones y apps low-code en SAP BTP"),
+      b: L("Process owner + IT", "Dueño de proceso + TI"),
+      p: L("Users work around ERP gaps with spreadsheets and email.", "Los usuarios cubren vacíos del ERP con hojas de cálculo y correo."),
+      s: L("Build side-by-side apps and workflows for approvals, portals or field capture while keeping the core clean.", "Construir apps y flujos side-by-side para aprobaciones, portales o captura en campo, manteniendo limpio el núcleo."),
+      k: L("Manual workarounds retired; cycle time.", "Soluciones manuales retiradas; tiempo de ciclo."),
+      g: L("BTP entitlements and licensing confirmed per customer.", "Derechos y licencias de BTP confirmados por cliente.")
+    },
+    {
+      f: "int",
+      pri: "build",
+      m: "project",
+      d: "own",
+      e: 3,
+      v: 4,
+      c: ALL,
+      t: L("Commerce and POS-to-ERP integration", "Integración de comercio y POS con el ERP"),
+      b: L("Commercial + operations lead", "Líder comercial + operaciones"),
+      p: L("Orders, inventory and returns disagree across channels.", "Pedidos, inventario y devoluciones no coinciden entre canales."),
+      s: L("Connect one storefront or POS to the ERP; define product ownership; synchronize stock; handle order, return and payment exceptions.", "Conectar una tienda o POS al ERP; definir el dueño del producto; sincronizar inventario; gestionar excepciones de pedidos, devoluciones y pagos."),
+      k: L("Failed transactions; oversell incidents; rekeying time.", "Transacciones fallidas; sobreventas; tiempo de recaptura."),
+      g: L("API access, volume tests and retry controls.", "Acceso a APIs, pruebas de volumen y controles de reintento.")
+    },
+    {
+      f: "int",
+      pri: "build",
+      m: "project",
+      d: "own",
+      e: 3,
+      v: 4,
+      c: ALL,
+      t: L("ERP-to-bank connectivity and cash reconciliation", "Conectividad ERP-banco y conciliación de caja"),
+      b: L("Treasurer", "Tesorero"),
+      p: L("Bank files, receipts and ledger entries are matched manually.", "Archivos bancarios, recibos y asientos se concilian a mano."),
+      s: L("Connect an approved bank channel; implement matching rules, exception queues and evidence retention.", "Conectar un canal bancario aprobado; implementar reglas de conciliación, colas de excepciones y retención de evidencia."),
+      k: L("Automatic match rate; age of unmatched items.", "Tasa de conciliación automática; antigüedad de partidas abiertas."),
+      g: L("Bank permissions, segregation of duties and a tested fallback.", "Permisos bancarios, segregación de funciones y un plan alterno probado.")
+    },
+    {
+      f: "int",
+      pri: "partner",
+      m: "project",
+      d: "partner",
+      e: 2,
+      v: 4,
+      c: ["gt", "sv", "hn", "ni", "cr", "pa"],
+      t: L("B2B and logistics connection hub", "Hub de conexión B2B y logística"),
+      b: L("Supply-chain director", "Director de cadena de suministro"),
+      p: L("Distributors, carriers and customs brokers exchange disconnected files.", "Distribuidores, transportistas y agentes aduanales intercambian archivos desconectados."),
+      s: L("Integrate approved partner interfaces; normalize shipment events and documents; build exception handling and traceability.", "Integrar interfaces aprobadas de socios; normalizar eventos y documentos de envío; crear manejo de excepciones y trazabilidad."),
+      k: L("Missing milestones; manual status requests.", "Hitos faltantes; consultas manuales de estado."),
+      g: L("Partner agreements; never imply privileged access to government trade systems.", "Acuerdos con socios; nunca insinuar acceso privilegiado a sistemas de comercio gubernamentales.")
+    },
+    {
+      f: "tax",
+      pri: "launch",
+      m: "diag",
+      d: "hybrid",
+      e: 5,
+      v: 4,
+      c: ["gt", "sv", "cr", "pa", "hn"],
+      t: L("E-invoicing integration health check", "Chequeo de salud de la facturación electrónica"),
+      b: L("CFO + tax manager", "CFO + gerente de impuestos"),
+      p: L("Tax documents fail, duplicate or cannot be reconciled.", "Los documentos fiscales fallan, se duplican o no se concilian."),
+      s: L("Review one country’s document flow; map ERP fields; inspect acknowledgments, rejections, cancellations, retention and reconciliation.", "Revisar el flujo documental de un país; mapear campos del ERP; revisar acuses, rechazos, anulaciones, retención y conciliación."),
+      k: L("Accepted-document rate; time to resolve rejections.", "Tasa de documentos aceptados; tiempo para resolver rechazos."),
+      g: L("Local tax adviser and authorized provider where required; not a compliance guarantee.", "Asesor tributario local y proveedor autorizado cuando aplique; no es garantía de cumplimiento.")
+    },
+    {
+      f: "tax",
+      pri: "build",
+      m: "project",
+      d: "partner",
+      e: 4,
+      v: 3,
+      c: ["pa"],
+      t: L("Panama PAC migration and ERP/POS integration", "Migración a PAC en Panamá e integración ERP/POS"),
+      b: L("Owner or CFO of a growing business", "Dueño o CFO de una empresa en crecimiento"),
+      p: L("Businesses above the DGI free-tool limits must use a PAC, and re-keying sales from POS or ERP wastes hours.", "Las empresas sobre los límites del facturador gratuito de la DGI deben usar un PAC, y recapturar ventas del POS o ERP consume horas."),
+      s: L("Confirm obligation and modality with a tax adviser; select a PAC; integrate ERP/POS; test the authorization flow; train staff.", "Confirmar obligación y modalidad con un asesor tributario; seleccionar un PAC; integrar ERP/POS; probar el flujo de autorización; capacitar al personal."),
+      k: L("Documents issued without manual re-keying; rejection rate.", "Documentos emitidos sin recaptura manual; tasa de rechazo."),
+      g: L("A PAC partner and confirmation of each taxpayer’s obligation on official DGI channels.", "Un PAC aliado y confirmación de la obligación de cada contribuyente en canales oficiales de la DGI.")
+    },
+    {
+      f: "tax",
+      pri: "partner",
+      m: "project",
+      d: "partner",
+      e: 2,
+      v: 5,
+      c: ["gt", "sv", "cr", "pa", "hn"],
+      t: L("Regional e-document hub", "Hub regional de documentos electrónicos"),
+      b: L("Regional CFO", "CFO regional"),
+      p: L("Each subsidiary runs a different provider, integration and monitoring approach.", "Cada subsidiaria usa un proveedor, una integración y un monitoreo diferentes."),
+      s: L("One ERP integration layer routing to country providers, with common monitoring, retention and reconciliation.", "Una capa de integración ERP que enruta a los proveedores de cada país, con monitoreo, retención y conciliación comunes."),
+      k: L("Countries on the hub; incidents per 1,000 documents.", "Países en el hub; incidentes por cada 1.000 documentos."),
+      g: L("Country-by-country provider agreements and tax review.", "Acuerdos con proveedores y revisión tributaria país por país.")
+    },
+    {
+      f: "tax",
+      pri: "build",
+      m: "recur",
+      d: "hybrid",
+      e: 4,
+      v: 4,
+      c: ["gt", "sv", "cr", "pa"],
+      t: L("Tax-specification change monitoring and regression testing", "Monitoreo de cambios normativos y pruebas de regresión"),
+      b: L("Tax manager + IT", "Gerente de impuestos + TI"),
+      p: L("Specifications change (for example Costa Rica’s v4.4 structures) and nobody retests the integration.", "Las especificaciones cambian (por ejemplo las estructuras v4.4 de Costa Rica) y nadie vuelve a probar la integración."),
+      s: L("Watch official publications; maintain regression test packs; run tests before each change takes effect; report readiness.", "Vigilar publicaciones oficiales; mantener paquetes de pruebas de regresión; probar antes de cada cambio; reportar el estado de preparación."),
+      k: L("Changes tested before effective date; production defects.", "Cambios probados antes de su vigencia; defectos en producción."),
+      g: L("Use current authority-hosted editions only.", "Usar solo ediciones vigentes publicadas por la autoridad.")
+    },
+    {
+      f: "tax",
+      pri: "build",
+      m: "project",
+      d: "own",
+      e: 3,
+      v: 3,
+      c: ALL,
+      t: L("Audit-ready document retention and reconciliation", "Retención documental y conciliación lista para auditoría"),
+      b: L("Controller + internal audit", "Contralor + auditoría interna"),
+      p: L("Proving what was issued, cancelled and paid takes days.", "Demostrar qué se emitió, anuló y pagó toma días."),
+      s: L("Retention design, ERP-to-authority reconciliation reports and on-demand evidence packs.", "Diseño de retención, reportes de conciliación ERP-autoridad y paquetes de evidencia bajo demanda."),
+      k: L("Time to assemble audit evidence.", "Tiempo para reunir evidencia de auditoría."),
+      g: L("Retention periods confirmed with local advisers.", "Plazos de retención confirmados con asesores locales.")
+    },
+    {
+      f: "data",
+      pri: "launch",
+      m: "diag",
+      d: "own",
+      e: 5,
+      v: 4,
+      c: ALL,
+      t: L("CFO visibility sprint", "Sprint de visibilidad CFO"),
+      b: L("CFO / controller", "CFO / contralor"),
+      p: L("Management decisions rely on inconsistent spreadsheets.", "Las decisiones de gerencia dependen de hojas de cálculo inconsistentes."),
+      s: L("Choose one finance question; define its metric; connect a permitted ERP extract; build a reconciled receivables, margin or cash view.", "Elegir una pregunta financiera; definir su métrica; conectar un extracto autorizado del ERP; construir una vista conciliada de cartera, margen o caja."),
+      k: L("Reconciled metric accepted; report preparation time.", "Métrica conciliada aceptada; tiempo de preparación del reporte."),
+      g: L("Finance owner, source access and a data dictionary.", "Responsable de finanzas, acceso a fuentes y diccionario de datos.")
+    },
+    {
+      f: "data",
+      pri: "build",
+      m: "project",
+      d: "own",
+      e: 4,
+      v: 4,
+      c: ALL,
+      t: L("Executive KPI cockpit", "Cockpit ejecutivo de KPIs"),
+      b: L("CEO + CFO", "CEO + CFO"),
+      p: L("Leadership meetings debate numbers instead of decisions.", "Las reuniones de dirección discuten cifras en lugar de decisiones."),
+      s: L("Define a small set of governed KPIs; build a cockpit on the chosen BI platform (for example SAP Analytics Cloud or Power BI); design refresh and access.", "Definir un conjunto acotado de KPIs gobernados; construir un cockpit en la plataforma BI elegida (por ejemplo SAP Analytics Cloud o Power BI); diseñar actualización y accesos."),
+      k: L("KPIs with a single definition; meeting preparation time.", "KPIs con una sola definición; tiempo de preparación de reuniones."),
+      g: L("Licensing evaluated separately from services.", "Licenciamiento evaluado por separado de los servicios.")
+    },
+    {
+      f: "data",
+      pri: "build",
+      m: "project",
+      d: "own",
+      e: 3,
+      v: 4,
+      c: ALL,
+      t: L("Inventory and working-capital analytics", "Analítica de inventario y capital de trabajo"),
+      b: L("COO + CFO", "COO + CFO"),
+      p: L("Excess stock and shortages are hard to tell apart.", "Es difícil distinguir el exceso de inventario de los faltantes."),
+      s: L("Analyze stock aging, availability and policies; create buyer exception lists with transparent definitions.", "Analizar antigüedad, disponibilidad y políticas de inventario; crear listas de excepciones para compradores con definiciones transparentes."),
+      k: L("Stockout incidents; aged stock value; inventory days.", "Quiebres de inventario; valor de inventario envejecido; días de inventario."),
+      g: L("Reliable movements and finance-approved valuation; no guaranteed savings.", "Movimientos confiables y valoración aprobada por finanzas; sin ahorros garantizados.")
+    },
+    {
+      f: "data",
+      pri: "build",
+      m: "project",
+      d: "own",
+      e: 3,
+      v: 4,
+      c: ALL,
+      t: L("Master-data governance foundation", "Base de gobierno de datos maestros"),
+      b: L("Data owner + process leads", "Dueño de datos + líderes de proceso"),
+      p: L("Duplicate suppliers, products and customers undermine automation.", "Proveedores, productos y clientes duplicados frenan la automatización."),
+      s: L("Profile one data domain; define quality rules and stewardship; cleanse through approved workflows; schedule recurring checks.", "Perfilar un dominio de datos; definir reglas de calidad y responsables; depurar con flujos aprobados; programar revisiones recurrentes."),
+      k: L("Duplicate rate; required-field completeness.", "Tasa de duplicados; completitud de campos obligatorios."),
+      g: L("Business approval of merge rules; preserve audit history.", "Aprobación del negocio para reglas de fusión; preservar el historial.")
+    },
+    {
+      f: "data",
+      pri: "partner",
+      m: "project",
+      d: "partner",
+      e: 2,
+      v: 4,
+      c: ALL,
+      t: L("Planning, budgeting and scenario modeling", "Planificación, presupuesto y escenarios"),
+      b: L("FP&A + operations", "FP&A + operaciones"),
+      p: L("Budgets and demand plans are disconnected.", "El presupuesto y el plan de demanda están desconectados."),
+      s: L("Driver-based planning model with documented assumptions, scenarios and approval workflow.", "Modelo de planificación por drivers con supuestos documentados, escenarios y flujo de aprobación."),
+      k: L("Forecast error by agreed method; planning-cycle duration.", "Error de pronóstico según método acordado; duración del ciclo de planificación."),
+      g: L("Stable historical data and planners who own the assumptions.", "Datos históricos estables y planificadores dueños de los supuestos.")
+    },
+    {
+      f: "ai",
+      pri: "launch",
+      m: "diag",
+      d: "own",
+      e: 4,
+      v: 5,
+      c: ALL,
+      t: L("AI governance and pilot selection", "Gobierno de IA y selección de pilotos"),
+      b: L("CIO + legal / risk", "CIO + legal / riesgo"),
+      p: L("AI experimentation lacks ownership and safeguards.", "La experimentación con IA carece de responsables y salvaguardas."),
+      s: L("Inventory uses; classify information; select a bounded pilot; define evaluation, human review, acceptable use and vendor due diligence.", "Inventariar usos; clasificar la información; elegir un piloto acotado; definir evaluación, revisión humana, uso aceptable y debida diligencia de proveedores."),
+      k: L("Approved use-case register; evaluation coverage.", "Registro aprobado de casos de uso; cobertura de evaluación."),
+      g: L("Business, security and legal participation; a policy alone does not ensure compliance.", "Participación de negocio, seguridad y legal; una política por sí sola no asegura el cumplimiento.")
+    },
+    {
+      f: "ai",
+      pri: "build",
+      m: "project",
+      d: "own",
+      e: 3,
+      v: 4,
+      c: ALL,
+      t: L("Accounts-payable automation pilot", "Piloto de automatización de cuentas por pagar"),
+      b: L("Controller + procurement", "Contralor + compras"),
+      p: L("Invoice capture, matching and approvals are repetitive.", "La captura, conciliación y aprobación de facturas es repetitiva."),
+      s: L("Pilot document extraction, purchase-order matching and exception routing, with human approval before payment.", "Pilotear extracción de documentos, conciliación con órdenes de compra y enrutamiento de excepciones, con aprobación humana antes del pago."),
+      k: L("Touchless eligible invoices; exception rate; processing time.", "Facturas procesadas sin intervención; tasa de excepciones; tiempo de proceso."),
+      g: L("Confidence thresholds, audit logging and payment controls.", "Umbrales de confianza, bitácora de auditoría y controles de pago.")
+    },
+    {
+      f: "ai",
+      pri: "build",
+      m: "project",
+      d: "own",
+      e: 3,
+      v: 4,
+      c: ALL,
+      t: L("Enterprise knowledge assistant", "Asistente de conocimiento empresarial"),
+      b: L("Operations / service director", "Director de operaciones / servicio"),
+      p: L("Staff cannot easily find approved procedures.", "El personal no encuentra con facilidad los procedimientos aprobados."),
+      s: L("Permission-aware assistant over approved documents, with citations, evaluation cases and escalation for uncertain answers.", "Asistente con permisos sobre documentos aprobados, con citas, casos de evaluación y escalamiento ante respuestas dudosas."),
+      k: L("Grounded-answer pass rate; time to locate a policy.", "Tasa de respuestas fundamentadas; tiempo para encontrar una política."),
+      g: L("Clean permissions, document owners and a tested escalation policy.", "Permisos limpios, dueños de documentos y una política de escalamiento probada.")
+    },
+    {
+      f: "ai",
+      pri: "partner",
+      m: "diag",
+      d: "partner",
+      e: 2,
+      v: 4,
+      c: ALL,
+      t: L("Process mining and discovery", "Minería y descubrimiento de procesos"),
+      b: L("COO + process excellence", "COO + excelencia de procesos"),
+      p: L("Nobody can see how order-to-cash or procure-to-pay really runs.", "Nadie ve cómo funcionan realmente order-to-cash o procure-to-pay."),
+      s: L("Extract event logs; map process variants; quantify rework and delays; prioritize automation (for example with SAP Signavio).", "Extraer bitácoras de eventos; mapear variantes; cuantificar reprocesos y demoras; priorizar la automatización (por ejemplo con SAP Signavio)."),
+      k: L("Variants reduced; cycle time.", "Variantes reducidas; tiempo de ciclo."),
+      g: L("Tool licensing and data-extraction permissions.", "Licencias de la herramienta y permisos de extracción de datos.")
+    },
+    {
+      f: "ai",
+      pri: "build",
+      m: "project",
+      d: "own",
+      e: 3,
+      v: 3,
+      c: ALL,
+      t: L("Collections and customer-service copilot", "Copiloto de cobranza y servicio al cliente"),
+      b: L("Credit, collections or service lead", "Líder de crédito, cobranza o servicio"),
+      p: L("Agents lack a consistent view of disputes, overdue accounts and history.", "Los agentes no tienen una vista consistente de disputas, cuentas vencidas e historial."),
+      s: L("Summarize account context; draft follow-ups; track disputes and human-approved next actions.", "Resumir el contexto de la cuenta; redactar seguimientos; registrar disputas y siguientes pasos aprobados por personas."),
+      k: L("Dispute aging; preparation time per account.", "Antigüedad de disputas; tiempo de preparación por cuenta."),
+      g: L("No autonomous credit decisions or external sends; privacy controls.", "Sin decisiones de crédito ni envíos externos autónomos; controles de privacidad.")
+    },
+    {
+      f: "sec",
+      pri: "launch",
+      m: "diag",
+      d: "own",
+      e: 4,
+      v: 4,
+      c: ALL,
+      t: L("Cybersecurity baseline and roadmap", "Diagnóstico y hoja de ruta de ciberseguridad"),
+      b: L("CEO + IT lead", "CEO + líder de TI"),
+      p: L("Security spending is reactive and hard to prioritize.", "El gasto en seguridad es reactivo y difícil de priorizar."),
+      s: L("Review identity, endpoint, backup, patching and incident readiness; deliver an owned risk register and sequencing.", "Revisar identidad, endpoints, respaldos, parches y preparación ante incidentes; entregar un registro de riesgos con responsables y secuencia."),
+      k: L("Priority findings remediated; control verification coverage.", "Hallazgos prioritarios corregidos; cobertura de verificación de controles."),
+      g: L("Explicit testing authorization; no 24/7 monitoring promise without capability.", "Autorización explícita de pruebas; sin promesas de monitoreo 24/7 sin capacidad.")
+    },
+    {
+      f: "sec",
+      pri: "partner",
+      m: "diag",
+      d: "partner",
+      e: 2,
+      v: 4,
+      c: ALL,
+      t: L("SAP access, roles and segregation-of-duties review", "Revisión de accesos, roles SAP y segregación de funciones"),
+      b: L("Internal audit + SAP security", "Auditoría interna + seguridad SAP"),
+      p: L("Excessive access and conflicting duties increase control exposure.", "Accesos excesivos y funciones en conflicto aumentan la exposición de control."),
+      s: L("Review roles, privileged access, joiner/mover/leaver controls and conflicts; assign remediation owners.", "Revisar roles, accesos privilegiados, altas/cambios/bajas y conflictos; asignar responsables de remediación."),
+      k: L("Unapproved privileged accounts; aged control exceptions.", "Cuentas privilegiadas no aprobadas; excepciones de control vencidas."),
+      g: L("Qualified SAP security expertise; not an audit opinion.", "Experiencia calificada en seguridad SAP; no constituye opinión de auditoría.")
+    },
+    {
+      f: "sec",
+      pri: "build",
+      m: "project",
+      d: "hybrid",
+      e: 3,
+      v: 4,
+      c: ALL,
+      t: L("Cloud migration and FinOps review", "Migración a la nube y revisión FinOps"),
+      b: L("CIO + infrastructure lead", "CIO + líder de infraestructura"),
+      p: L("Cloud spend and architecture decisions lack a shared baseline.", "El gasto y la arquitectura en la nube no tienen una línea base compartida."),
+      s: L("Review one environment on a hyperscaler; assess identity, backup and cost allocation; produce a prioritized migration and optimization plan.", "Revisar un ambiente en un hiperescalador; evaluar identidad, respaldos y asignación de costos; entregar un plan priorizado de migración y optimización."),
+      k: L("Unallocated spend; validated recommendations.", "Gasto sin asignar; recomendaciones validadas."),
+      g: L("Read-only access first; platform-specific skills.", "Acceso de lectura primero; habilidades específicas de la plataforma.")
+    },
+    {
+      f: "sec",
+      pri: "build",
+      m: "project",
+      d: "own",
+      e: 4,
+      v: 3,
+      c: ALL,
+      t: L("Backup, recovery and continuity exercise", "Ejercicio de respaldo, recuperación y continuidad"),
+      b: L("IT operations + business continuity", "Operaciones de TI + continuidad del negocio"),
+      p: L("Recovery assumptions have never been tested.", "Los supuestos de recuperación nunca se han probado."),
+      s: L("Define recovery objectives for one critical service; test restoration; document gaps and repeatable runbooks.", "Definir objetivos de recuperación para un servicio crítico; probar la restauración; documentar brechas y runbooks repetibles."),
+      k: L("Observed recovery time and data loss against objectives.", "Tiempo de recuperación y pérdida de datos observados frente a objetivos."),
+      g: L("Approved test window and rollback plan.", "Ventana de prueba aprobada y plan de reversa.")
+    },
+    {
+      f: "sec",
+      pri: "build",
+      m: "diag",
+      d: "hybrid",
+      e: 3,
+      v: 3,
+      c: ALL,
+      t: L("Data-protection readiness program", "Programa de preparación en protección de datos"),
+      b: L("Legal + IT", "Legal + TI"),
+      p: L("Personal data is spread across ERP, CRM and files without clear rules.", "Los datos personales están dispersos en ERP, CRM y archivos sin reglas claras."),
+      s: L("Data inventory, access and retention rules, and an incident procedure — with local counsel for each country’s law.", "Inventario de datos, reglas de acceso y retención, y un procedimiento de incidentes — con asesoría legal local para la ley de cada país."),
+      k: L("Inventory coverage; access reviews completed.", "Cobertura del inventario; revisiones de acceso completadas."),
+      g: L("Legal interpretation stays with qualified counsel.", "La interpretación legal queda a cargo de abogados calificados.")
+    },
+    {
+      f: "ind",
+      pri: "build",
+      m: "project",
+      d: "own",
+      e: 3,
+      v: 4,
+      c: ALL,
+      t: L("Retail and distribution accelerator", "Acelerador para retail y distribución"),
+      b: L("Distribution or retail COO", "COO de distribución o retail"),
+      p: L("Branches, warehouses and sales teams operate with different information.", "Sucursales, bodegas y ventas operan con información distinta."),
+      s: L("Pick order-to-cash or replenishment; combine master data, stock visibility and exception workflows in one measurable pilot.", "Elegir order-to-cash o reabastecimiento; combinar datos maestros, visibilidad de inventario y flujos de excepción en un piloto medible."),
+      k: L("Order exceptions; fulfillment lead time; inventory discrepancies.", "Excepciones de pedidos; tiempo de entrega; diferencias de inventario."),
+      g: L("One pilot location and verified POS/WMS interfaces.", "Una ubicación piloto e interfaces POS/WMS verificadas.")
+    },
+    {
+      f: "ind",
+      pri: "partner",
+      m: "project",
+      d: "partner",
+      e: 2,
+      v: 4,
+      c: ["gt", "hn", "ni", "cr"],
+      t: L("Manufacturing and agro-export traceability", "Trazabilidad para manufactura y agroexportación"),
+      b: L("Plant + quality manager", "Gerente de planta + calidad"),
+      p: L("Batch movements and quality evidence are fragmented.", "Los movimientos de lotes y la evidencia de calidad están fragmentados."),
+      s: L("Trace a bounded product flow from input to shipment; connect quality records; simulate a lot investigation.", "Trazar un flujo acotado de producto desde el insumo hasta el embarque; conectar registros de calidad; simular una investigación de lote."),
+      k: L("Lot completeness; time to assemble trace evidence.", "Completitud de lotes; tiempo para reunir evidencia de trazabilidad."),
+      g: L("Industry specialist and regulatory review; no certification promise.", "Especialista de la industria y revisión regulatoria; sin promesa de certificación.")
+    },
+    {
+      f: "ind",
+      pri: "build",
+      m: "recur",
+      d: "own",
+      e: 3,
+      v: 5,
+      c: ["cr"],
+      t: L("Free-zone operations partner program", "Programa de socio para operaciones en zonas francas"),
+      b: L("Site leader or shared-services director of a multinational", "Líder de sitio o director de servicios compartidos de una multinacional"),
+      p: L("Expanding free-zone operations need local specialists for SAP, data and process support.", "Las operaciones en expansión en zonas francas necesitan especialistas locales en SAP, datos y procesos."),
+      s: L("Local SAP functional support, reporting and automation for shared-service and manufacturing sites; apply to investor-facing supplier networks where eligible.", "Soporte funcional SAP local, reportería y automatización para centros de servicios compartidos y plantas; postular a redes de proveedores para inversionistas cuando sea elegible."),
+      k: L("Retained accounts; tickets resolved within SLA.", "Cuentas retenidas; tickets resueltos dentro del SLA."),
+      g: L("Treat supplier-network membership as an opportunity to earn, not an existing affiliation.", "Tratar la membresía en redes de proveedores como una oportunidad por ganar, no como una afiliación existente.")
+    },
+    {
+      f: "ind",
+      pri: "partner",
+      m: "project",
+      d: "partner",
+      e: 2,
+      v: 4,
+      c: ["pa"],
+      t: L("Logistics and 3PL visibility", "Visibilidad para logística y operadores 3PL"),
+      b: L("Logistics or 3PL operations director", "Director de operaciones logísticas o 3PL"),
+      p: L("Customers ask for shipment status that lives in disconnected systems.", "Los clientes piden estados de envío que viven en sistemas desconectados."),
+      s: L("Event capture across warehouse, transport and customs milestones; customer-facing status views and exception alerts.", "Captura de eventos de bodega, transporte y aduana; vistas de estado para clientes y alertas de excepción."),
+      k: L("Manual status requests; on-time milestone rate.", "Consultas manuales de estado; cumplimiento de hitos a tiempo."),
+      g: L("Carrier and partner interface access confirmed.", "Acceso confirmado a interfaces de transportistas y socios.")
+    },
+    {
+      f: "ind",
+      pri: "partner",
+      m: "diag",
+      d: "partner",
+      e: 2,
+      v: 3,
+      c: ALL,
+      t: L("Cooperatives and mid-size financial institutions", "Cooperativas e instituciones financieras medianas"),
+      b: L("General manager + risk", "Gerente general + riesgo"),
+      p: L("Legacy cores, manual regulatory reporting and rising cyber exposure.", "Núcleos heredados, reportería regulatoria manual y creciente exposición cibernética."),
+      s: L("Architecture and vendor-selection diagnostic, reporting automation and a cyber baseline; regulatory requirements confirmed with local counsel.", "Diagnóstico de arquitectura y selección de proveedores, automatización de reportes y diagnóstico de ciberseguridad; requisitos regulatorios confirmados con asesoría local."),
+      k: L("Roadmap approved; reporting hours saved.", "Hoja de ruta aprobada; horas de reportería ahorradas."),
+      g: L("Regulated-sector specialist partner.", "Socio especialista en sectores regulados.")
+    },
+    {
+      f: "run",
+      pri: "launch",
+      m: "diag",
+      d: "own",
+      e: 4,
+      v: 4,
+      c: ALL,
+      t: L("Transformation PMO and rescue review", "PMO de transformación y revisión de rescate"),
+      b: L("CEO + executive sponsor", "CEO + patrocinador ejecutivo"),
+      p: L("A technology program lacks clear decisions, dependencies or recovery options.", "Un programa tecnológico carece de decisiones claras, dependencias o alternativas de recuperación."),
+      s: L("Independent PMI-aligned review of scope, governance, schedule and risk; decision cadence, change control and benefit ownership.", "Revisión independiente alineada a PMI de alcance, gobernanza, cronograma y riesgos; cadencia de decisiones, control de cambios y responsables de beneficios."),
+      k: L("Decision latency; unresolved dependencies; accepted milestones.", "Latencia de decisiones; dependencias abiertas; hitos aceptados."),
+      g: L("Sponsor access; never guarantee recovery of an unassessed program.", "Acceso al patrocinador; nunca garantizar la recuperación de un programa no evaluado.")
+    },
+    {
+      f: "run",
+      pri: "build",
+      m: "recur",
+      d: "own",
+      e: 3,
+      v: 5,
+      c: ALL,
+      t: L("SAP application management (AMS) retainer", "Retainer de gestión de aplicaciones SAP (AMS)"),
+      b: L("IT operations lead", "Líder de operaciones de TI"),
+      p: L("Recurring tickets consume the internal team’s capacity.", "Los tickets recurrentes consumen la capacidad del equipo interno."),
+      s: L("Business-hours functional support, incident triage, release testing, problem management and a quarterly improvement backlog.", "Soporte funcional en horario laboral, triage de incidentes, pruebas de versiones, gestión de problemas y backlog trimestral de mejoras."),
+      k: L("Response and resolution against SLA; repeat incidents.", "Respuesta y resolución frente al SLA; incidentes repetidos."),
+      g: L("Named coverage, escalation and runbooks before selling a retainer.", "Cobertura nominal, escalamiento y runbooks antes de vender un retainer.")
+    },
+    {
+      f: "run",
+      pri: "build",
+      m: "train",
+      d: "own",
+      e: 4,
+      v: 3,
+      c: ALL,
+      t: L("Role-based adoption academy", "Academia de adopción por rol"),
+      b: L("HR + process owners", "RR. HH. + dueños de proceso"),
+      p: L("Users are trained on screens, not on their daily jobs.", "Los usuarios aprenden pantallas, no su trabajo diario."),
+      s: L("Spanish-first task guides, sandbox exercises, super-user coaching and post-launch reinforcement; English where needed.", "Guías de tareas en español, ejercicios en sandbox, coaching de super-usuarios y refuerzo post-lanzamiento; inglés cuando se requiera."),
+      k: L("Task completion in practice; support topics after training.", "Tareas completadas en la práctica; temas de soporte después de la capacitación."),
+      g: L("Validated process design and a safe training environment.", "Diseño de procesos validado y un ambiente seguro de capacitación.")
+    },
+    {
+      f: "run",
+      pri: "build",
+      m: "train",
+      d: "own",
+      e: 4,
+      v: 3,
+      c: ALL,
+      t: L("SAP and project-management skills academy", "Academia de habilidades SAP y gestión de proyectos"),
+      b: L("HR / L&D leaders and professionals", "Líderes de RR. HH. / formación y profesionales"),
+      p: L("SAP and project-management skills are scarce in regional teams.", "Las habilidades SAP y de gestión de proyectos escasean en los equipos de la región."),
+      s: L("Corporate and open cohorts on SAP fundamentals, S/4HANA key-user skills and PMI-aligned project practice.", "Cohortes corporativas y abiertas sobre fundamentos SAP, habilidades de usuario clave S/4HANA y práctica de proyectos alineada a PMI."),
+      k: L("Cohorts completed; learner outcomes tracked with consent.", "Cohortes completadas; resultados de participantes medidos con consentimiento."),
+      g: L("Clearly distinguish training from official SAP or PMI certification.", "Distinguir claramente la capacitación de la certificación oficial de SAP o PMI.")
+    },
+    {
+      f: "run",
+      pri: "build",
+      m: "recur",
+      d: "hybrid",
+      e: 2,
+      v: 5,
+      c: ["cr", "gt", "sv", "pa"],
+      t: L("Nearshore bilingual SAP talent pods", "Equipos nearshore bilingües de talento SAP"),
+      b: L("US or regional SAP program leads", "Líderes de programas SAP en EE. UU. o la región"),
+      p: L("SAP programs need bilingual capacity in time zones close to US business hours.", "Los programas SAP necesitan capacidad bilingüe en husos horarios cercanos al horario laboral de EE. UU."),
+      s: L("Dedicated pods (functional, integration, analytics) with INNOEQX PMO oversight and staged ramp-up.", "Equipos dedicados (funcional, integración, analítica) con supervisión del PMO de INNOEQX y crecimiento por etapas."),
+      k: L("Client-accepted deliverables; pod utilization.", "Entregables aceptados por el cliente; utilización del equipo."),
+      g: L("Verified skills, employment and contracting model per country.", "Habilidades verificadas y modelo laboral y contractual por país.")
+    }
+  ];
+  IDEAS.forEach((x, i) => {
+    x.id = i + 1;
+  });
+  const IDEA = {};
+  IDEAS.forEach((x) => {
+    IDEA[x.id] = x;
+  });
+  const SOURCES = [
+    { id: "R1", org: "INNOEQX", t: "INNOEQX", u: "https://www.innoeqx.com/", loc: L("Homepage: service list and newsletter area", "Página de inicio: lista de servicios y boletín"), n: L("Basis for the content-level observations about the current website.", "Base de las observaciones de contenido sobre el sitio actual.") },
+    { id: "R2", org: "INNOEQX", t: "About | Empower Your Business Growth Today — INNOEQX", u: "https://www.innoeqx.com/about", loc: L("About page", "Página Nosotros"), n: L("Company-authored positioning; not an independent verification of capacity.", "Posicionamiento de la empresa; no verifica capacidad de forma independiente.") },
+    { id: "R3", org: "SAP", t: "Maintenance 2040 - SAP", u: "https://support.sap.com/en/release-upgrade-maintenance/maintenance-information/maintenance-strategy/s4hana-business-suite7.html", loc: L("Clarity and Choice on SAP Business Suite 7", "Clarity and Choice on SAP Business Suite 7"), n: L("Eligibility must be checked for each customer.", "La elegibilidad debe verificarse por cliente.") },
+    { id: "R4", org: "SAT Guatemala", t: "Portal SAT | Factura Electrónica en Línea", u: "https://portal.sat.gob.gt/portal/efactura/", loc: L("FEL regime", "Régimen FEL"), n: L("Implementation needs current technical documentation and taxpayer facts.", "La implementación requiere documentación técnica vigente y datos del contribuyente.") },
+    { id: "R5", org: "Ministerio de Hacienda, Costa Rica", t: "Anexos y Estructuras para la Emisión de Comprobantes Electrónicos Versión 4.4", u: "https://www.hacienda.go.cr/docs/ANEXOS_Y_ESTRUCTURAS_V4.4.pdf", loc: L("Annex 1 and change history", "Anexo 1 y control histórico de cambios"), n: L("Use the current authority-hosted edition.", "Usar la edición vigente publicada por la autoridad.") },
+    { id: "R6", org: "Ministerio de Hacienda, El Salvador", t: "Facturación Electrónica", u: "https://www.mh.gob.sv/facturacion-electronica/", loc: L("Electronic invoicing resource", "Recurso de facturación electrónica"), n: L("Entry point for official guidance; no universal deadline is implied.", "Punto de entrada a la guía oficial; no implica una fecha única para todos.") },
+    { id: "R7", org: "Inter-American Development Bank", t: "Central American Digital Trade Platform (PDCC 2.0)", u: "https://www.iadb.org/en/project/RG-T4217", loc: L("Project objective", "Objetivo del proyecto"), n: L("Public-sector integration signal, not a private market estimate.", "Señal de integración del sector público, no una estimación del mercado privado.") },
+    { id: "R8", org: "Inter-American Development Bank", t: "Digital Transformation of Tax Administrations in Central America", u: "https://www.iadb.org/en/project/RG-T4958", loc: L("Project objective", "Objetivo del proyecto"), n: L("Context only; no inference of private purchasing commitments.", "Solo contexto; no implica compromisos de compra privados.") },
+    { id: "R9", org: "SAP", t: "SAP Business Technology Platform", u: "https://www.sap.com/products/technology-platform.html", loc: L("Product overview", "Resumen del producto"), n: L("Validate naming, entitlements and availability per proposal.", "Validar nombres, derechos y disponibilidad en cada propuesta.") },
+    { id: "R10", org: "SAP", t: "SAP Business One | ERP Software for Small Businesses", u: "https://www.sap.com/products/erp/business-one.html", loc: L("What is SAP Business One?", "¿Qué es SAP Business One?"), n: L("A candidate product, not a universal recommendation.", "Un producto candidato, no una recomendación universal.") },
+    { id: "R11", org: "B Consulting (Panama)", t: "Facturación electrónica en Panamá 2026: PAC, CUFE y los nuevos límites", u: "https://bconsulting.com.pa/blog/facturacion-electronica-panama/", loc: L("Published 18 August 2026; free-tool vs. PAC section", "Publicado el 18 de agosto de 2026; sección facturador gratuito vs. PAC"), n: L("Secondary source; confirm each case on official DGI channels.", "Fuente secundaria; confirmar cada caso en canales oficiales de la DGI.") },
+    { id: "R12", org: "Alegra (Panama blog)", t: "Factura electrónica DGI: obligaciones Panamá 2026", u: "https://blog.alegra.com/panama/factura-electronica-dgi-voluntaria/", loc: L("Note on Resolution No. 201-6299", "Nota sobre la Resolución No. 201-6299"), n: L("Vendor publication used to corroborate R11.", "Publicación de un proveedor usada para corroborar R11.") },
+    { id: "R13", org: "PROCOMER", t: "Zona Franca: 35 años construyendo valor para Costa Rica — Datos y análisis 2020-2024", u: "https://www.procomer.com/wp-content/uploads/2025/08/Zona-Franca-35-anos-Construyendo-valor-para-Costa-Rica-Datos-y-analisis-2020-2024_Informe.pdf", loc: L("Company count and GDP contribution; preliminary data", "Cantidad de empresas y aporte al PIB; datos preliminares"), n: L("Figures are preliminary and subject to change.", "Cifras preliminares sujetas a cambios.") },
+    { id: "R14", org: "CINDE", t: "El middle market local: la capa de empresas nacionales que puede sostener la inversión extranjera en Costa Rica", u: "https://www.cinde.org/es/noticias/el-middle-market-local-la-capa-de-empresas-nacionales-que-puede-sostener-la-inversin-extranjera-en-costa-rica", loc: L("News item, 14 September 2026", "Noticia del 14 de septiembre de 2026"), n: L("Context for local-supplier opportunities; not evidence of INNOEQX eligibility.", "Contexto de oportunidades para proveedores locales; no prueba la elegibilidad de INNOEQX.") }
+  ];
+  const SIGNALS = [
+    {
+      t: L("SAP transition planning", "Planificación de la transición SAP"),
+      refs: ["R3"],
+      ideas: [1, 2, 4, 37],
+      f: L("Eligible SAP Business Suite 7 core applications have mainstream maintenance through 2027, with optional extended maintenance through 2030.", "Las aplicaciones núcleo elegibles de SAP Business Suite 7 tienen mantenimiento estándar hasta 2027 y mantenimiento extendido opcional hasta 2030."),
+      r: L("Sell a customer-specific readiness decision, not deadline panic. Confirm release, contract and support options with SAP.", "Vender una decisión de preparación específica para cada cliente, no pánico por fechas. Confirmar versión, contrato y opciones de soporte con SAP.")
+    },
+    {
+      t: L("Guatemala: FEL electronic documents", "Guatemala: documentos electrónicos FEL"),
+      refs: ["R4"],
+      ideas: [11, 13, 15],
+      f: L("Guatemala’s FEL regime covers electronic tax-document issuance, transmission, certification and retention.", "El régimen FEL de Guatemala abarca la emisión, transmisión, certificación y conservación de documentos tributarios electrónicos."),
+      r: L("Offer operational reliability — field mapping, rejection handling, reconciliation and provider integration — with local tax expertise in scope.", "Ofrecer confiabilidad operativa — mapeo de campos, manejo de rechazos, conciliación e integración con el proveedor — con experiencia tributaria local en el alcance.")
+    },
+    {
+      t: L("Costa Rica: evolving specifications", "Costa Rica: especificaciones en evolución"),
+      refs: ["R5"],
+      ideas: [14, 11],
+      f: L("Hacienda publishes version 4.4 electronic-document structures together with a change history.", "Hacienda publica las estructuras de comprobantes electrónicos versión 4.4 junto con un historial de cambios."),
+      r: L("Turn specification change into a recurring regression-testing and monitoring service.", "Convertir los cambios de especificación en un servicio recurrente de pruebas de regresión y monitoreo.")
+    },
+    {
+      t: L("El Salvador: electronic invoicing", "El Salvador: facturación electrónica"),
+      refs: ["R6"],
+      ideas: [11, 13],
+      f: L("Hacienda maintains an electronic-invoicing resource with document consultation and guidance links.", "Hacienda mantiene un recurso de facturación electrónica con consulta de documentos y enlaces de orientación."),
+      r: L("Use discovery to establish each taxpayer’s actual requirements and implementation state.", "Usar el descubrimiento para establecer los requisitos reales y el estado de implementación de cada contribuyente.")
+    },
+    {
+      t: L("Panama: 2026 limits on the free invoicing tool", "Panamá: límites de 2026 al facturador gratuito"),
+      refs: ["R11", "R12"],
+      ideas: [12, 8, 13],
+      f: L("Resolution No. 201-6299 (29 July 2025), in force since 1 January 2026, limits the DGI free invoicing tool to taxpayers with up to B/.36,000 in annual gross income and up to 100 documents per month; above either limit, a PAC is required. The free tool does not connect to POS or ERP systems.", "La Resolución No. 201-6299 (29 de julio de 2025), vigente desde el 1 de enero de 2026, limita el facturador gratuito de la DGI a contribuyentes con hasta B/.36.000 de ingresos brutos anuales y hasta 100 documentos al mes; sobre cualquiera de esos límites se requiere un PAC. El facturador gratuito no se conecta con sistemas POS o ERP."),
+      r: L("Package PAC selection support plus ERP/POS integration for growing businesses, delivered with a PAC partner. Confirm each taxpayer’s obligation with tax advisers.", "Empaquetar apoyo en la selección de PAC más integración ERP/POS para empresas en crecimiento, junto con un PAC aliado. Confirmar la obligación de cada contribuyente con asesores tributarios.")
+    },
+    {
+      t: L("Costa Rica: free-zone reinvestment", "Costa Rica: reinversión en zonas francas"),
+      refs: ["R13", "R14"],
+      ideas: [33, 40, 37],
+      f: L("Free-zone companies grew from 56 in 1990 to 626 in 2024, and the regime’s contribution reached US$13,893 million, or 15% of GDP, in 2024 (preliminary). CINDE supported 19 new projects and 48 expansions in 2025 and describes reinvestment as the main route of foreign-investment growth.", "Las empresas de zona franca pasaron de 56 en 1990 a 626 en 2024, y el aporte del régimen llegó a US$13.893 millones, el 15% del PIB, en 2024 (preliminar). CINDE acompañó 19 nuevos proyectos y 48 expansiones en 2025 y describe la reinversión como la principal vía de crecimiento de la inversión extranjera."),
+      r: L("Build a free-zone partner program: local SAP support, analytics and automation for multinational operations. Treat supplier-network access as an opportunity to earn.", "Crear un programa de socio para zonas francas: soporte SAP local, analítica y automatización para operaciones multinacionales. Tratar el acceso a redes de proveedores como una oportunidad por ganar.")
+    },
+    {
+      t: L("Regional trade interoperability", "Interoperabilidad del comercio regional"),
+      refs: ["R7"],
+      ideas: [10, 34],
+      f: L("PDCC connects trade-related processes across Guatemala, El Salvador, Honduras, Nicaragua, Costa Rica and Panama.", "La PDCC conecta procesos de comercio entre Guatemala, El Salvador, Honduras, Nicaragua, Costa Rica y Panamá."),
+      r: L("Investigate logistics-document and partner-interface problems; treat access to external platforms as a dependency, not a feature.", "Investigar problemas de documentos logísticos e interfaces con socios; tratar el acceso a plataformas externas como una dependencia, no como una funcionalidad.")
+    },
+    {
+      t: L("Secure digital operations", "Operaciones digitales seguras"),
+      refs: ["R8"],
+      ideas: [19, 26, 29, 30],
+      f: L("An IDB initiative targets tax-administration interoperability, data governance, analytics and cyber resilience.", "Una iniciativa del BID apunta a la interoperabilidad de las administraciones tributarias, el gobierno de datos, la analítica y la ciberresiliencia."),
+      r: L("Pair integration work with data ownership, access controls and recovery planning. Public modernization is context, not proof of private demand.", "Combinar la integración con responsables de datos, controles de acceso y planes de recuperación. La modernización pública es contexto, no prueba de demanda privada.")
+    }
+  ];
+  const OFFERS = [
+    {
+      k: L("Flagship 1", "Oferta 1"),
+      n: L("SAP Decision-to-Run", "SAP: de la decisión a la operación"),
+      b: L("CIO + CFO", "CIO + CFO"),
+      refs: ["R3"],
+      p: L("From a clear S/4HANA decision to a governed program and ongoing application care.", "De una decisión clara sobre S/4HANA a un programa gobernado y soporte continuo de aplicaciones."),
+      land: [1],
+      expand: [4, 5, 36],
+      run: [37]
+    },
+    {
+      k: L("Flagship 2", "Oferta 2"),
+      n: L("Regional E-Invoicing Hub", "Hub regional de facturación electrónica"),
+      b: L("CFO + tax manager", "CFO + gerente de impuestos"),
+      refs: ["R4", "R5", "R6", "R11"],
+      p: L("One reliable document flow per country today; one monitored regional layer tomorrow.", "Hoy, un flujo documental confiable por país; mañana, una capa regional monitoreada."),
+      land: [11],
+      expand: [12, 13, 15],
+      run: [14]
+    },
+    {
+      k: L("Flagship 3", "Oferta 3"),
+      n: L("CFO Command Center", "Centro de mando del CFO"),
+      b: L("CFO / controller", "CFO / contralor"),
+      p: L("Start with one trusted number and grow into a governed finance-performance system.", "Empezar con una cifra confiable y crecer hacia un sistema gobernado de desempeño financiero."),
+      land: [16],
+      expand: [17, 18, 19, 20],
+      run: [L("Reporting care retainer and KPI improvement", "Retainer de reportería y mejora continua de KPIs")]
+    },
+    {
+      k: L("Flagship 4", "Oferta 4"),
+      n: L("AI-Ready Enterprise", "Empresa lista para la IA"),
+      b: L("CIO + legal / risk", "CIO + legal / riesgo"),
+      p: L("Governance first, then bounded pilots that remove repetitive work with human oversight.", "Primero el gobierno, luego pilotos acotados que eliminan trabajo repetitivo con supervisión humana."),
+      land: [21],
+      expand: [22, 23, 24, 25],
+      run: [L("Ongoing AI evaluation and operations", "Evaluación y operación continua de IA")]
+    },
+    {
+      k: L("Flagship 5", "Oferta 5"),
+      n: L("Secure SAP & Cloud", "SAP y nube seguros"),
+      b: L("CEO + IT lead", "CEO + líder de TI"),
+      refs: ["R8"],
+      p: L("A prioritized security baseline that extends into SAP access, cloud cost and tested recovery.", "Un diagnóstico de seguridad priorizado que se extiende a accesos SAP, costos de nube y recuperación probada."),
+      land: [26],
+      expand: [27, 28, 29, 30],
+      run: [L("Quarterly control and recovery reviews", "Revisiones trimestrales de controles y recuperación")]
+    },
+    {
+      k: L("Flagship 6", "Oferta 6"),
+      n: L("Free-Zone & Nearshore Partner", "Socio para zonas francas y nearshore"),
+      b: L("Multinational site and program leaders", "Líderes de sitio y de programas multinacionales"),
+      refs: ["R13", "R14"],
+      p: L("Local SAP, data and automation capacity for multinational operations and US-facing programs.", "Capacidad local en SAP, datos y automatización para operaciones multinacionales y programas orientados a EE. UU."),
+      land: [L("SAP-support and process diagnostic for one free-zone operation", "Diagnóstico de soporte SAP y procesos para una operación en zona franca")],
+      expand: [39, 40],
+      run: [33, 37]
+    }
+  ];
+  const INDUSTRIES = [
+    { n: L("Retail & distribution", "Retail y distribución"), v: [3, 3, 3, 3, 2, 2, 3, 2] },
+    { n: L("Manufacturing & agro-processing", "Manufactura y agroindustria"), v: [3, 2, 2, 3, 2, 2, 3, 2] },
+    { n: L("Logistics & trade", "Logística y comercio exterior"), v: [2, 3, 2, 2, 2, 2, 3, 1] },
+    { n: L("Financial services & cooperatives", "Servicios financieros y cooperativas"), v: [1, 2, 2, 3, 3, 3, 2, 2] },
+    { n: L("Services & free-zone operations", "Servicios y operaciones en zona franca"), v: [2, 2, 1, 2, 3, 2, 3, 3] },
+    { n: L("Regional multi-country groups", "Grupos regionales multi-país"), v: [3, 3, 3, 3, 2, 2, 1, 3] },
+    { n: L("Suppliers to the public sector", "Proveedores del sector público"), v: [1, 2, 3, 1, 1, 2, 1, 1] }
+  ];
+  const PLAYBOOK = [
+    {
+      c: "gt",
+      role: 1,
+      rl: L("Candidate launch market", "Mercado candidato de lanzamiento"),
+      refs: ["R4"],
+      ideas: [11, 16, 13],
+      e: L("E-invoicing health check + CFO visibility sprint for distribution, retail and multi-entity groups.", "Chequeo de facturación electrónica + sprint CFO para distribución, retail y grupos multi-entidad."),
+      g: L("Interview finance leaders; verify certification-provider interfaces, taxpayer scope and referral access.", "Entrevistar a líderes financieros; verificar interfaces con certificadores, alcance del contribuyente y acceso por referidos.")
+    },
+    {
+      c: "cr",
+      role: 1,
+      rl: L("Candidate launch market", "Mercado candidato de lanzamiento"),
+      refs: ["R5", "R13", "R14"],
+      ideas: [1, 14, 33, 40],
+      e: L("SAP roadmap sprint + specification regression testing; then the free-zone partner program.", "Sprint de hoja de ruta SAP + pruebas de regresión de especificaciones; luego el programa de socio para zonas francas."),
+      g: L("Confirm SAP estates, budget authority, local tax interpretation and specialist capacity; confirm supplier-network eligibility.", "Confirmar entornos SAP, autoridad presupuestaria, interpretación tributaria local y capacidad especializada; confirmar elegibilidad en redes de proveedores.")
+    },
+    {
+      c: "pa",
+      role: 2,
+      rl: L("Partner-led test", "Prueba con socios"),
+      refs: ["R11", "R12", "R7"],
+      ideas: [12, 10, 34],
+      e: L("PAC migration + ERP/POS integration for growing businesses; B2B and logistics visibility for regional groups.", "Migración a PAC + integración ERP/POS para empresas en crecimiento; visibilidad B2B y logística para grupos regionales."),
+      g: L("Select a PAC partner; confirm obligations with tax advisers; test carrier and partner interfaces.", "Seleccionar un PAC aliado; confirmar obligaciones con asesores tributarios; probar interfaces con transportistas y socios.")
+    },
+    {
+      c: "sv",
+      role: 2,
+      rl: L("Partner-led expansion", "Expansión con socios"),
+      refs: ["R6"],
+      ideas: [11, 22],
+      e: L("Electronic-document integration + process automation for retail, services and regional subsidiaries.", "Integración de documentos electrónicos + automatización para retail, servicios y subsidiarias regionales."),
+      g: L("Verify each taxpayer’s requirements, current technical specifications and finance ownership.", "Verificar los requisitos de cada contribuyente, las especificaciones técnicas vigentes y el responsable financiero.")
+    },
+    {
+      c: "hn",
+      role: 3,
+      rl: L("Selective opportunities", "Oportunidades selectivas"),
+      refs: [],
+      ideas: [18, 19],
+      e: L("Inventory visibility + master-data foundation for distribution and production businesses.", "Visibilidad de inventario + base de datos maestros para distribución y producción."),
+      g: L("Confirm data availability, local fiscal requirements, on-site support needs and a qualified sponsor.", "Confirmar disponibilidad de datos, requisitos fiscales locales, soporte presencial y un patrocinador calificado.")
+    },
+    {
+      c: "ni",
+      role: 3,
+      rl: L("Selective opportunities", "Oportunidades selectivas"),
+      refs: [],
+      ideas: [32, 16],
+      e: L("Traceability discovery + finance reporting for distribution and agro-processing.", "Descubrimiento de trazabilidad + reportería financiera para distribución y agroindustria."),
+      g: L("Check counterparty, payment, legal and delivery risks with qualified advisers.", "Revisar riesgos de contraparte, pagos, legales y de entrega con asesores calificados.")
+    },
+    {
+      c: "bz",
+      role: 3,
+      rl: L("Referral-led", "Por referidos"),
+      refs: [],
+      ideas: [3, 7],
+      e: L("English-led ERP fit assessment + workflow digitization for distribution and service businesses.", "Evaluación de ERP en inglés + digitalización de flujos para distribución y servicios."),
+      g: L("Test an English-led sales motion, local tax and currency needs, and product availability.", "Probar una venta en inglés, necesidades fiscales y de moneda locales, y disponibilidad de productos.")
+    }
+  ];
+  const ROADMAP = [
+    {
+      k: L("Days 0–90", "Días 0–90"),
+      t: L("Focus and prove", "Enfocar y demostrar"),
+      items: [L("Approve SAP-anchored positioning and publish the bilingual website.", "Aprobar el posicionamiento anclado en SAP y publicar el sitio bilingüe."), L("Package the three entry offers: SAP roadmap, e-invoicing check, CFO sprint.", "Empaquetar las tres ofertas de entrada: hoja de ruta SAP, chequeo de facturación, sprint CFO."), L("Run 10 buyer interviews across Guatemala and Costa Rica.", "Realizar 10 entrevistas con compradores en Guatemala y Costa Rica."), L("Verify skills, references, partner permissions and capacity.", "Verificar habilidades, referencias, permisos de socios y capacidad.")],
+      x: L("Exit gate: validated buyer problems and a first signed diagnostic.", "Criterio de salida: problemas validados y un primer diagnóstico firmado.")
+    },
+    {
+      k: L("Months 4–6", "Meses 4–6"),
+      t: L("Expand and attach", "Expandir y anclar"),
+      items: [L("Convert diagnostics into milestone projects with acceptance criteria.", "Convertir diagnósticos en proyectos por hitos con criterios de aceptación."), L("Launch the AMS retainer and the adoption academy.", "Lanzar el retainer AMS y la academia de adopción."), L("Sign local tax-adviser and implementation partners.", "Firmar con asesores tributarios locales y socios de implementación."), L("Publish a case study only with evidence and client permission.", "Publicar un caso de éxito solo con evidencia y permiso del cliente.")],
+      x: L("Exit gate: customer-accepted deliverables and a first recurring contract.", "Criterio de salida: entregables aceptados y un primer contrato recurrente.")
+    },
+    {
+      k: L("Months 7–9", "Meses 7–9"),
+      t: L("Scale the hubs", "Escalar los hubs"),
+      items: [L("Design the regional e-document hub with provider partners.", "Diseñar el hub regional de documentos electrónicos con proveedores aliados."), L("Move from AI governance to AP and knowledge-assistant pilots.", "Pasar del gobierno de IA a pilotos de cuentas por pagar y asistente de conocimiento."), L("Run the partner-led Panama PAC-integration test.", "Ejecutar la prueba con socios de integración PAC en Panamá."), L("Start the specification-monitoring service.", "Iniciar el servicio de monitoreo de especificaciones.")],
+      x: L("Exit gate: repeatable delivery assets and measured pilot results.", "Criterio de salida: activos de entrega repetibles y resultados de pilotos medidos.")
+    },
+    {
+      k: L("Months 10–12", "Meses 10–12"),
+      t: L("Build the recurring engine", "Construir el motor recurrente"),
+      items: [L("Pilot the free-zone partner program and a nearshore talent pod in Costa Rica.", "Pilotear el programa de socio para zonas francas y un equipo nearshore en Costa Rica."), L("Scale managed services with named coverage and SLAs.", "Escalar servicios gestionados con cobertura nominal y SLA."), L("Review margin, attachment and capacity metrics.", "Revisar métricas de margen, anclaje y capacidad."), L("Choose the next country or service using pipeline evidence.", "Elegir el siguiente país o servicio con evidencia de pipeline.")],
+      x: L("Exit gate: an informed expand / pause decision for year two.", "Criterio de salida: una decisión informada de expandir o pausar para el segundo año.")
+    }
+  ];
+  const RISKS = [
+    [L("Implying SAP partnership or certification without evidence", "Insinuar alianza o certificación SAP sin evidencia"), L("Use a trademark notice; claim only verified credentials; distinguish consulting expertise from authorized partnership.", "Usar aviso de marcas; declarar solo credenciales verificadas; distinguir experiencia en consultoría de alianza autorizada.")],
+    [L("Tax-compliance liability", "Responsabilidad por cumplimiento fiscal"), L("Scope work as operational reliability; involve local tax advisers and authorized providers; no compliance guarantees.", "Definir el trabajo como confiabilidad operativa; involucrar asesores tributarios y proveedores autorizados; sin garantías de cumplimiento.")],
+    [L("Delivery capacity stretched across too many offers", "Capacidad de entrega dispersa en demasiadas ofertas"), L("Launch three offers first; use an own / partner / defer model; widen only with delivery evidence.", "Lanzar primero tres ofertas; usar un modelo propio / socio / diferir; ampliar solo con evidencia de entrega.")],
+    [L("AI data exposure", "Exposición de datos por IA"), L("Governance first, permission-aware design, human approval and evaluation before scaling.", "Gobierno primero, diseño con permisos, aprobación humana y evaluación antes de escalar.")],
+    [L("Authority specifications change", "Cambios en especificaciones de la autoridad"), L("Monitor official publications; verify current editions; keep regression test packs.", "Monitorear publicaciones oficiales; verificar ediciones vigentes; mantener pruebas de regresión.")],
+    [L("Pricing without delivery economics", "Precios sin economía de entrega"), L("Price from effort by role, cost, third-party fees, risk and target margin; review tax and currency locally.", "Fijar precios según esfuerzo por rol, costo, terceros, riesgo y margen objetivo; revisar impuestos y moneda localmente.")],
+    [L("Lead capture without privacy controls", "Captura de prospectos sin controles de privacidad"), L("Add a real backend, spam controls, retention rules and a reviewed privacy notice before collecting data.", "Agregar un backend real, controles antispam, reglas de retención y un aviso de privacidad revisado antes de recolectar datos.")],
+    [L("Implying presence in every country", "Insinuar presencia en todos los países"), L("Describe the regional scope honestly; confirm delivery coverage and partners before promoting a country.", "Describir el alcance regional con honestidad; confirmar cobertura y socios antes de promover un país.")]
+  ];
+  const U = {
+    title: L("INNOEQX | Service Opportunity Report · Central America", "INNOEQX | Informe de oportunidades de servicio · Centroamérica"),
+    label: L("Executive report · Central America", "Informe ejecutivo · Centroamérica"),
+    print: L("Print report", "Imprimir informe"),
+    skip: L("Skip to report", "Saltar al informe"),
+    langLabel: L("Report language", "Idioma del informe"),
+    navLabel: L("Report sections", "Secciones del informe"),
+    meta: L("24 September 2026 · Prepared for INNOEQX leadership · Independent proposal", "24 de septiembre de 2026 · Preparado para la dirección de INNOEQX · Propuesta independiente"),
+    h1a: L("From a broad consultancy to an ", "De una consultoría amplia a un "),
+    h1b: L("SAP-anchored growth engine", "motor de crecimiento anclado en SAP"),
+    lede: (n, o) => L(`${n} service ideas, ${o} flagship offers, a country playbook and a 12-month plan to grow INNOEQX across Central America.`, `${n} ideas de servicio, ${o} ofertas insignia, un plan por país y una hoja de ruta de 12 meses para crecer INNOEQX en Centroamérica.`),
+    decK: L("The executive decision", "La decisión ejecutiva"),
+    decH: L("Lead with three offers. Build a recurring layer behind them.", "Liderar con tres ofertas. Construir detrás una capa recurrente."),
+    decP: L("Open with SAP readiness, e-invoicing integration health and CFO visibility; expand into projects; retain clients through managed services, monitoring and training.", "Abrir con preparación SAP, salud de la facturación electrónica y visibilidad CFO; expandir a proyectos; retener clientes con servicios gestionados, monitoreo y capacitación."),
+    kpi: [L("service ideas", "ideas de servicio"), L("service families", "familias de servicio"), L("launch-first ideas", "ideas para lanzar primero"), L("flagship offers", "ofertas insignia"), L("countries in scope", "países en alcance"), L("recurring or training ideas", "ideas recurrentes o de capacitación")],
+    scopeS: L("How to read this report.", "Cómo leer este informe."),
+    scope: L(" Public-source observations are cited [R#]. Service designs, scores, country priorities, timelines and targets are recommendations to validate — not existing INNOEQX capabilities, market forecasts or commitments. Sources R1–R10 carry over from the Central America Growth Playbook (24 September 2026); R11–R14 were added for this report. This report is separate from the customer-facing website.", " Las observaciones de fuentes públicas se citan [R#]. Los diseños de servicio, puntajes, prioridades por país, plazos y metas son recomendaciones por validar — no capacidades existentes de INNOEQX, pronósticos de mercado ni compromisos. Las fuentes R1–R10 provienen del Central America Growth Playbook (24 de septiembre de 2026); R11–R14 se agregaron para este informe. Este informe es independiente del sitio web para clientes."),
+    sec: [
+      L("Summary", "Resumen"),
+      L("Market signals", "Señales de mercado"),
+      L("Portfolio map", "Mapa del portafolio"),
+      L("Service catalog", "Catálogo de servicios"),
+      L("Flagship offers", "Ofertas insignia"),
+      L("Industry fit", "Ajuste por industria"),
+      L("Country playbook", "Plan por país"),
+      L("Revenue model", "Modelo de ingresos"),
+      L("12-month roadmap", "Hoja de ruta 12 meses"),
+      L("Risks & guardrails", "Riesgos y salvaguardas"),
+      L("Sources", "Fuentes")
+    ]
+  };
+  const SEC_IDS = ["summary", "signals", "map", "catalog", "offers", "industries", "countries", "revenue", "roadmap", "risks", "sources"];
+  function getInitialLang() {
+    try {
+      const p = new URLSearchParams(window.location.search).get("lang");
+      if (p === "en" || p === "es")
+        return p;
+    } catch (e) {}
+    try {
+      const s = window.localStorage.getItem(LANG_KEY);
+      if (s === "en" || s === "es")
+        return s;
+    } catch (e) {}
+    return "en";
+  }
+  const Refs = ({ ids }) => ids && ids.length ? React.createElement("span", null, " ", ids.map((r, i) => React.createElement("a", {
+    key: r,
+    className: "ref",
+    href: "#" + r
+  }, "[" + r + "]", i < ids.length - 1 ? " " : ""))) : null;
+  const goToIdea = (id) => {
+    const el = document.getElementById("idea-" + id);
+    if (!el)
+      return;
+    window.dispatchEvent(new CustomEvent("innoeqx-open-idea", { detail: id }));
+    setTimeout(() => {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      el.classList.remove("flash");
+      el.offsetWidth;
+      el.classList.add("flash");
+    }, 60);
+  };
+  const IdChips = ({ ids }) => {
+    const t = useT();
+    return React.createElement("div", {
+      className: "idchips"
+    }, ids.map((id) => React.createElement("button", {
+      key: id,
+      type: "button",
+      className: "idchip",
+      title: t(IDEA[id].t),
+      onClick: () => goToIdea(id)
+    }, "#" + pad(id) + " " + t(IDEA[id].t))));
+  };
+  const SHead = ({ i, title, sub }) => {
+    const t = useT();
+    return React.createElement("div", {
+      className: "shead"
+    }, React.createElement("span", {
+      className: "num"
+    }, pad(i + 1)), React.createElement("div", null, React.createElement("h2", null, t(title)), sub && React.createElement("p", null, t(sub))));
+  };
+  const LangToggle = ({ lang, setLang }) => {
+    const t = useT();
+    return React.createElement("div", {
+      className: "lang",
+      "data-lang": lang,
+      role: "group",
+      "aria-label": t(U.langLabel)
+    }, React.createElement("span", {
+      className: "thumb",
+      "aria-hidden": "true"
+    }), React.createElement("button", {
+      type: "button",
+      "aria-pressed": lang === "en",
+      onClick: () => setLang("en"),
+      lang: "en",
+      title: "English"
+    }, "EN"), React.createElement("button", {
+      type: "button",
+      "aria-pressed": lang === "es",
+      onClick: () => setLang("es"),
+      lang: "es",
+      title: "Español"
+    }, "ES"));
+  };
+  const Cover = () => {
+    const t = useT();
+    const launch = IDEAS.filter((x) => x.pri === "launch").length;
+    const recurring = IDEAS.filter((x) => x.m === "recur" || x.m === "train").length;
+    const kv = [IDEAS.length, FAMILIES.length, launch, OFFERS.length, COUNTRIES.length, recurring];
+    return React.createElement("header", {
+      className: "cover"
+    }, React.createElement("div", {
+      className: "wrap"
+    }, React.createElement("div", {
+      className: "meta"
+    }, t(U.meta)), React.createElement("div", {
+      className: "cover-grid"
+    }, React.createElement("div", null, React.createElement("h1", null, t(U.h1a), React.createElement("em", null, t(U.h1b))), React.createElement("p", {
+      className: "lede"
+    }, t(U.lede(IDEAS.length, OFFERS.length)))), React.createElement("aside", {
+      className: "decision"
+    }, React.createElement("div", {
+      className: "k"
+    }, t(U.decK)), React.createElement("h2", null, t(U.decH)), React.createElement("p", null, t(U.decP)))), React.createElement("div", {
+      className: "kpis"
+    }, kv.map((v, i) => React.createElement("div", {
+      className: "kpi",
+      key: i
+    }, React.createElement("b", null, v), React.createElement("span", null, t(U.kpi[i]))))), React.createElement("div", {
+      className: "scope"
+    }, React.createElement("strong", null, t(U.scopeS)), t(U.scope))));
+  };
+  const Summary = () => {
+    const t = useT();
+    const msgs = [
+      [L("Anchor on SAP, sell outcomes", "Anclar en SAP, vender resultados"), L("Position INNOEQX as the firm that connects SAP, data and technology to business results. Cloud, AI and cybersecurity become enablers of a named outcome — not a list of disconnected capabilities.", "Posicionar a INNOEQX como la firma que conecta SAP, datos y tecnología con resultados de negocio. La nube, la IA y la ciberseguridad se vuelven habilitadores de un resultado concreto, no una lista de capacidades desconectadas.")],
+      [L("Land, expand, run", "Entrar, expandir, operar"), L("Open with bounded diagnostics, convert them into milestone projects, then retain clients through managed services, monitoring and training — a recurring layer that is not visible on the current website.", "Entrar con diagnósticos acotados, convertirlos en proyectos por hitos y retener clientes con servicios gestionados, monitoreo y capacitación — una capa recurrente que no es visible en el sitio actual.")],
+      [L("Sequence the region", "Secuenciar la región"), L("Test Guatemala and Costa Rica first, run a partner-led Panama test around the 2026 e-invoicing change, and enter the other markets through partners and referrals.", "Probar primero Guatemala y Costa Rica, ejecutar una prueba con socios en Panamá alrededor del cambio de facturación de 2026 y entrar a los demás mercados mediante socios y referidos.")]
+    ];
+    const decisions = [
+      L("Approve the SAP-anchored positioning and the bilingual (Spanish-first) website.", "Aprobar el posicionamiento anclado en SAP y el sitio bilingüe (español primero)."),
+      L("Name an accountable owner for each of the three entry offers.", "Nombrar un responsable para cada una de las tres ofertas de entrada."),
+      L("Confirm Guatemala + Costa Rica as the launch pair and a partner-led Panama test.", "Confirmar Guatemala + Costa Rica como pareja de lanzamiento y una prueba con socios en Panamá."),
+      L("Adopt the own / partner / defer capability model before publishing new claims.", "Adoptar el modelo de capacidades propio / socio / diferir antes de publicar nuevas afirmaciones."),
+      L("Fund a 90-day validation sprint with clear exit gates.", "Financiar un sprint de validación de 90 días con criterios de salida claros.")
+    ];
+    return React.createElement("section", {
+      className: "section",
+      id: "summary"
+    }, React.createElement("div", {
+      className: "wrap"
+    }, React.createElement(SHead, {
+      i: 0,
+      title: L("The opportunity is not more services. It is a clearer path to buy them.", "La oportunidad no es tener más servicios, sino un camino más claro para comprarlos.")
+    }), React.createElement("p", {
+      className: "situation"
+    }, t(L("INNOEQX’s homepage presents SAP inside a broad advisory list — PMI project management, strategic direction, cybersecurity, digital transformation, cloud and hyperscalers, SAP, analytics, IT alignment, training, and process automation and AI", "La página de inicio de INNOEQX presenta SAP dentro de una lista amplia de asesoría — gestión de proyectos PMI, dirección estratégica, ciberseguridad, transformación digital, nube e hiperescaladores, SAP, analítica, alineación de TI, capacitación y automatización de procesos e IA")), React.createElement(Refs, {
+      ids: ["R1"]
+    }), t(L(". The About page spans strategy through education", ". La página Nosotros abarca desde estrategia hasta educación")), React.createElement(Refs, {
+      ids: ["R2"]
+    }), t(L(". That breadth is an asset once it is organized around SAP and specific business outcomes.", ". Esa amplitud es una ventaja cuando se organiza alrededor de SAP y de resultados de negocio concretos."))), React.createElement("div", {
+      className: "grid3"
+    }, msgs.map((m, i) => React.createElement("article", {
+      key: i,
+      className: "panel msg"
+    }, React.createElement("span", {
+      className: "n"
+    }, pad(i + 1)), React.createElement("h3", null, t(m[0])), React.createElement("p", null, t(m[1]))))), React.createElement("div", {
+      className: "decide"
+    }, React.createElement("div", {
+      className: "k"
+    }, t(L("Decisions requested from leadership", "Decisiones solicitadas a la dirección"))), React.createElement("h3", null, t(L("Choose the first buyer problems. Prove them. Then widen the portfolio.", "Elegir los primeros problemas del comprador. Demostrarlos. Luego ampliar el portafolio."))), React.createElement("ol", null, decisions.map((d, i) => React.createElement("li", {
+      key: i
+    }, t(d)))))));
+  };
+  const Signals = () => {
+    const t = useT();
+    return React.createElement("section", {
+      className: "section",
+      id: "signals"
+    }, React.createElement("div", {
+      className: "wrap"
+    }, React.createElement(SHead, {
+      i: 1,
+      title: L("Signals that create concrete buying moments", "Señales que crean momentos de compra concretos"),
+      sub: L("Public evidence points to discovery conversations — it does not size a market or prove an existing pipeline. Select an idea to jump to it in the catalog.", "La evidencia pública apunta a conversaciones de descubrimiento; no dimensiona un mercado ni prueba un pipeline existente. Selecciona una idea para ir a ella en el catálogo.")
+    }), React.createElement("div", {
+      className: "signals"
+    }, SIGNALS.map((s, i) => React.createElement("article", {
+      key: i,
+      className: "signal"
+    }, React.createElement("div", null, React.createElement("span", {
+      className: "k"
+    }, t(L("Signal", "Señal")), " ", pad(i + 1)), React.createElement("h3", null, t(s.t)), React.createElement("p", null, t(s.f), React.createElement(Refs, {
+      ids: s.refs
+    }))), React.createElement("div", null, React.createElement("span", {
+      className: "k"
+    }, t(L("Recommended response", "Respuesta recomendada"))), React.createElement("p", null, t(s.r))), React.createElement("div", null, React.createElement("span", {
+      className: "k"
+    }, t(L("Related ideas", "Ideas relacionadas"))), React.createElement(IdChips, {
+      ids: s.ideas
+    }))))), React.createElement("p", {
+      className: "note"
+    }, t(L("Product-fit guardrail: SAP positions BTP around integration, extensions, automation and AI-supported processes", "Salvaguarda de ajuste de producto: SAP posiciona BTP alrededor de integración, extensiones, automatización y procesos apoyados en IA")), React.createElement(Refs, {
+      ids: ["R9"]
+    }), t(L("; SAP Business One addresses small-business management", "; SAP Business One atiende la gestión de pequeñas empresas")), React.createElement(Refs, {
+      ids: ["R10"]
+    }), t(L(". Recommend technology only after checking localization, licensing, existing architecture, delivery skills and total cost.", ". Recomendar tecnología solo después de revisar localización, licencias, arquitectura existente, habilidades de entrega y costo total.")))));
+  };
+  const Bars = ({ rows }) => {
+    const max = Math.max.apply(null, rows.map((r) => r.v));
+    return React.createElement("div", {
+      className: "bars"
+    }, rows.map((r, i) => React.createElement("div", {
+      key: i,
+      className: "barrow"
+    }, React.createElement("span", null, r.l), React.createElement("div", {
+      className: "bartrack"
+    }, React.createElement("div", {
+      className: "barfill",
+      style: { inlineSize: r.v / max * 100 + "%", background: r.c || "var(--accent)" }
+    })), React.createElement("b", null, r.v))));
+  };
+  const PortfolioMap = () => {
+    const t = useT();
+    const [sel, setSel] = useState(1);
+    const [fam, setFam] = useState("all");
+    const W = 660, H = 470, x0 = 64, x1 = 636, y0 = 28, y1 = 410;
+    const sx = (e) => x0 + (e - 0.5) / 5 * (x1 - x0);
+    const sy = (v) => y1 - (v - 0.5) / 5 * (y1 - y0);
+    const groups = {};
+    IDEAS.forEach((x) => {
+      const k = x.e + "-" + x.v;
+      (groups[k] = groups[k] || []).push(x);
+    });
+    const pos = {};
+    Object.keys(groups).forEach((k) => {
+      const g = groups[k];
+      const n = g.length;
+      const rad = n === 1 ? 0 : Math.min(30, 11 + n * 3);
+      g.forEach((x, j) => {
+        const a = j / n * Math.PI * 2 - Math.PI / 2;
+        pos[x.id] = [sx(x.e) + rad * Math.cos(a), sy(x.v) + rad * Math.sin(a)];
+      });
+    });
+    const s = IDEA[sel];
+    const byFam = FAMILIES.map((f) => ({ l: t(f.n), v: IDEAS.filter((x) => x.f === f.id).length, c: f.c }));
+    const byModel = Object.keys(MODEL).map((m) => ({ l: t(MODEL[m]), v: IDEAS.filter((x) => x.m === m).length }));
+    const byPri = Object.keys(PRI).map((p) => ({ l: t(PRI[p]), v: IDEAS.filter((x) => x.pri === p).length }));
+    const Dots = ({ n }) => React.createElement("span", {
+      className: "dots"
+    }, [1, 2, 3, 4, 5].map((i) => React.createElement("i", {
+      key: i,
+      className: i <= n ? "on" : ""
+    })));
+    const onKey = (e, id) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        setSel(id);
+      }
+    };
+    return React.createElement("section", {
+      className: "section",
+      id: "map"
+    }, React.createElement("div", {
+      className: "wrap"
+    }, React.createElement(SHead, {
+      i: 2,
+      title: L("Where to play first: value versus speed to revenue", "Dónde jugar primero: valor frente a velocidad de ingreso"),
+      sub: L("Each dot is a numbered service idea. Scores from 1 to 5 are analyst judgments to structure a prioritization discussion — not measured market data.", "Cada punto es una idea de servicio numerada. Los puntajes de 1 a 5 son juicios del analista para ordenar una discusión de priorización — no datos de mercado medidos.")
+    }), React.createElement("div", {
+      className: "mapgrid"
+    }, React.createElement("div", null, React.createElement("div", {
+      className: "chart"
+    }, React.createElement("svg", {
+      viewBox: "0 0 " + W + " " + H,
+      role: "img",
+      "aria-label": t(L("Portfolio map of service ideas", "Mapa del portafolio de ideas de servicio"))
+    }, React.createElement("rect", {
+      x: sx(3),
+      y: y0,
+      width: x1 - sx(3),
+      height: sy(3) - y0,
+      fill: "rgba(16,184,166,.07)"
+    }), React.createElement("line", {
+      className: "ax",
+      x1: x0,
+      y1,
+      x2: x1,
+      y2: y1
+    }), React.createElement("line", {
+      className: "ax",
+      x1: x0,
+      y1: y0,
+      x2: x0,
+      y2: y1
+    }), React.createElement("line", {
+      className: "mid",
+      x1: sx(3),
+      y1: y0,
+      x2: sx(3),
+      y2: y1
+    }), React.createElement("line", {
+      className: "mid",
+      x1: x0,
+      y1: sy(3),
+      x2: x1,
+      y2: sy(3)
+    }), [1, 2, 3, 4, 5].map((n) => React.createElement("text", {
+      key: "x" + n,
+      className: "tick",
+      x: sx(n),
+      y: y1 + 16,
+      textAnchor: "middle"
+    }, n)), [1, 2, 3, 4, 5].map((n) => React.createElement("text", {
+      key: "y" + n,
+      className: "tick",
+      x: x0 - 10,
+      y: sy(n) + 4,
+      textAnchor: "end"
+    }, n)), React.createElement("text", {
+      className: "ql hot",
+      x: x1 - 8,
+      y: y0 + 16,
+      textAnchor: "end"
+    }, t(L("Lead now", "Liderar ya"))), React.createElement("text", {
+      className: "ql",
+      x: x0 + 8,
+      y: y0 + 16
+    }, t(L("Build capability", "Construir capacidad"))), React.createElement("text", {
+      className: "ql",
+      x: x1 - 8,
+      y: y1 - 10,
+      textAnchor: "end"
+    }, t(L("Quick wins", "Victorias rápidas"))), React.createElement("text", {
+      className: "ql",
+      x: x0 + 8,
+      y: y1 - 10
+    }, t(L("Opportunistic", "Oportunista"))), React.createElement("text", {
+      className: "axl",
+      x: (x0 + x1) / 2,
+      y: H - 12,
+      textAnchor: "middle"
+    }, t(L("Speed to revenue / ease of entry →", "Velocidad de ingreso / facilidad de entrada →"))), React.createElement("text", {
+      className: "axl",
+      x: 16,
+      y: (y0 + y1) / 2,
+      textAnchor: "middle",
+      transform: "rotate(-90 16 " + (y0 + y1) / 2 + ")"
+    }, t(L("Strategic value & expansion pull →", "Valor estratégico y potencial de expansión →"))), IDEAS.map((x) => {
+      const p = pos[x.id];
+      const cls = "pt" + (fam !== "all" && x.f !== fam ? " dim" : "") + (sel === x.id ? " sel" : "");
+      return React.createElement("g", {
+        key: x.id,
+        className: cls,
+        tabIndex: "0",
+        role: "button",
+        "aria-label": "#" + pad(x.id) + " " + t(x.t),
+        onClick: () => setSel(x.id),
+        onKeyDown: (e) => onKey(e, x.id)
+      }, React.createElement("title", null, "#" + pad(x.id) + " " + t(x.t)), React.createElement("circle", {
+        cx: p[0],
+        cy: p[1],
+        r: sel === x.id ? 13 : 11,
+        fill: FAM[x.f].c
+      }), React.createElement("text", {
+        x: p[0],
+        y: p[1] + 3.4,
+        textAnchor: "middle"
+      }, x.id));
+    }))), React.createElement("div", {
+      className: "legend",
+      role: "group",
+      "aria-label": t(L("Highlight a service family", "Resaltar una familia de servicios"))
+    }, React.createElement("button", {
+      type: "button",
+      className: "lg",
+      "aria-pressed": fam === "all",
+      onClick: () => setFam("all")
+    }, t(L("All families", "Todas las familias"))), FAMILIES.map((f) => React.createElement("button", {
+      key: f.id,
+      type: "button",
+      className: "lg",
+      "aria-pressed": fam === f.id,
+      onClick: () => setFam(fam === f.id ? "all" : f.id)
+    }, React.createElement("i", {
+      style: { background: f.c }
+    }), t(f.n))))), React.createElement("aside", {
+      className: "panel detail fade",
+      key: sel,
+      "aria-live": "polite"
+    }, React.createElement("span", {
+      className: "fam",
+      style: { color: FAM[s.f].c }
+    }, React.createElement("i", {
+      style: { background: FAM[s.f].c }
+    }), t(FAM[s.f].n)), React.createElement("h3", null, "#" + pad(s.id) + " · " + t(s.t)), React.createElement("p", {
+      className: "muted"
+    }, t(s.p)), React.createElement("div", {
+      className: "scores"
+    }, React.createElement("div", {
+      className: "score"
+    }, React.createElement("span", null, t(L("Speed to revenue", "Velocidad de ingreso"))), React.createElement("b", null, s.e), React.createElement(Dots, {
+      n: s.e
+    })), React.createElement("div", {
+      className: "score"
+    }, React.createElement("span", null, t(L("Strategic value", "Valor estratégico"))), React.createElement("b", null, s.v), React.createElement(Dots, {
+      n: s.v
+    }))), React.createElement("p", null, React.createElement("strong", null, t(L("Sequence: ", "Secuencia: "))), t(PRI[s.pri]), " · ", React.createElement("strong", null, t(L("Model: ", "Modelo: "))), t(MODEL[s.m])), React.createElement("button", {
+      type: "button",
+      className: "btn2",
+      onClick: () => goToIdea(s.id)
+    }, t(L("Open in catalog ↓", "Abrir en el catálogo ↓"))))), React.createElement("div", {
+      className: "mini3"
+    }, React.createElement("div", {
+      className: "panel"
+    }, React.createElement("div", {
+      className: "k"
+    }, t(L("Ideas by family", "Ideas por familia"))), React.createElement("div", {
+      style: { marginBlockStart: "14px" }
+    }, React.createElement(Bars, {
+      rows: byFam
+    }))), React.createElement("div", {
+      className: "panel"
+    }, React.createElement("div", {
+      className: "k"
+    }, t(L("Ideas by revenue model", "Ideas por modelo de ingreso"))), React.createElement("div", {
+      style: { marginBlockStart: "14px" }
+    }, React.createElement(Bars, {
+      rows: byModel
+    }))), React.createElement("div", {
+      className: "panel"
+    }, React.createElement("div", {
+      className: "k"
+    }, t(L("Ideas by delivery sequence", "Ideas por secuencia de entrega"))), React.createElement("div", {
+      style: { marginBlockStart: "14px" }
+    }, React.createElement(Bars, {
+      rows: byPri
+    }))))));
+  };
+  const Catalog = () => {
+    const t = useT();
+    const [q, setQ] = useState("");
+    const [fam, setFam] = useState("");
+    const [pri, setPri] = useState("");
+    const [model, setModel] = useState("");
+    const [ctry, setCtry] = useState("");
+    const [open, setOpen] = useState({});
+    useEffect(() => {
+      const h = (e) => {
+        const id = e.detail;
+        setQ("");
+        setFam("");
+        setPri("");
+        setModel("");
+        setCtry("");
+        setOpen((o) => Object.assign({}, o, { [id]: true }));
+      };
+      window.addEventListener("innoeqx-open-idea", h);
+      return () => window.removeEventListener("innoeqx-open-idea", h);
+    }, []);
+    const term = q.trim().toLowerCase();
+    const match = (x) => (!fam || x.f === fam) && (!pri || x.pri === pri) && (!model || x.m === model) && (!ctry || x.c.indexOf(ctry) >= 0) && (!term || [x.t, x.p, x.s, x.b, x.k, FAM[x.f].n].map(t).join(" ").toLowerCase().indexOf(term) >= 0 || ("#" + pad(x.id)).indexOf(term) >= 0);
+    const shown = IDEAS.filter(match);
+    const allOpen = shown.length > 0 && shown.every((x) => open[x.id]);
+    const toggleAll = () => {
+      const o = Object.assign({}, open);
+      shown.forEach((x) => {
+        o[x.id] = !allOpen;
+      });
+      setOpen(o);
+    };
+    const reset = () => {
+      setQ("");
+      setFam("");
+      setPri("");
+      setModel("");
+      setCtry("");
+    };
+    const ctryText = (x) => x.c.length === ALL.length ? t(L("All seven countries", "Los siete países")) : x.c.map((c) => t(CTRY[c].n)).join(", ");
+    return React.createElement("section", {
+      className: "section",
+      id: "catalog"
+    }, React.createElement("div", {
+      className: "wrap"
+    }, React.createElement(SHead, {
+      i: 3,
+      title: L(`${IDEAS.length} service ideas across ${FAMILIES.length} families`, `${IDEAS.length} ideas de servicio en ${FAMILIES.length} familias`),
+      sub: L("“Launch first” means suitable for early validation if qualified delivery capacity exists — not that every idea should launch at once. Each card lists the buyer, scope, success measure and the control gate to clear before selling.", "“Lanzar primero” significa apto para validación temprana si existe capacidad calificada — no que todas las ideas deban lanzarse a la vez. Cada tarjeta indica comprador, alcance, medida de éxito y la condición a cumplir antes de vender.")
+    }), React.createElement("div", {
+      className: "filters"
+    }, React.createElement("div", {
+      className: "field wide"
+    }, React.createElement("label", {
+      htmlFor: "q"
+    }, t(L("Search ideas or business problems", "Buscar ideas o problemas de negocio"))), React.createElement("input", {
+      id: "q",
+      type: "search",
+      value: q,
+      onChange: (e) => setQ(e.target.value),
+      placeholder: t(L("Try SAP, inventory, CFO, Panama…", "Prueba SAP, inventario, CFO, Panamá…"))
+    })), React.createElement("div", {
+      className: "field"
+    }, React.createElement("label", {
+      htmlFor: "ff"
+    }, t(L("Family", "Familia"))), React.createElement("select", {
+      id: "ff",
+      value: fam,
+      onChange: (e) => setFam(e.target.value)
+    }, React.createElement("option", {
+      value: ""
+    }, t(L("All families", "Todas"))), FAMILIES.map((f) => React.createElement("option", {
+      key: f.id,
+      value: f.id
+    }, t(f.n))))), React.createElement("div", {
+      className: "field"
+    }, React.createElement("label", {
+      htmlFor: "fp"
+    }, t(L("Sequence", "Secuencia"))), React.createElement("select", {
+      id: "fp",
+      value: pri,
+      onChange: (e) => setPri(e.target.value)
+    }, React.createElement("option", {
+      value: ""
+    }, t(L("All stages", "Todas"))), Object.keys(PRI).map((p) => React.createElement("option", {
+      key: p,
+      value: p
+    }, t(PRI[p]))))), React.createElement("div", {
+      className: "field"
+    }, React.createElement("label", {
+      htmlFor: "fm"
+    }, t(L("Revenue model", "Modelo de ingreso"))), React.createElement("select", {
+      id: "fm",
+      value: model,
+      onChange: (e) => setModel(e.target.value)
+    }, React.createElement("option", {
+      value: ""
+    }, t(L("All models", "Todos"))), Object.keys(MODEL).map((m) => React.createElement("option", {
+      key: m,
+      value: m
+    }, t(MODEL[m]))))), React.createElement("div", {
+      className: "field"
+    }, React.createElement("label", {
+      htmlFor: "fc"
+    }, t(L("Country", "País"))), React.createElement("select", {
+      id: "fc",
+      value: ctry,
+      onChange: (e) => setCtry(e.target.value)
+    }, React.createElement("option", {
+      value: ""
+    }, t(L("All countries", "Todos"))), COUNTRIES.map((c) => React.createElement("option", {
+      key: c.id,
+      value: c.id
+    }, t(c.n))))), React.createElement("button", {
+      type: "button",
+      className: "btn2",
+      onClick: toggleAll,
+      "aria-expanded": allOpen
+    }, t(allOpen ? L("Collapse all", "Contraer todo") : L("Expand all", "Expandir todo")))), React.createElement("p", {
+      className: "count",
+      "aria-live": "polite"
+    }, t(L(`Showing ${shown.length} of ${IDEAS.length} ideas`, `Mostrando ${shown.length} de ${IDEAS.length} ideas`))), React.createElement("div", {
+      className: "catalog"
+    }, IDEAS.map((x) => {
+      const isOpen = !!open[x.id];
+      const hide = !match(x);
+      return React.createElement("article", {
+        key: x.id,
+        id: "idea-" + x.id,
+        className: "card",
+        "data-open": isOpen,
+        "data-hide": hide,
+        style: { "--c": FAM[x.f].c }
+      }, React.createElement("button", {
+        type: "button",
+        className: "card-h",
+        "aria-expanded": isOpen,
+        "aria-controls": "idea-b-" + x.id,
+        onClick: () => setOpen(Object.assign({}, open, { [x.id]: !isOpen }))
+      }, React.createElement("div", {
+        className: "card-top"
+      }, React.createElement("span", {
+        className: "cid"
+      }, pad(x.id)), React.createElement("span", {
+        className: "badges"
+      }, React.createElement("span", {
+        className: "badge" + (x.pri === "launch" ? " launch" : "")
+      }, t(PRI[x.pri])), React.createElement("span", {
+        className: "badge"
+      }, t(MODEL[x.m])))), React.createElement("span", {
+        className: "famlabel"
+      }, t(FAM[x.f].n)), React.createElement("h3", null, t(x.t)), React.createElement("p", null, t(x.p)), React.createElement("span", {
+        className: "more"
+      }, t(isOpen ? L("Hide details −", "Ocultar detalles −") : L("Scope, buyer and gate +", "Alcance, comprador y condición +")))), React.createElement("div", {
+        className: "card-b",
+        id: "idea-b-" + x.id
+      }, React.createElement("div", null, React.createElement("b", null, t(L("Buyer", "Comprador"))), React.createElement("p", null, t(x.b))), React.createElement("div", null, React.createElement("b", null, t(L("Delivery", "Entrega"))), React.createElement("p", null, t(DELIV[x.d]))), React.createElement("div", {
+        className: "full"
+      }, React.createElement("b", null, t(L("Proposed scope", "Alcance propuesto"))), React.createElement("p", null, t(x.s))), React.createElement("div", null, React.createElement("b", null, t(L("What to measure", "Qué medir"))), React.createElement("p", null, t(x.k))), React.createElement("div", null, React.createElement("b", null, t(L("Countries", "Países"))), React.createElement("p", null, ctryText(x))), React.createElement("div", {
+        className: "full gate"
+      }, React.createElement("b", null, t(L("Capability / control gate", "Condición de capacidad / control"))), React.createElement("p", null, t(x.g)))));
+    }), shown.length === 0 && React.createElement("div", {
+      className: "empty"
+    }, t(L("No ideas match these filters.", "Ninguna idea coincide con estos filtros.")), " ", React.createElement("button", {
+      type: "button",
+      className: "btn2",
+      onClick: reset
+    }, t(L("Clear filters", "Limpiar filtros")))))));
+  };
+  const Offers = () => {
+    const t = useT();
+    const item = (v, i) => React.createElement("li", {
+      key: i
+    }, typeof v === "number" ? "#" + pad(v) + " " + t(IDEA[v].t) : t(v));
+    return React.createElement("section", {
+      className: "section",
+      id: "offers"
+    }, React.createElement("div", {
+      className: "wrap"
+    }, React.createElement(SHead, {
+      i: 4,
+      title: L(`${OFFERS.length} flagship offers that turn ideas into buying journeys`, `${OFFERS.length} ofertas insignia que convierten ideas en recorridos de compra`),
+      sub: L("Each flagship bundles catalog ideas into a land → expand → run path, so the first purchase naturally leads to the next one.", "Cada oferta insignia agrupa ideas del catálogo en una ruta entrar → expandir → operar, para que la primera compra lleve naturalmente a la siguiente.")
+    }), React.createElement("div", {
+      className: "offers"
+    }, OFFERS.map((o, i) => React.createElement("article", {
+      key: i,
+      className: "offer"
+    }, React.createElement("span", {
+      className: "k"
+    }, t(o.k)), React.createElement("h3", null, t(o.n)), React.createElement("p", {
+      className: "pitch"
+    }, t(o.p)), React.createElement("div", {
+      className: "chain"
+    }, React.createElement("div", {
+      className: "stage land"
+    }, React.createElement("span", {
+      className: "st"
+    }, t(L("Land", "Entrar"))), React.createElement("ul", null, o.land.map(item))), React.createElement("div", {
+      className: "stage expand"
+    }, React.createElement("span", {
+      className: "st"
+    }, t(L("Expand", "Expandir"))), React.createElement("ul", null, o.expand.map(item))), React.createElement("div", {
+      className: "stage run"
+    }, React.createElement("span", {
+      className: "st"
+    }, t(L("Run", "Operar"))), React.createElement("ul", null, o.run.map(item)))), React.createElement("p", {
+      className: "why"
+    }, React.createElement("strong", null, t(L("Buyer: ", "Comprador: "))), t(o.b), o.refs ? React.createElement("span", null, " · ", t(L("Evidence", "Evidencia")), React.createElement(Refs, {
+      ids: o.refs
+    })) : null))))));
+  };
+  const Industries = () => {
+    const t = useT();
+    const lbl = { 3: L("Strong", "Alto"), 2: L("Relevant", "Relevante"), 1: L("Selective", "Selectivo") };
+    return React.createElement("section", {
+      className: "section",
+      id: "industries"
+    }, React.createElement("div", {
+      className: "wrap"
+    }, React.createElement(SHead, {
+      i: 5,
+      title: L("Industry fit: where each service family lands best", "Ajuste por industria: dónde encaja mejor cada familia"),
+      sub: L("Recommended fit based on typical operating bottlenecks in each industry — an analyst judgment to guide targeting, not measured demand.", "Ajuste recomendado según los cuellos de botella típicos de cada industria — un juicio del analista para orientar la prospección, no demanda medida.")
+    }), React.createElement("div", {
+      className: "heatwrap"
+    }, React.createElement("table", {
+      className: "heat"
+    }, React.createElement("thead", null, React.createElement("tr", null, React.createElement("th", {
+      className: "rowh"
+    }, t(L("Industry", "Industria"))), FAMILIES.map((f) => React.createElement("th", {
+      key: f.id,
+      scope: "col"
+    }, t(f.n))))), React.createElement("tbody", null, INDUSTRIES.map((r, i) => React.createElement("tr", {
+      key: i
+    }, React.createElement("th", {
+      className: "rowh",
+      scope: "row"
+    }, t(r.n)), r.v.map((v, j) => React.createElement("td", {
+      key: j,
+      className: "h" + v,
+      title: t(lbl[v])
+    }, t(lbl[v])))))))), React.createElement("div", {
+      className: "hlegend"
+    }, React.createElement("span", null, React.createElement("i", {
+      className: "h3"
+    }), t(L("Strong fit — lead with it", "Ajuste alto — liderar con ello"))), React.createElement("span", null, React.createElement("i", {
+      className: "h2"
+    }), t(L("Relevant — attach after the first win", "Relevante — sumar tras el primer éxito"))), React.createElement("span", null, React.createElement("i", {
+      className: "h1"
+    }), t(L("Selective — only with a clear sponsor", "Selectivo — solo con un patrocinador claro"))))));
+  };
+  const Countries = () => {
+    const t = useT();
+    return React.createElement("section", {
+      className: "section",
+      id: "countries"
+    }, React.createElement("div", {
+      className: "wrap"
+    }, React.createElement(SHead, {
+      i: 6,
+      title: L("Enter through relationships, not a regional slogan", "Entrar por relaciones, no con un eslogan regional"),
+      sub: L("Working hypothesis: test Guatemala and Costa Rica first, run a partner-led test in Panama, and expand elsewhere through qualified partners and referrals. These are sales tests, not rankings of market size.", "Hipótesis de trabajo: probar primero Guatemala y Costa Rica, hacer una prueba con socios en Panamá y expandirse al resto con socios calificados y referidos. Son pruebas comerciales, no rankings de tamaño de mercado.")
+    }), React.createElement("table", {
+      className: "ctable"
+    }, React.createElement("thead", null, React.createElement("tr", null, React.createElement("th", null, t(L("Market / role", "Mercado / rol"))), React.createElement("th", null, t(L("Suggested entry", "Entrada sugerida"))), React.createElement("th", null, t(L("Related ideas", "Ideas relacionadas"))), React.createElement("th", null, t(L("Before committing", "Antes de comprometerse"))))), React.createElement("tbody", null, PLAYBOOK.map((p) => React.createElement("tr", {
+      key: p.c
+    }, React.createElement("td", {
+      "data-label": t(L("Market / role", "Mercado / rol"))
+    }, React.createElement("strong", null, t(CTRY[p.c].n)), React.createElement("span", {
+      className: "role r" + p.role
+    }, t(p.rl))), React.createElement("td", {
+      "data-label": t(L("Suggested entry", "Entrada sugerida"))
+    }, t(p.e), React.createElement(Refs, {
+      ids: p.refs
+    })), React.createElement("td", {
+      "data-label": t(L("Related ideas", "Ideas relacionadas"))
+    }, React.createElement(IdChips, {
+      ids: p.ideas
+    })), React.createElement("td", {
+      "data-label": t(L("Before committing", "Antes de comprometerse"))
+    }, t(p.g)))))), React.createElement("p", {
+      className: "note"
+    }, t(L("Central America is the market scope; it is not a claim that INNOEQX has offices, staff or delivery coverage in every country. Belize is included explicitly with its own language, tax and currency considerations.", "Centroamérica es el alcance de mercado; no afirma que INNOEQX tenga oficinas, personal o cobertura en cada país. Belice se incluye explícitamente con sus propias consideraciones de idioma, impuestos y moneda.")))));
+  };
+  const Revenue = () => {
+    const t = useT();
+    const land = IDEAS.filter((x) => x.m === "diag");
+    const expand = IDEAS.filter((x) => x.m === "project");
+    const run = IDEAS.filter((x) => x.m === "recur" || x.m === "train");
+    const cols = [
+      { k: L("Land", "Entrar"), h: L("Fixed-fee diagnostics", "Diagnósticos de tarifa fija"), p: L("Low-risk first purchase after qualifying scope and access.", "Primera compra de bajo riesgo tras calificar alcance y acceso."), list: land },
+      { k: L("Expand", "Expandir"), h: L("Milestone projects", "Proyectos por hitos"), p: L("Statements of work with acceptance criteria and change control.", "Contratos con criterios de aceptación y control de cambios."), list: expand },
+      { k: L("Run", "Operar"), h: L("Recurring services & training", "Servicios recurrentes y capacitación"), p: L("Retainers tied to systems, coverage, response commitments and exclusions; training priced by cohort.", "Retainers ligados a sistemas, cobertura, compromisos de respuesta y exclusiones; capacitación por cohorte."), list: run }
+    ];
+    return React.createElement("section", {
+      className: "section",
+      id: "revenue"
+    }, React.createElement("div", {
+      className: "wrap"
+    }, React.createElement(SHead, {
+      i: 7,
+      title: L("Land, expand, run: building recurring revenue", "Entrar, expandir, operar: construir ingresos recurrentes"),
+      sub: L("Counts below come directly from the catalog. The run layer is the gap to close: it turns project wins into predictable revenue.", "Los conteos provienen directamente del catálogo. La capa de operación es la brecha por cerrar: convierte proyectos ganados en ingresos predecibles.")
+    }), React.createElement("div", {
+      className: "flywheel"
+    }, cols.map((c, i) => React.createElement("div", {
+      key: i,
+      className: "fw"
+    }, React.createElement("span", {
+      className: "k"
+    }, t(c.k)), React.createElement("div", {
+      className: "big"
+    }, c.list.length), React.createElement("h3", null, t(c.h)), React.createElement("p", {
+      className: "muted",
+      style: { margin: 0, fontSize: "14.5px" }
+    }, t(c.p)), React.createElement("ul", null, c.list.slice(0, 5).map((x) => React.createElement("li", {
+      key: x.id
+    }, "#" + pad(x.id) + " " + t(x.t))), c.list.length > 5 ? React.createElement("li", null, t(L(`+ ${c.list.length - 5} more`, `+ ${c.list.length - 5} más`))) : null)))), React.createElement("div", {
+      className: "grid2",
+      style: { marginBlockStart: "24px" }
+    }, React.createElement("article", {
+      className: "panel"
+    }, React.createElement("h3", null, t(L("Price from delivery economics", "Precio basado en la economía de entrega"))), React.createElement("p", null, t(L("Build each quote from planned effort by role, internal cost, third-party fees, travel, risk allowance and target margin. Review tax and currency treatment locally, and keep SAP licenses and cloud consumption separate from services.", "Construir cada cotización con esfuerzo planificado por rol, costo interno, terceros, viajes, reserva de riesgo y margen objetivo. Revisar impuestos y moneda localmente, y separar licencias SAP y consumo de nube de los servicios."))), React.createElement("p", {
+      className: "muted"
+    }, t(L("No market prices are quoted: INNOEQX’s cost base, rate card, team and partner terms were not available.", "No se citan precios de mercado: no se contó con la estructura de costos, tarifas, equipo ni términos de socios de INNOEQX.")))), React.createElement("article", {
+      className: "panel"
+    }, React.createElement("h3", null, t(L("Metrics to run the portfolio", "Métricas para gestionar el portafolio"))), React.createElement("ul", {
+      className: "list"
+    }, React.createElement("li", null, React.createElement("strong", null, t(L("Qualified conversion: ", "Conversión calificada: "))), t(L("signed diagnostics ÷ qualified proposals.", "diagnósticos firmados ÷ propuestas calificadas."))), React.createElement("li", null, React.createElement("strong", null, t(L("Delivery acceptance: ", "Aceptación de entregas: "))), t(L("accepted milestones ÷ milestones due.", "hitos aceptados ÷ hitos vencidos."))), React.createElement("li", null, React.createElement("strong", null, t(L("Engagement margin: ", "Margen por proyecto: "))), t(L("(service revenue − direct delivery cost) ÷ service revenue.", "(ingreso por servicios − costo directo de entrega) ÷ ingreso por servicios."))), React.createElement("li", null, React.createElement("strong", null, t(L("Run attachment: ", "Anclaje recurrente: "))), t(L("clients on a recurring service ÷ clients with a completed project.", "clientes con servicio recurrente ÷ clientes con proyecto completado.")))), React.createElement("p", {
+      className: "muted"
+    }, t(L("Proposed definitions, not calculated results. Where a denominator is zero, report “not applicable”.", "Definiciones propuestas, no resultados calculados. Si el denominador es cero, reportar “no aplica”.")))))));
+  };
+  const Roadmap = () => {
+    const t = useT();
+    return React.createElement("section", {
+      className: "section",
+      id: "roadmap"
+    }, React.createElement("div", {
+      className: "wrap"
+    }, React.createElement(SHead, {
+      i: 8,
+      title: L("A 12-month roadmap with gates, not guesses", "Una hoja de ruta de 12 meses con criterios, no suposiciones"),
+      sub: L("Owners are roles to assign, not verified INNOEQX staff. Interview and proposal counts are operating targets, not forecasts.", "Los responsables son roles por asignar, no personal verificado de INNOEQX. Los conteos de entrevistas y propuestas son metas operativas, no pronósticos.")
+    }), React.createElement("div", {
+      className: "timeline"
+    }, ROADMAP.map((r, i) => React.createElement("article", {
+      key: i,
+      className: "phase"
+    }, React.createElement("span", {
+      className: "k"
+    }, t(r.k)), React.createElement("h3", null, t(r.t)), React.createElement("ul", null, r.items.map((x, j) => React.createElement("li", {
+      key: j
+    }, t(x)))), React.createElement("p", {
+      className: "exit"
+    }, t(r.x)))))));
+  };
+  const Risks = () => {
+    const t = useT();
+    return React.createElement("section", {
+      className: "section",
+      id: "risks"
+    }, React.createElement("div", {
+      className: "wrap"
+    }, React.createElement(SHead, {
+      i: 9,
+      title: L("Risks and guardrails", "Riesgos y salvaguardas"),
+      sub: L("Growth depends on credibility. These guardrails keep new claims aligned with real capability.", "El crecimiento depende de la credibilidad. Estas salvaguardas mantienen las nuevas afirmaciones alineadas con la capacidad real.")
+    }), React.createElement("table", {
+      className: "rtable"
+    }, React.createElement("thead", null, React.createElement("tr", null, React.createElement("th", null, t(L("Risk", "Riesgo"))), React.createElement("th", null, t(L("Guardrail", "Salvaguarda"))))), React.createElement("tbody", null, RISKS.map((r, i) => React.createElement("tr", {
+      key: i
+    }, React.createElement("td", {
+      "data-label": t(L("Risk", "Riesgo"))
+    }, t(r[0])), React.createElement("td", {
+      "data-label": t(L("Guardrail", "Salvaguarda"))
+    }, t(r[1]))))))));
+  };
+  const Sources = () => {
+    const t = useT();
+    return React.createElement("section", {
+      className: "section",
+      id: "sources"
+    }, React.createElement("div", {
+      className: "wrap"
+    }, React.createElement("div", {
+      className: "shead"
+    }, React.createElement("span", {
+      className: "num"
+    }, "↗"), React.createElement("div", null, React.createElement("h2", null, t(L("Evidence and limitations", "Evidencia y limitaciones"))), React.createElement("p", null, t(L("Links support specific observations in this report; they do not endorse INNOEQX or establish its market share, authorization or delivery capacity.", "Los enlaces respaldan observaciones específicas de este informe; no avalan a INNOEQX ni establecen su participación de mercado, autorización o capacidad de entrega."))))), React.createElement("div", {
+      className: "sources"
+    }, SOURCES.map((s) => React.createElement("article", {
+      key: s.id,
+      className: "source",
+      id: s.id
+    }, React.createElement("span", {
+      className: "k"
+    }, s.id, " · ", s.org), React.createElement("strong", null, React.createElement("a", {
+      href: s.u,
+      target: "_blank",
+      rel: "noopener noreferrer"
+    }, s.t)), React.createElement("p", null, React.createElement("b", null, t(L("Location: ", "Ubicación: "))), t(s.loc)), React.createElement("p", {
+      className: "muted"
+    }, t(s.n))))), React.createElement("p", {
+      className: "note"
+    }, t(L("This is an outside-in strategy proposal, not legal, tax, investment or audit advice. No buyer interviews, company financials, skills inventory or technical assessment were available. Validate those inputs before committing material budget or promising service levels.", "Esta es una propuesta estratégica basada en fuentes externas, no asesoría legal, tributaria, de inversión ni de auditoría. No se contó con entrevistas a compradores, finanzas de la empresa, inventario de habilidades ni evaluación técnica. Validar esos insumos antes de comprometer presupuesto o prometer niveles de servicio.")))));
+  };
+  const App = () => {
+    const [lang, setLangState] = useState(getInitialLang);
+    const setLang = (l) => {
+      setLangState(l);
+      try {
+        window.localStorage.setItem(LANG_KEY, l);
+      } catch (e) {}
+    };
+    useEffect(() => {
+      document.documentElement.lang = lang;
+      document.title = U.title[lang];
+    }, [lang]);
+    const t = (v) => v[lang];
+    return React.createElement(LangCtx.Provider, {
+      value: lang
+    }, React.createElement("a", {
+      href: "#main",
+      className: "skip"
+    }, t(U.skip)), React.createElement("div", {
+      className: "top"
+    }, React.createElement("div", {
+      className: "wrap row"
+    }, React.createElement("a", {
+      href: "#top",
+      className: "brand"
+    }, "INNO", React.createElement("span", {
+      className: "x"
+    }, "EQX")), React.createElement("span", {
+      className: "label"
+    }, t(U.label)), React.createElement("span", {
+      className: "grow"
+    }), React.createElement(LangToggle, {
+      lang,
+      setLang
+    }), React.createElement("button", {
+      type: "button",
+      className: "pbtn",
+      onClick: () => window.print()
+    }, t(U.print)))), React.createElement("nav", {
+      className: "nav",
+      "aria-label": t(U.navLabel)
+    }, React.createElement("div", {
+      className: "wrap"
+    }, SEC_IDS.map((id, i) => React.createElement("a", {
+      key: id,
+      href: "#" + id
+    }, React.createElement("b", null, i < 10 ? pad(i + 1) : "↗"), t(U.sec[i]))))), React.createElement("div", {
+      id: "top"
+    }), React.createElement("main", {
+      id: "main"
+    }, React.createElement(Cover, null), React.createElement(Summary, null), React.createElement(Signals, null), React.createElement(PortfolioMap, null), React.createElement(Catalog, null), React.createElement(Offers, null), React.createElement(Industries, null), React.createElement(Countries, null), React.createElement(Revenue, null), React.createElement(Roadmap, null), React.createElement(Risks, null), React.createElement(Sources, null)), React.createElement("footer", {
+      className: "wrap footer"
+    }, React.createElement("span", null, t(L("INNOEQX · Service Opportunity Report · Central America", "INNOEQX · Informe de oportunidades de servicio · Centroamérica"))), React.createElement("span", null, t(L("Independent executive proposal · 24 September 2026", "Propuesta ejecutiva independiente · 24 de septiembre de 2026")))));
+  };
+  ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App, null));
+})();
+
+</script>
+</body>
+</html>

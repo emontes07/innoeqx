@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="INNOEQX — Consultoría SAP y tecnología para Centroamérica. SAP and technology consulting for Central America.">
+<title>INNOEQX | Consultoría SAP y tecnología · SAP &amp; technology consulting</title>
+<style>
+:root{
+  --bg:#F5F7FB;--paper:#FFFFFF;--text:#0B1324;--muted:#566178;--line:#E1E7F0;--soft:#EDF2F8;
+  --ink:#070D1A;--ink-2:#0D1729;--ink-3:#142039;--on-ink:#EAF0FA;--on-ink-muted:#9DAAC2;--ink-line:#213050;
+  --brand:#10B8A6;--brand-strong:#0A8478;--blue:#3B82F6;--lime:#B6F24A;--violet:#8B5CF6;
+  --grad:linear-gradient(100deg,#38BDF8 0%,#10B8A6 48%,#B6F24A 100%);
+  --shadow:0 12px 32px -14px rgba(11,19,36,.22);
+  --font:"Inter","Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#0A1120;--paper:#101A2E;--text:#E8EEF8;--muted:#A4B2C9;--line:#22314D;--soft:#0D1627;--brand-strong:#3DDBC8;--shadow:0 12px 32px -14px rgba(0,0,0,.6)}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-block-start:84px}
+body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+svg{display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+.container{max-inline-size:1200px;margin-inline:auto;padding-inline:clamp(20px,4vw,40px)}
+.skip{position:absolute;inset-inline-start:16px;inset-block-start:-80px;z-index:100;background:#fff;color:#000;padding:10px 16px;border-radius:10px;font-weight:700}
+.skip:focus{inset-block-start:12px}
+
+/* boot */
+.boot{min-block-size:100vh;display:grid;place-content:center;text-align:center;background:var(--ink);color:var(--on-ink-muted);gap:6px}
+.boot-logo{font-size:40px;font-weight:800;letter-spacing:-.03em;color:#fff}
+.boot-logo span,.logo .x{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* header */
+.header{position:fixed;inset-inline:0;inset-block-start:0;z-index:50;color:var(--on-ink);transition:background .3s,box-shadow .3s}
+.header.scrolled,.header.open{background:rgba(7,13,26,.86);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);box-shadow:0 1px 0 var(--ink-line)}
+.bar{display:flex;align-items:center;gap:28px;block-size:72px}
+.logo{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:800;letter-spacing:-.03em;color:#fff}
+.logo-mark{inline-size:32px;block-size:32px;border-radius:10px;background:var(--grad);display:grid;place-items:center;box-shadow:0 6px 18px -6px rgba(16,184,166,.8)}
+.logo-mark i{inline-size:12px;block-size:12px;border:2.5px solid #04121A;border-radius:3px;transform:rotate(45deg)}
+.nav{display:flex;gap:26px;margin-inline-start:auto}
+.nav a{font-size:14.5px;font-weight:550;color:var(--on-ink-muted);transition:color .2s;position:relative;padding-block:6px}
+.nav a::after{content:"";position:absolute;inset-inline:0;inset-block-end:0;block-size:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav a:hover{color:#fff}
+.nav a:hover::after{transform:scaleX(1)}
+.actions{display:flex;align-items:center;gap:12px}
+.menu-btn{display:none;inline-size:44px;block-size:44px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#fff;place-items:center}
+.menu-btn svg{inline-size:22px;block-size:22px}
+.drawer{position:fixed;inset-inline:0;inset-block-start:72px;background:rgba(7,13,26,.97);padding:12px clamp(20px,4vw,40px) 28px;display:grid;border-block-end:1px solid var(--ink-line);animation:fadeUp .25s both}
+.drawer a{padding:14px 0;border-block-end:1px solid var(--ink-line);color:var(--on-ink);font-size:17px;font-weight:600}
+.drawer .btn{margin-block-start:18px;justify-content:center}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:650;font-size:15px;border:1px solid transparent;transition:transform .2s,box-shadow .2s,background .2s,gap .2s;white-space:nowrap}
+.btn svg{inline-size:18px;block-size:18px}
+.btn:hover{gap:12px}
+.btn-primary{background:var(--grad);color:#04121A;box-shadow:0 10px 26px -10px rgba(16,184,166,.75)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px -12px rgba(16,184,166,.85)}
+.btn-ghost{border-color:rgba(255,255,255,.22);color:var(--on-ink);background:rgba(255,255,255,.04)}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-sm{padding:9px 16px;font-size:14px}
+
+/* language toggle */
+.lang{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}
+.lang button{position:relative;z-index:1;border:0;background:none;color:var(--on-ink-muted);font-weight:750;font-size:13px;padding:6px 13px;border-radius:999px;letter-spacing:.05em;transition:color .3s}
+.lang button[aria-pressed="true"]{color:#04121A}
+.lang .thumb{position:absolute;inset-block:4px;inset-inline-start:4px;inline-size:calc(50% - 4px);border-radius:999px;background:#fff;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.lang[data-lang="en"] .thumb{transform:translateX(100%)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--ink);color:var(--on-ink);padding-block:150px 84px;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-10%;z-index:-2;background:radial-gradient(560px 380px at 14% 22%,rgba(56,189,248,.26),transparent 62%),radial-gradient(680px 480px at 86% 28%,rgba(16,184,166,.30),transparent 62%),radial-gradient(620px 420px at 55% 105%,rgba(139,92,246,.24),transparent 62%);animation:drift 18s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 25%,transparent 75%);mask-image:radial-gradient(ellipse at 50% 40%,#000 25%,transparent 75%)}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:13px;font-weight:600}
+.pulse-dot{inline-size:8px;block-size:8px;border-radius:50%;background:var(--lime);animation:pulse 2.2s infinite}
+.hero h1{font-size:clamp(40px,5.5vw,70px);line-height:1.04;letter-spacing:-.035em;font-weight:760;margin:22px 0}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(17px,1.35vw,19px);color:var(--on-ink-muted);max-inline-size:600px;margin:0}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-block-start:34px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);margin-block-start:56px;border-block-start:1px solid var(--ink-line)}
+.hero-stats div{padding-block-start:18px;padding-inline-end:14px}
+.hero-stats b{display:block;font-size:28px;letter-spacing:-.02em;color:#fff}
+.hero-stats span{font-size:13px;color:var(--on-ink-muted)}
+
+/* orbit visual */
+.orbit{position:relative;inline-size:100%;max-inline-size:500px;aspect-ratio:1;margin-inline:auto;container-type:inline-size}
+.ring{position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(255,255,255,.13)}
+.ring.r2{inset:14%;border-color:rgba(255,255,255,.1)}
+.ring.r3{inset:29%;border-style:solid;border-color:rgba(16,184,166,.35)}
+.core{position:absolute;inset:36%;border-radius:50%;background:radial-gradient(circle at 30% 28%,#27E0CB,#0B6C8C 72%);display:grid;place-items:center;text-align:center;box-shadow:0 0 90px rgba(16,184,166,.5),inset 0 0 30px rgba(255,255,255,.18);color:#fff}
+.core b{display:block;font-size:clamp(15px,4.4cqw,22px);letter-spacing:-.01em}
+.core small{display:block;font-size:clamp(10px,2.6cqw,12px);opacity:.85;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.spin{position:absolute;inset:0;animation:spin 48s linear infinite}
+.node{position:absolute;inset-block-start:50%;inset-inline-start:50%;--r:180px;--r:36cqw;transform:translate(-50%,-50%) rotate(var(--a)) translateX(var(--r)) rotate(calc(var(--a) * -1))}
+.chip-n{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(13,23,41,.88);border:1px solid rgba(255,255,255,.15);font-size:13px;font-weight:650;white-space:nowrap;box-shadow:0 8px 24px -10px rgba(0,0,0,.6);animation:spin 48s linear infinite reverse}
+.chip-n svg{inline-size:16px;block-size:16px;color:var(--lime)}
+.glass{position:absolute;inset-inline-start:-4%;inset-block-end:2%;padding:14px 16px;border-radius:16px;background:rgba(13,23,41,.78);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);inline-size:min(250px,62%);animation:float 6s ease-in-out infinite}
+.glass b{font-size:13px;display:block}
+.glass span{font-size:12px;color:var(--on-ink-muted)}
+.bars{display:flex;gap:4px;margin-block-start:10px}
+.bars i{flex:1;block-size:6px;border-radius:4px;background:rgba(255,255,255,.12)}
+.bars i.on{background:var(--grad)}
+
+/* marquee */
+.marquee{background:var(--ink-2);border-block:1px solid var(--ink-line);overflow:hidden;color:var(--on-ink-muted)}
+.track{display:flex;inline-size:max-content;animation:marq 46s linear infinite}
+.track span{display:inline-flex;align-items:center;gap:22px;padding-block:18px;padding-inline-end:22px;font-weight:600;font-size:15px;white-space:nowrap}
+.track span::after{content:"";inline-size:6px;block-size:6px;border-radius:50%;background:var(--brand)}
+.marquee:hover .track{animation-play-state:paused}
+
+/* sections */
+.section{padding-block:clamp(76px,9vw,120px)}
+.section.dark{background:var(--ink);color:var(--on-ink)}
+.section.soft{background:var(--soft)}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-strong)}
+.kicker::before{content:"";inline-size:24px;block-size:2px;background:currentColor}
+.dark .kicker{color:var(--lime)}
+h2{font-size:clamp(32px,3.8vw,50px);line-height:1.08;letter-spacing:-.03em;margin:14px 0 16px;font-weight:740}
+.sub{font-size:18px;color:var(--muted);max-inline-size:690px;margin:0}
+.dark .sub{color:var(--on-ink-muted)}
+.section-head{margin-block-end:48px}
+.section-head.center{text-align:center}
+.section-head.center .sub{margin-inline:auto}
+.section-head.split{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap}
+
+/* offers */
+.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.offer{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:16px;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s;overflow:hidden}
+.offer::before{content:"";position:absolute;inset-inline:0;inset-block-start:0;block-size:4px;background:var(--grad)}
+.offer:hover{transform:translateY(-6px);box-shadow:0 26px 50px -22px rgba(11,19,36,.35)}
+.offer-top{display:flex;justify-content:space-between;align-items:center}
+.offer .num{font-size:40px;font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--line)}
+.tag{font-size:12px;font-weight:750;padding:5px 12px;border-radius:999px;background:rgba(16,184,166,.12);color:var(--brand-strong)}
+.offer h3{font-size:24px;letter-spacing:-.02em;margin:0;line-height:1.2}
+.offer .for{color:var(--muted);font-size:15px;margin:0}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.checks li{display:flex;gap:10px;font-size:15px;line-height:1.45}
+.checks svg{flex:none;inline-size:20px;block-size:20px;color:var(--brand)}
+.offer .next{margin-block-start:auto;padding-block-start:16px;border-block-start:1px solid var(--line);font-size:14px;color:var(--muted)}
+.link-arrow{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--brand-strong);transition:gap .2s;font-size:15px}
+.link-arrow svg{inline-size:18px;block-size:18px}
+.link-arrow:hover{gap:11px}
+.fine{margin-block-start:30px;text-align:center;font-size:14px;color:var(--muted)}
+
+/* services */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-block-end:34px}
+.tab{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;border:1px solid var(--ink-line);background:rgba(255,255,255,.03);color:var(--on-ink-muted);font-weight:650;font-size:15px;transition:all .25s}
+.tab svg{inline-size:20px;block-size:20px}
+.tab:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+.tab[aria-selected="true"]{background:#fff;color:var(--ink);border-color:#fff;box-shadow:0 10px 30px -12px rgba(255,255,255,.35)}
+.svc-panel{display:grid;grid-template-columns:.9fr 2fr;gap:28px;animation:fadeUp .5s ease both}
+.svc-intro{padding:32px;border-radius:24px;background:linear-gradient(160deg,rgba(16,184,166,.2),rgba(59,130,246,.1) 60%,rgba(139,92,246,.12));border:1px solid var(--ink-line);display:flex;flex-direction:column;gap:14px}
+.big-icon{inline-size:56px;block-size:56px;border-radius:16px;background:var(--grad);display:grid;place-items:center;color:#04121A}
+.big-icon svg{inline-size:28px;block-size:28px}
+.svc-intro h3{font-size:28px;margin:0;letter-spacing:-.02em;line-height:1.15}
+.svc-intro p{margin:0;color:var(--on-ink-muted)}
+.svc-intro .count{margin-block-start:auto;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lime)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.svc{padding:24px;border-radius:20px;background:var(--ink-2);border:1px solid var(--ink-line);transition:all .25s}
+.svc:hover{border-color:rgba(16,184,166,.65);transform:translateY(-3px);background:var(--ink-3)}
+.svc .idx{font-size:13px;font-weight:750;color:var(--lime);letter-spacing:.06em}
+.svc h4{margin:10px 0 8px;font-size:18px;letter-spacing:-.01em;line-height:1.3}
+.svc p{margin:0;color:var(--on-ink-muted);font-size:15px}
+
+/* industries */
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ind{position:relative;padding:28px;border-radius:22px;background:var(--paper);border:1px solid var(--line);overflow:hidden;transition:all .3s;display:flex;flex-direction:column}
+.ind::after{content:"";position:absolute;inset-inline-end:-60px;inset-block-start:-60px;inline-size:160px;block-size:160px;border-radius:50%;background:radial-gradient(circle,rgba(16,184,166,.16),transparent 70%);transition:transform .5s}
+.ind:hover{border-color:var(--brand);box-shadow:var(--shadow);transform:translateY(-4px)}
+.ind:hover::after{transform:scale(1.6)}
+.ic{inline-size:48px;block-size:48px;border-radius:14px;display:grid;place-items:center;background:rgba(16,184,166,.12);color:var(--brand-strong);margin-block-end:18px}
+.ic svg{inline-size:24px;block-size:24px}
+.ind h3{font-size:20px;margin:0 0 12px;letter-spacing:-.01em}
+.mini{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-block-end:4px}
+.ind p{margin:0 0 14px;font-size:15px}
+.ind .ch{color:var(--muted)}
+.ind .hp{margin-block:auto 0;padding-block-start:14px;border-block-start:1px dashed var(--line);font-weight:600}
+
+/* approach */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.steps::before{content:"";position:absolute;inset-block-start:28px;inset-inline:6%;block-size:2px;background:linear-gradient(90deg,var(--brand),var(--blue),var(--violet));opacity:.45}
+.step .dot{inline-size:56px;block-size:56px;border-radius:50%;background:var(--paper);border:2px solid var(--brand);display:grid;place-items:center;font-weight:800;font-size:18px;color:var(--brand-strong);box-shadow:0 0 0 8px var(--soft);position:relative;z-index:1;transition:transform .3s}
+.step:hover .dot{transform:scale(1.08);background:var(--brand);color:#fff}
+.step h3{margin:22px 0 8px;font-size:21px;letter-spacing:-.01em}
+.step p{margin:0;color:var(--muted);font-size:15px}
+.gov{margin-block-start:52px;display:flex;gap:18px;align-items:center;padding:22px 26px;border-radius:18px;background:var(--paper);border:1px solid var(--line)}
+.gov .ic{margin:0;flex:none}
+.gov p{margin:0;font-size:16px}
+
+/* region */
+.region{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.map{position:relative;border-radius:28px;background:radial-gradient(circle at 25% 18%,rgba(16,184,166,.18),transparent 60%),var(--ink-2);border:1px solid var(--ink-line);padding:18px}
+.map svg{inline-size:100%;block-size:auto}
+.map .isthmus{fill:none;stroke:rgba(16,184,166,.1);stroke-width:64;stroke-linecap:round;stroke-linejoin:round}
+.map .link{stroke:rgba(255,255,255,.22);stroke-width:1.5;stroke-dasharray:4 7;animation:dash 12s linear infinite}
+.cnode{cursor:pointer}
+.cnode .core-dot{fill:var(--ink-3);stroke:var(--brand);stroke-width:2.5;transition:all .3s}
+.cnode .halo{fill:rgba(16,184,166,.18);opacity:0}
+.cnode text{fill:var(--on-ink-muted);font-size:15px;font-weight:650;font-family:var(--font);transition:fill .3s}
+.cnode:hover text{fill:#fff}
+.cnode.sel .core-dot{fill:var(--lime);stroke:#fff}
+.cnode.sel .halo{opacity:1;animation:halo 2.2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+.cnode.sel text{fill:#fff;font-weight:800}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-block-start:16px}
+.chip{padding:8px 14px;border-radius:999px;border:1px solid var(--ink-line);background:transparent;color:var(--on-ink-muted);font-size:14px;font-weight:650;transition:all .2s}
+.chip:hover{color:#fff;border-color:rgba(255,255,255,.35)}
+.chip[aria-pressed="true"]{background:#fff;color:var(--ink);border-color:#fff}
+.cpanel{padding:34px;border-radius:24px;background:rgba(255,255,255,.035);border:1px solid var(--ink-line);animation:fadeUp .45s both}
+.cpanel .mini{color:var(--on-ink-muted)}
+.cpanel h3{font-size:36px;margin:4px 0 18px;letter-spacing:-.025em}
+.topics{display:flex;flex-wrap:wrap;gap:8px}
+.topic{padding:8px 14px;border-radius:999px;background:rgba(16,184,166,.14);border:1px solid rgba(16,184,166,.38);font-size:14px;font-weight:650}
+.startbox{margin-block-start:24px;padding:20px;border-radius:16px;background:var(--ink-3);border:1px solid var(--ink-line)}
+.startbox p{margin:0;font-size:17px;font-weight:650;color:#fff}
+.region-note{margin-block-start:18px;font-size:13.5px;color:var(--on-ink-muted)}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.quote{font-size:clamp(24px,2.5vw,33px);line-height:1.3;letter-spacing:-.02em;font-weight:650;margin:0}
+.quote::before{content:"\201C";display:block;font-size:84px;line-height:.7;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-block-end:10px}
+.about-body{color:var(--muted);font-size:17px;margin-block-start:24px}
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.pr{padding:22px;border-radius:18px;background:var(--paper);border:1px solid var(--line);transition:all .25s}
+.pr:hover{border-color:var(--brand);transform:translateY(-3px)}
+.pr .n{font-size:12px;font-weight:800;color:var(--brand-strong);letter-spacing:.08em}
+.pr h4{margin:6px 0 6px;font-size:17px}
+.pr p{margin:0;color:var(--muted);font-size:14.5px}
+
+/* faq */
+.faq{max-inline-size:860px;margin-inline:auto}
+.qa{border-block-end:1px solid var(--line)}
+.qa button{inline-size:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;background:none;border:0;color:var(--text);font-size:19px;font-weight:680;text-align:start;letter-spacing:-.01em}
+.pm{flex:none;inline-size:38px;block-size:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:transform .3s,background .3s,color .3s}
+.pm svg{inline-size:18px;block-size:18px}
+.qa[data-open="true"] .pm{transform:rotate(45deg);background:var(--text);color:var(--bg);border-color:var(--text)}
+.ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.qa[data-open="true"] .ans{grid-template-rows:1fr}
+.ans>div{overflow:hidden}
+.ans p{margin:0 0 24px;color:var(--muted);font-size:16.5px;max-inline-size:760px}
+
+/* contact */
+.contact{position:relative;overflow:hidden;isolation:isolate}
+.contact::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 400px at 10% 10%,rgba(16,184,166,.22),transparent 60%),radial-gradient(600px 400px at 95% 90%,rgba(59,130,246,.2),transparent 60%)}
+.contact-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.expect{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:14px}
+.expect li{display:flex;gap:12px;align-items:flex-start;font-size:16px}
+.expect svg{flex:none;inline-size:22px;block-size:22px;color:var(--lime)}
+.form{padding:32px;border-radius:26px;background:var(--paper);color:var(--text);box-shadow:0 30px 70px -30px rgba(0,0,0,.7)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;font-weight:700}
+.field input,.field select,.field textarea{font:inherit;font-size:15px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text);transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px rgba(16,184,166,.18)}
+.field textarea{min-block-size:110px;resize:vertical}
+.form .btn{margin-block-start:22px;inline-size:100%;justify-content:center}
+.form-note{margin:14px 0 0;font-size:12.5px;color:var(--muted);text-align:center}
+.sent{text-align:center;padding:36px 10px;animation:fadeUp .4s both}
+.sent .ok{inline-size:68px;block-size:68px;border-radius:50%;background:var(--grad);display:grid;place-items:center;margin:0 auto 18px;color:#04121A}
+.sent .ok svg{inline-size:32px;block-size:32px}
+.sent h3{font-size:24px;margin:0 0 8px}
+.sent p{color:var(--muted);margin:0 0 18px}
+.sent button{background:none;border:1px solid var(--line);border-radius:999px;padding:9px 18px;color:var(--text);font-weight:650}
+
+/* footer */
+.footer{background:#050A14;color:var(--on-ink-muted);padding-block:64px 32px;font-size:14px}
+.f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+.f-grid h5{color:#fff;font-size:14px;margin:0 0 14px}
+.f-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.f-grid a:hover{color:#fff}
+.f-tag{margin:16px 0 20px;max-inline-size:320px}
+.f-bottom{margin-block-start:48px;padding-block-start:24px;border-block-start:1px solid var(--ink-line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:12.5px}
+.tm{max-inline-size:760px;margin:0}
+
+/* motion */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .75s ease,transform .75s ease}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes marq{to{transform:translateX(-50%)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(182,242,74,.55)}60%{box-shadow:0 0 0 9px rgba(182,242,74,0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(3%,-3%,0) scale(1.05)}}
+@keyframes dash{to{stroke-dashoffset:-220}}
+@keyframes halo{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.2);opacity:0}}
+
+/* responsive */
+@media (max-width:1140px){
+  .nav,.cta-desktop{display:none}
+  .menu-btn{display:inline-grid}
+  .actions{margin-inline-start:auto}
+  .hero-grid,.svc-panel,.region,.about,.contact-wrap{grid-template-columns:1fr}
+  .orbit{max-inline-size:440px}
+  .offers{grid-template-columns:1fr;max-inline-size:640px;margin-inline:auto}
+  .ind-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr);row-gap:40px}
+  .steps::before{display:none}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .hero{padding-block:118px 64px}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .svc-grid,.ind-grid,.principles,.form-grid,.steps,.f-grid{grid-template-columns:1fr}
+  .qa button{font-size:17px}
+  .form,.cpanel,.svc-intro{padding:24px}
+  .glass{display:none}
+  .chip-n{font-size:11.5px;padding:6px 10px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+@media print{
+  .header,.marquee,.drawer,.skip{display:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+  .hero{padding-block:40px}
+  .section{padding-block:36px}
+  .offer,.svc,.ind,.pr,.step{break-inside:avoid}
+}
+
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="boot" role="status">
+    <div class="boot-logo">INNO<span>EQX</span></div>
+    <p>Cargando · Loading…</p>
+    <noscript><p>Este sitio necesita JavaScript. · This site needs JavaScript enabled.</p></noscript>
+  </div>
+</div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script>
+(function() {
+  if (!window.React || !window.ReactDOM) {
+    var r = document.getElementById("root");
+    if (r)
+      r.innerHTML = '<div class="boot"><div class="boot-logo">INNO<span>EQX</span></div><p>No se pudo cargar el sitio. Revisa tu conexión a internet y vuelve a intentarlo.<br>The site could not load. Please check your internet connection and try again.</p></div>';
+    return;
+  }
+  const { useState, useEffect, useContext, createContext } = React;
+  const LANG_KEY = "innoeqx-site-lang";
+  const L = (es, en) => ({ es, en });
+  const LangCtx = createContext("es");
+  const useT = () => {
+    const lang = useContext(LangCtx);
+    return (v) => v && typeof v === "object" && !Array.isArray(v) && ("es" in v) ? v[lang] : v;
+  };
+  const ICONS = {
+    layers: '<path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="m2 16 10 5 10-5"/><path d="m2 12 10 5 10-5"/>',
+    link: '<path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/>',
+    chart: '<path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/>',
+    chip: '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><path d="M10 10h4v4h-4z"/>',
+    shield: '<path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/>',
+    compass: '<circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/>',
+    arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+    check: '<path d="m5 12 5 5 9-10"/>',
+    menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
+    close: '<path d="M6 6l12 12M18 6 6 18"/>',
+    plus: '<path d="M12 5v14M5 12h14"/>',
+    store: '<path d="M4 9h16l-1.5-5h-13L4 9Z"/><path d="M5 9v11h14V9"/><path d="M10 20v-6h4v6"/>',
+    factory: '<path d="M3 21V10l6 4V10l6 4V6l6 4v11H3Z"/><path d="M7 17h2M12 17h2M17 17h1"/>',
+    truck: '<path d="M3 6h11v10H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>',
+    bank: '<path d="M3 10 12 4l9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/>',
+    building: '<rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/>',
+    network: '<circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v5M12 12l-6 5M12 12l6 5"/>',
+    cloud: '<path d="M7 18h10a4 4 0 0 0 .5-7.97A6 6 0 0 0 6 11a3.5 3.5 0 0 0 1 7Z"/>',
+    target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+    receipt: '<path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Z"/><path d="M9 8h6M9 12h6"/>',
+    spark: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6.3 6.3l2.8 2.8M14.9 14.9l2.8 2.8M6.3 17.7l2.8-2.8M14.9 9.1l2.8-2.8"/>'
+  };
+  const Icon = ({ name }) => React.createElement("svg", {
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "1.8",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    "aria-hidden": "true",
+    dangerouslySetInnerHTML: { __html: ICONS[name] || "" }
+  });
+  const NAV = [
+    { id: "servicios", label: L("Servicios", "Services") },
+    { id: "industrias", label: L("Industrias", "Industries") },
+    { id: "metodologia", label: L("Metodología", "Approach") },
+    { id: "region", label: L("Región", "Region") },
+    { id: "nosotros", label: L("Nosotros", "About") },
+    { id: "preguntas", label: L("Preguntas", "FAQ") }
+  ];
+  const UI = {
+    title: L("INNOEQX | Consultoría SAP y tecnología para Centroamérica", "INNOEQX | SAP & technology consulting for Central America"),
+    skip: L("Saltar al contenido", "Skip to content"),
+    book: L("Agenda una sesión", "Book a session"),
+    explore: L("Explora servicios", "Explore services"),
+    langLabel: L("Idioma del sitio", "Site language"),
+    navLabel: L("Navegación principal", "Main navigation"),
+    menu: L("Abrir menú", "Open menu"),
+    closeMenu: L("Cerrar menú", "Close menu")
+  };
+  const HERO = {
+    eyebrow: L("Consultoría SAP y tecnología · Centroamérica", "SAP & technology consulting · Central America"),
+    title: L(["Conectamos SAP, datos y tecnología con los ", "resultados", " de tu negocio."], ["We connect SAP, data and technology to your ", "business results", "."]),
+    lead: L("Ayudamos a empresas de la región a decidir mejor, implementar con disciplina y operar con visibilidad: desde la hoja de ruta a S/4HANA hasta la facturación electrónica, la analítica financiera, la automatización con IA y la ciberseguridad.", "We help companies across the region decide better, implement with discipline and operate with visibility — from the S/4HANA roadmap to electronic invoicing, financial analytics, AI-powered automation and cybersecurity."),
+    stats: [
+      { n: "3", l: L("formas claras de empezar", "clear ways to start") },
+      { n: "6", l: L("áreas de servicio conectadas", "connected service areas") },
+      { n: "7", l: L("países en foco", "countries in focus") },
+      { n: "ES · EN", l: L("atención bilingüe", "bilingual engagement") }
+    ],
+    core: L("Núcleo SAP", "SAP core"),
+    nodes: [
+      { a: "0deg", icon: "chart", l: L("Datos", "Data") },
+      { a: "60deg", icon: "chip", l: L("IA", "AI") },
+      { a: "120deg", icon: "cloud", l: L("Nube", "Cloud") },
+      { a: "180deg", icon: "shield", l: L("Ciberseguridad", "Cybersecurity") },
+      { a: "240deg", icon: "link", l: L("Integración", "Integration") },
+      { a: "300deg", icon: "target", l: L("PMO", "PMO") }
+    ],
+    glassT: L("Un núcleo, todo conectado", "One core, everything connected"),
+    glassS: L("ERP · facturación · analítica · IA", "ERP · invoicing · analytics · AI")
+  };
+  const MARQUEE = ["SAP S/4HANA", "SAP Business One", "SAP BTP", L("Facturación electrónica", "Electronic invoicing"), L("Analítica", "Analytics"), L("IA y automatización", "AI & automation"), L("Nube e hiperescaladores", "Cloud & hyperscalers"), L("Ciberseguridad", "Cybersecurity"), "PMI · PMO", L("Alineación de TI", "IT alignment"), L("Dirección estratégica", "Strategic direction"), L("Capacitación", "Training")];
+  const START = {
+    kicker: L("Empieza aquí", "Start here"),
+    title: L("Tres formas concretas de empezar", "Three concrete ways to start"),
+    sub: L("Diagnósticos con alcance acotado, entregables claros y una decisión al final. Empieza por el problema de negocio, no por la tecnología.", "Bounded diagnostics with clear deliverables and a decision at the end. Start with the business problem, not the technology."),
+    cta: L("Solicitar este diagnóstico", "Request this diagnostic"),
+    fine: L("Cada diagnóstico se define con alcance, supuestos, exclusiones y criterios de aceptación acordados antes de iniciar.", "Every diagnostic is defined with agreed scope, assumptions, exclusions and acceptance criteria before work begins."),
+    offers: [
+      {
+        tag: L("Decisión SAP", "SAP decision"),
+        title: L("Sprint de hoja de ruta SAP", "SAP Roadmap Sprint"),
+        for: L("Para CIO y CFO con un ERP que necesita una decisión de futuro.", "For CIOs and CFOs whose ERP needs a decision about its future."),
+        items: [
+          L("Inventario de versiones, interfaces y desarrollos a la medida", "Inventory of releases, interfaces and custom code"),
+          L("Comparación de opciones: conversión, reimplementación o transición selectiva", "Option comparison: conversion, reimplementation or selective transition"),
+          L("Registro de riesgos y caso de negocio por fases", "Risk register and phased business case"),
+          L("Taller ejecutivo de decisión", "Executive decision workshop")
+        ],
+        next: L("Siguiente paso: plan de implementación, datos maestros o PMO.", "Next step: implementation plan, master data or PMO.")
+      },
+      {
+        tag: L("Salud transaccional", "Transaction health"),
+        title: L("Chequeo de facturación electrónica", "E-Invoicing Integration Check"),
+        for: L("Para CFO y gerentes de impuestos con documentos rechazados, duplicados o sin conciliar.", "For CFOs and tax managers facing rejected, duplicated or unreconciled documents."),
+        items: [
+          L("Mapeo de campos entre el ERP y el proveedor autorizado", "Field mapping between the ERP and the authorized provider"),
+          L("Análisis de rechazos, anulaciones y reintentos", "Analysis of rejections, cancellations and retries"),
+          L("Conciliación y retención de documentos", "Document reconciliation and retention"),
+          L("Backlog priorizado de correcciones", "Prioritized remediation backlog")
+        ],
+        next: L("Siguiente paso: remediación y soporte de la integración.", "Next step: remediation and ongoing integration support.")
+      },
+      {
+        tag: L("Visibilidad financiera", "Finance visibility"),
+        title: L("Sprint de visibilidad CFO", "CFO Visibility Sprint"),
+        for: L("Para equipos de finanzas que deciden con hojas de cálculo inconsistentes.", "For finance teams making decisions on inconsistent spreadsheets."),
+        items: [
+          L("Una pregunta de negocio y su métrica bien definida", "One business question and a well-defined metric"),
+          L("Conexión a una fuente autorizada del ERP", "Connection to one authorized ERP source"),
+          L("Vista conciliada de cartera, margen o flujo de caja", "Reconciled view of receivables, margin or cash"),
+          L("Controles de acceso y traspaso al equipo", "Access controls and team handover")
+        ],
+        next: L("Siguiente paso: reportería recurrente, planificación o capital de trabajo.", "Next step: recurring reporting, planning or working-capital analytics.")
+      }
+    ]
+  };
+  const SERVICES = {
+    kicker: L("Servicios", "Services"),
+    title: L("Un portafolio conectado alrededor de SAP", "A connected portfolio built around SAP"),
+    sub: L("Seis áreas que trabajan juntas para que la tecnología produzca resultados medibles.", "Six areas that work together so technology delivers measurable results."),
+    countLabel: L("servicios en esta área", "services in this area"),
+    families: [
+      {
+        id: "sap",
+        icon: "layers",
+        name: L("SAP y ERP", "SAP & ERP"),
+        blurb: L("Decisiones, implementación y soporte para el núcleo de tu operación.", "Decisions, implementation and support for the core of your operation."),
+        items: [
+          [L("Preparación y hoja de ruta S/4HANA", "S/4HANA readiness & roadmap"), L("Evalúa opciones de transición, riesgos, datos y caso de negocio.", "Assess transition options, risks, data and the business case.")],
+          [L("Selección de ERP y fit-to-standard", "ERP selection & fit-to-standard"), L("SAP Business One, ERP en la nube u otras alternativas según tus procesos.", "SAP Business One, cloud ERP or alternatives based on your processes.")],
+          [L("Rollouts multi-país", "Multi-country rollouts"), L("Plantilla regional de procesos con paquetes por país.", "A regional process template with country-specific packs.")],
+          [L("Soporte de aplicaciones SAP", "SAP application support"), L("Soporte funcional, pruebas de versiones y mejora continua.", "Functional support, release testing and continuous improvement.")]
+        ]
+      },
+      {
+        id: "int",
+        icon: "link",
+        name: L("Integración y facturación electrónica", "Integration & e-invoicing"),
+        blurb: L("Procesos conectados de punta a punta, con requisitos fiscales de cada país.", "End-to-end connected processes that respect each country’s tax requirements."),
+        items: [
+          [L("Integración de facturación electrónica", "E-invoicing integration"), L("FEL en Guatemala, comprobantes v4.4 en Costa Rica, SFEP en Panamá y más.", "FEL in Guatemala, v4.4 e-documents in Costa Rica, SFEP in Panama and more.")],
+          [L("Comercio y POS conectados al ERP", "Commerce & POS to ERP"), L("Pedidos, inventario y devoluciones sincronizados.", "Orders, inventory and returns kept in sync.")],
+          [L("Conectividad bancaria y conciliación", "Bank connectivity & reconciliation"), L("Conciliación automática con colas de excepciones.", "Automated matching with exception queues.")],
+          [L("SAP BTP, APIs y extensiones", "SAP BTP, APIs & extensions"), L("Extiende SAP sin comprometer el núcleo.", "Extend SAP without compromising the core.")]
+        ]
+      },
+      {
+        id: "data",
+        icon: "chart",
+        name: L("Datos y analítica", "Data & analytics"),
+        blurb: L("Información confiable para decidir con rapidez.", "Trusted information for faster decisions."),
+        items: [
+          [L("Tableros para CFO y dirección", "CFO & executive dashboards"), L("Métricas conciliadas con el ERP, no hojas sueltas.", "Metrics reconciled with the ERP, not loose spreadsheets.")],
+          [L("Inventario y capital de trabajo", "Inventory & working capital"), L("Distingue el exceso de inventario de los faltantes reales.", "Tell excess stock apart from real shortages.")],
+          [L("Gobierno de datos maestros", "Master data governance"), L("Clientes, productos y proveedores sin duplicados.", "Customers, products and suppliers without duplicates.")],
+          [L("Planificación y escenarios", "Planning & scenarios"), L("Presupuesto y demanda conectados con supuestos claros.", "Budget and demand connected through clear assumptions.")]
+        ]
+      },
+      {
+        id: "ai",
+        icon: "chip",
+        name: L("Automatización e IA", "Automation & AI"),
+        blurb: L("IA útil, gobernada y con supervisión humana.", "Useful, governed AI with human oversight."),
+        items: [
+          [L("Gobierno de IA y selección de casos", "AI governance & use-case selection"), L("Políticas, riesgos y un piloto bien acotado.", "Policies, risks and a well-bounded pilot.")],
+          [L("Automatización de cuentas por pagar", "Accounts payable automation"), L("Captura, conciliación con órdenes de compra y aprobaciones.", "Capture, purchase-order matching and approvals.")],
+          [L("Asistente de conocimiento empresarial", "Enterprise knowledge assistant"), L("Respuestas con fuentes sobre tus procedimientos aprobados.", "Cited answers grounded in your approved procedures.")],
+          [L("Minería de procesos y RPA", "Process mining & RPA"), L("Descubre cuellos de botella y automatiza tareas repetitivas.", "Find bottlenecks and automate repetitive tasks.")]
+        ]
+      },
+      {
+        id: "cloud",
+        icon: "shield",
+        name: L("Nube y ciberseguridad", "Cloud & cybersecurity"),
+        blurb: L("Infraestructura moderna, segura y preparada para recuperarse.", "Modern, secure infrastructure that is ready to recover."),
+        items: [
+          [L("Diagnóstico y hoja de ruta de ciberseguridad", "Cybersecurity baseline & roadmap"), L("Identidad, endpoints, parches y preparación ante incidentes.", "Identity, endpoints, patching and incident readiness.")],
+          [L("Roles SAP y segregación de funciones", "SAP roles & segregation of duties"), L("Accesos privilegiados y conflictos bajo control.", "Privileged access and conflicts under control.")],
+          [L("Migración a la nube y FinOps", "Cloud migration & FinOps"), L("Arquitectura en hiperescaladores con costos visibles.", "Hyperscaler architecture with visible costs.")],
+          [L("Respaldo y recuperación ante desastres", "Backup & disaster recovery"), L("Pruebas reales de restauración y runbooks documentados.", "Real restore tests and documented runbooks.")]
+        ]
+      },
+      {
+        id: "pmo",
+        icon: "compass",
+        name: L("Estrategia, PMO y capacitación", "Strategy, PMO & training"),
+        blurb: L("Dirección clara y ejecución disciplinada.", "Clear direction and disciplined execution."),
+        items: [
+          [L("Dirección estratégica y alineación de TI", "Strategic direction & IT alignment"), L("Prioridades tecnológicas alineadas al plan de negocio.", "Technology priorities aligned with the business plan.")],
+          [L("PMO de transformación (PMI)", "Transformation PMO (PMI)"), L("Gobernanza, cronograma, riesgos y control de cambios.", "Governance, schedule, risk and change control.")],
+          [L("Rescate de proyectos", "Project rescue review"), L("Revisión independiente y plan de recuperación.", "Independent review and a recovery plan.")],
+          [L("Academia de adopción y capacitación", "Adoption academy & training"), L("Formación por rol, en español primero y en inglés cuando se necesite.", "Role-based training, Spanish-first and in English where needed.")]
+        ]
+      }
+    ]
+  };
+  const INDUSTRIES = {
+    kicker: L("Industrias", "Industries"),
+    title: L("Soluciones pensadas para cómo opera la región", "Solutions designed for how the region operates"),
+    sub: L("Empezamos por el cuello de botella operativo de cada industria y conectamos la tecnología que lo resuelve.", "We start with each industry’s operating bottleneck and connect the technology that solves it."),
+    challenge: L("Reto", "Challenge"),
+    help: L("Cómo ayudamos", "How we help"),
+    items: [
+      { icon: "store", t: L("Retail y distribución", "Retail & distribution"), c: L("Sucursales, bodegas y ventas trabajan con información distinta.", "Branches, warehouses and sales teams work from different data."), h: L("Inventario visible, menos excepciones en pedidos y facturación integrada.", "Visible stock, fewer order exceptions and integrated invoicing.") },
+      { icon: "factory", t: L("Manufactura y agroindustria", "Manufacturing & agribusiness"), c: L("Lotes, calidad y costos fragmentados entre sistemas.", "Batch, quality and cost data fragmented across systems."), h: L("Trazabilidad de punta a punta y costeo confiable.", "End-to-end traceability and reliable costing.") },
+      { icon: "truck", t: L("Logística y comercio exterior", "Logistics & trade"), c: L("Transportistas, agentes y clientes intercambian archivos desconectados.", "Carriers, brokers and customers exchange disconnected files."), h: L("Integración B2B y visibilidad de cada hito del envío.", "B2B integration and visibility of every shipment milestone.") },
+      { icon: "bank", t: L("Servicios financieros", "Financial services"), c: L("Presión regulatoria, riesgo cibernético y datos dispersos.", "Regulatory pressure, cyber risk and scattered data."), h: L("Controles de acceso, resiliencia y reportería confiable.", "Access controls, resilience and reliable reporting.") },
+      { icon: "building", t: L("Servicios y zonas francas", "Services & free zones"), c: L("Operaciones que crecen más rápido que sus procesos.", "Operations growing faster than their processes."), h: L("Procesos estándar, automatización y soporte SAP continuo.", "Standard processes, automation and ongoing SAP support.") },
+      { icon: "network", t: L("Grupos regionales", "Regional groups"), c: L("Subsidiarias con procesos, cierres y reportes distintos.", "Subsidiaries with different processes, closes and reporting."), h: L("Plantilla regional, intercompañía y consolidación.", "Regional template, intercompany and consolidation.") }
+    ]
+  };
+  const APPROACH = {
+    kicker: L("Metodología", "Approach"),
+    title: L("De la estrategia a los resultados, en cuatro pasos", "From strategy to results in four steps"),
+    sub: L("Metodologías probadas para transformar la incertidumbre en avance real para tu negocio.", "Proven methodologies that turn uncertainty into real progress for your business."),
+    steps: [
+      [L("Diagnosticar", "Diagnose"), L("Entendemos el problema de negocio, los sistemas instalados y los datos disponibles.", "We understand the business problem, the installed systems and the data available.")],
+      [L("Diseñar", "Design"), L("Definimos alcance, arquitectura, métricas y criterios de aceptación.", "We define scope, architecture, metrics and acceptance criteria.")],
+      [L("Ejecutar", "Deliver"), L("Implementamos por hitos, con control de riesgos y de cambios.", "We deliver by milestones, with risk and change control.")],
+      [L("Evolucionar", "Evolve"), L("Medimos, capacitamos y mejoramos de forma continua.", "We measure, train and improve continuously.")]
+    ],
+    gov: L("Gobernanza basada en PMI en cada fase: alcance, cronograma, riesgos, cambios y beneficios con un responsable claro.", "PMI-based governance at every stage: scope, schedule, risks, changes and benefits, each with a clear owner.")
+  };
+  const REGION = {
+    kicker: L("Región", "Region"),
+    title: L("Centroamérica, país por país", "Central America, country by country"),
+    sub: L("Cada país tiene reglas fiscales, idioma y realidades operativas propias. Diseñamos cada proyecto con esa diferencia en mente.", "Every country has its own tax rules, language and operating realities. We design each engagement with that difference in mind."),
+    focus: L("Temas clave", "Key topics"),
+    start: L("Cómo empezamos", "How we start"),
+    pick: L("Selecciona un país", "Select a country"),
+    note: L("Los requisitos fiscales se confirman en cada proyecto con asesores tributarios locales y, cuando aplica, con el proveedor autorizado del país.", "Tax requirements are confirmed on every engagement with local tax advisers and, where applicable, the country’s authorized provider."),
+    countries: [
+      { id: "bz", name: L("Belice", "Belize"), x: 180, y: 52, lx: 18, anchor: "start", topics: [L("Evaluación de ERP", "ERP fit assessment"), L("Digitalización de flujos", "Workflow digitization"), L("Atención en inglés", "English-led engagement")], start: L("Evaluación de ajuste de ERP y digitalización de un flujo clave.", "ERP fit assessment and digitization of one key workflow.") },
+      { id: "gt", name: L("Guatemala", "Guatemala"), x: 108, y: 120, lx: -18, anchor: "end", topics: [L("Integración con FEL", "FEL integration"), L("Finanzas multi-entidad", "Multi-entity finance"), L("Distribución y retail", "Distribution & retail")], start: L("Chequeo de facturación electrónica + sprint de visibilidad CFO.", "E-invoicing integration check + CFO visibility sprint.") },
+      { id: "hn", name: L("Honduras", "Honduras"), x: 248, y: 148, lx: 18, anchor: "start", topics: [L("Visibilidad de inventario", "Inventory visibility"), L("Datos maestros", "Master data"), L("Distribución y producción", "Distribution & production")], start: L("Diagnóstico de inventario y datos maestros.", "Inventory and master-data diagnostic.") },
+      { id: "sv", name: L("El Salvador", "El Salvador"), x: 164, y: 188, lx: -18, anchor: "end", topics: [L("Facturación electrónica", "Electronic invoicing"), L("Automatización de procesos", "Process automation"), L("Retail y servicios", "Retail & services")], start: L("Integración de documentos electrónicos + automatización.", "Electronic-document integration + automation.") },
+      { id: "ni", name: L("Nicaragua", "Nicaragua"), x: 312, y: 224, lx: 18, anchor: "start", topics: [L("Trazabilidad", "Traceability"), L("Reportería financiera", "Finance reporting"), L("Agroindustria", "Agro-processing")], start: L("Descubrimiento de trazabilidad y reportería financiera.", "Traceability discovery and finance reporting.") },
+      { id: "cr", name: L("Costa Rica", "Costa Rica"), x: 356, y: 344, lx: -18, anchor: "end", topics: [L("Hoja de ruta SAP", "SAP roadmap"), L("Comprobantes electrónicos v4.4", "v4.4 electronic documents"), L("Operaciones en zonas francas", "Free-zone operations")], start: L("Sprint de hoja de ruta SAP + diagnóstico de integración financiera.", "SAP roadmap sprint + finance integration diagnostic.") },
+      { id: "pa", name: L("Panamá", "Panama"), x: 520, y: 384, lx: 0, ly: -22, anchor: "middle", topics: [L("SFEP y PAC integrados al ERP", "SFEP & PAC integrated with ERP"), L("Integración B2B y logística", "B2B & logistics integration"), L("Visibilidad intercompañía", "Intercompany visibility")], start: L("Integración B2B + visibilidad intercompañía.", "B2B integration + intercompany visibility.") }
+    ],
+    links: [["gt", "bz"], ["gt", "sv"], ["gt", "hn"], ["sv", "hn"], ["hn", "ni"], ["ni", "cr"], ["cr", "pa"]],
+    spine: ["gt", "sv", "hn", "ni", "cr", "pa"]
+  };
+  const ABOUT = {
+    kicker: L("Nosotros", "About"),
+    title: L("Por qué existimos", "Why we exist"),
+    quote: L("Creemos que los negocios pueden transformarse al unir el pensamiento visionario con la estrategia y la ejecución, para que las organizaciones lideren su mercado.", "We believe business can be transformed by merging visionary thinking with strategy and execution, enabling organizations to lead their market."),
+    body: L("Somos un equipo de consultoría de nueva generación que combina metodologías y experiencia de varias industrias: estrategia, gestión de proyectos, software y sistemas, analítica, ciberseguridad, riesgos, inteligencia artificial, automatización de procesos, asesoría y educación.", "We are a new-generation consulting team that combines methodologies and experience from several industries: strategy, project management, software and systems, analytics, cybersecurity, risk, artificial intelligence, process automation, advisory and education."),
+    principles: [
+      [L("SAP como ancla", "SAP as the anchor"), L("El ERP es el corazón de la operación; todo lo demás se conecta a él.", "The ERP is the heart of the operation; everything else connects to it.")],
+      [L("Resultados primero", "Outcomes first"), L("Cada proyecto empieza con una métrica de negocio acordada.", "Every engagement starts with an agreed business metric.")],
+      [L("Alcance transparente", "Transparent scope"), L("Entregables, supuestos y exclusiones claros desde el primer día.", "Clear deliverables, assumptions and exclusions from day one.")],
+      [L("Conocimiento regional", "Regional know-how"), L("Reglas fiscales y realidades operativas de cada país.", "Each country’s tax rules and operating realities.")],
+      [L("Ejecución disciplinada", "Disciplined execution"), L("Gobernanza basada en PMI y control de cambios.", "PMI-based governance and change control.")],
+      [L("Costo eficiente", "Cost-efficient"), L("Estrategias que generan resultados con rapidez y costo eficiente.", "Strategies that generate outcomes rapidly at an efficient cost.")]
+    ]
+  };
+  const FAQ = {
+    kicker: L("Preguntas frecuentes", "FAQ"),
+    title: L("Respuestas claras antes de empezar", "Clear answers before you start"),
+    items: [
+      [L("¿Tenemos que migrar a S/4HANA de inmediato?", "Do we need to migrate to S/4HANA right away?"), L("No necesariamente. La decisión depende de tu versión, tu contrato de mantenimiento y tus prioridades de negocio. El Sprint de hoja de ruta SAP te ayuda a decidir con información, confirmando con SAP las opciones de soporte disponibles para tu caso.", "Not necessarily. The decision depends on your release, your maintenance contract and your business priorities. The SAP Roadmap Sprint helps you decide with evidence, confirming with SAP the support options available for your case.")],
+      [L("¿Trabajan con empresas medianas?", "Do you work with mid-sized companies?"), L("Sí. Segmentamos por complejidad operativa y sistemas instalados, no solo por tamaño. Para empresas en crecimiento evaluamos opciones como SAP Business One o ERP en la nube.", "Yes. We segment by operational complexity and installed systems, not just size. For growing companies we evaluate options such as SAP Business One or cloud ERP.")],
+      [L("¿Cómo empieza un proyecto?", "How does an engagement start?"), L("Con una sesión dedicada para mapear tus necesidades. Luego proponemos un diagnóstico acotado con entregables, supuestos y criterios de aceptación claros.", "With a dedicated session to map your needs. Then we propose a bounded diagnostic with clear deliverables, assumptions and acceptance criteria.")],
+      [L("¿Garantizan el cumplimiento fiscal?", "Do you guarantee tax compliance?"), L("Nos enfocamos en la confiabilidad operativa de la integración: mapeo, rechazos y conciliación. La interpretación fiscal se trabaja con asesores tributarios locales y, cuando aplica, con el proveedor autorizado de cada país.", "We focus on the operational reliability of the integration: mapping, rejections and reconciliation. Tax interpretation is handled with local tax advisers and, where applicable, each country’s authorized provider.")],
+      [L("¿Ofrecen capacitación?", "Do you offer training?"), L("Sí. Diseñamos programas por rol, en español primero y en inglés cuando se necesita, con ejercicios prácticos y acompañamiento después del lanzamiento.", "Yes. We design role-based programs, Spanish-first and in English where needed, with hands-on exercises and post-launch reinforcement.")],
+      [L("¿Cómo usan la IA de forma responsable?", "How do you use AI responsibly?"), L("Empezamos por el gobierno: inventario de usos, clasificación de la información, evaluación y revisión humana. Solo después escalamos un piloto acotado.", "We start with governance: a use inventory, information classification, evaluation and human review. Only then do we scale a bounded pilot.")]
+    ]
+  };
+  const CONTACT = {
+    kicker: L("Contacto", "Contact"),
+    title: L("Planifica tu éxito con una sesión", "Plan your success with a session"),
+    sub: L("Reserva una sesión dedicada para mapear tus soluciones. Cuéntanos sobre tu empresa y el reto que quieres resolver.", "Secure a dedicated session to map out your solutions. Tell us about your company and the challenge you want to solve."),
+    expect: [
+      L("Una respuesta con próximos pasos claros", "A reply with clear next steps"),
+      L("Una sesión enfocada en tu problema de negocio", "A session focused on your business problem"),
+      L("Una propuesta con alcance, supuestos y exclusiones", "A proposal with scope, assumptions and exclusions")
+    ],
+    f: {
+      name: L("Nombre completo", "Full name"),
+      company: L("Empresa", "Company"),
+      email: L("Correo corporativo", "Work email"),
+      country: L("País", "Country"),
+      interest: L("Interés principal", "Main interest"),
+      msg: L("¿Qué reto quieres resolver?", "What challenge do you want to solve?"),
+      msgPh: L("Ej.: queremos decidir nuestra ruta a S/4HANA y conciliar la facturación electrónica.", "e.g. We want to decide our S/4HANA path and reconcile electronic invoicing."),
+      select: L("Selecciona…", "Select…"),
+      other: L("Otro", "Other"),
+      submit: L("Solicitar sesión", "Request a session")
+    },
+    interests: [
+      L("Sprint de hoja de ruta SAP", "SAP Roadmap Sprint"),
+      L("Chequeo de facturación electrónica", "E-Invoicing Integration Check"),
+      L("Sprint de visibilidad CFO", "CFO Visibility Sprint"),
+      L("Implementación o soporte SAP", "SAP implementation or support"),
+      L("Datos, IA o automatización", "Data, AI or automation"),
+      L("Nube o ciberseguridad", "Cloud or cybersecurity"),
+      L("PMO o capacitación", "PMO or training")
+    ],
+    okT: L("¡Gracias! Tu solicitud está lista.", "Thank you! Your request is ready."),
+    okS: L("Vista previa: conecta este formulario a tu correo o CRM antes de publicar el sitio.", "Preview: connect this form to your email or CRM before the site goes live."),
+    again: L("Enviar otra solicitud", "Send another request"),
+    privacy: L("Antes de publicar, agrega el aviso de privacidad y la política de tratamiento de datos.", "Before launch, add the privacy notice and data-handling policy.")
+  };
+  const FOOTER = {
+    tag: L("Asesoría para evaluar tu negocio y perfilarlo con éxito al futuro.", "Advisory to assess your business and shape it for future success."),
+    cols: [
+      { h: L("Servicios", "Services"), links: [[L("SAP y ERP", "SAP & ERP"), "#servicios"], [L("Integración", "Integration"), "#servicios"], [L("Datos e IA", "Data & AI"), "#servicios"], [L("Ciberseguridad", "Cybersecurity"), "#servicios"]] },
+      { h: L("Empresa", "Company"), links: [[L("Nosotros", "About"), "#nosotros"], [L("Metodología", "Approach"), "#metodologia"], [L("Región", "Region"), "#region"], [L("Preguntas", "FAQ"), "#preguntas"]] },
+      { h: L("Empieza", "Get started"), links: [[L("Sprint SAP", "SAP sprint"), "#empieza"], [L("Facturación electrónica", "E-invoicing"), "#empieza"], [L("Sprint CFO", "CFO sprint"), "#empieza"], [L("Agenda una sesión", "Book a session"), "#contacto"]] }
+    ],
+    tm: L("SAP, S/4HANA, SAP Business One, SAP BTP y otros productos SAP mencionados son marcas comerciales o registradas de SAP SE en Alemania y otros países. Las demás marcas pertenecen a sus respectivos propietarios.", "SAP, S/4HANA, SAP Business One, SAP BTP and other SAP products mentioned are trademarks or registered trademarks of SAP SE in Germany and other countries. All other marks belong to their respective owners."),
+    rights: L("© 2026 INNOEQX. Todos los derechos reservados.", "© 2026 INNOEQX. All rights reserved.")
+  };
+  function getInitialLang() {
+    try {
+      const p = new URLSearchParams(window.location.search).get("lang");
+      if (p === "en" || p === "es")
+        return p;
+    } catch (e) {}
+    try {
+      const s = window.localStorage.getItem(LANG_KEY);
+      if (s === "en" || s === "es")
+        return s;
+    } catch (e) {}
+    return "es";
+  }
+  const LangToggle = ({ lang, setLang }) => {
+    const t = useT();
+    return React.createElement("div", {
+      className: "lang",
+      "data-lang": lang,
+      role: "group",
+      "aria-label": t(UI.langLabel)
+    }, React.createElement("span", {
+      className: "thumb",
+      "aria-hidden": "true"
+    }), React.createElement("button", {
+      type: "button",
+      "aria-pressed": lang === "es",
+      onClick: () => setLang("es"),
+      lang: "es",
+      title: "Español"
+    }, "ES"), React.createElement("button", {
+      type: "button",
+      "aria-pressed": lang === "en",
+      onClick: () => setLang("en"),
+      lang: "en",
+      title: "English"
+    }, "EN"));
+  };
+  const Logo = () => React.createElement("a", {
+    href: "#inicio",
+    className: "logo",
+    "aria-label": "INNOEQX"
+  }, React.createElement("span", {
+    className: "logo-mark",
+    "aria-hidden": "true"
+  }, React.createElement("i", null)), React.createElement("span", null, "INNO", React.createElement("span", {
+    className: "x"
+  }, "EQX")));
+  const Header = ({ lang, setLang }) => {
+    const t = useT();
+    const [scrolled, setScrolled] = useState(false);
+    const [open, setOpen] = useState(false);
+    useEffect(() => {
+      const on = () => setScrolled(window.scrollY > 12);
+      on();
+      window.addEventListener("scroll", on, { passive: true });
+      return () => window.removeEventListener("scroll", on);
+    }, []);
+    const cls = "header" + (scrolled ? " scrolled" : "") + (open ? " open" : "");
+    return React.createElement("header", {
+      className: cls
+    }, React.createElement("div", {
+      className: "container bar"
+    }, React.createElement(Logo, null), React.createElement("nav", {
+      className: "nav",
+      "aria-label": t(UI.navLabel)
+    }, NAV.map((n) => React.createElement("a", {
+      key: n.id,
+      href: "#" + n.id
+    }, t(n.label)))), React.createElement("div", {
+      className: "actions"
+    }, React.createElement(LangToggle, {
+      lang,
+      setLang
+    }), React.createElement("a", {
+      href: "#contacto",
+      className: "btn btn-primary btn-sm cta-desktop"
+    }, t(UI.book)), React.createElement("button", {
+      type: "button",
+      className: "menu-btn",
+      "aria-expanded": open,
+      "aria-controls": "drawer",
+      "aria-label": t(open ? UI.closeMenu : UI.menu),
+      onClick: () => setOpen(!open)
+    }, React.createElement(Icon, {
+      name: open ? "close" : "menu"
+    })))), open && React.createElement("div", {
+      className: "drawer",
+      id: "drawer"
+    }, NAV.map((n) => React.createElement("a", {
+      key: n.id,
+      href: "#" + n.id,
+      onClick: () => setOpen(false)
+    }, t(n.label))), React.createElement("a", {
+      href: "#contacto",
+      className: "btn btn-primary",
+      onClick: () => setOpen(false)
+    }, t(UI.book), " ", React.createElement(Icon, {
+      name: "arrow"
+    }))));
+  };
+  const Hero = () => {
+    const t = useT();
+    const title = t(HERO.title);
+    return React.createElement("section", {
+      className: "hero",
+      id: "inicio"
+    }, React.createElement("div", {
+      className: "container hero-grid"
+    }, React.createElement("div", null, React.createElement("span", {
+      className: "eyebrow reveal"
+    }, React.createElement("span", {
+      className: "pulse-dot"
+    }), t(HERO.eyebrow)), React.createElement("h1", {
+      className: "reveal d1"
+    }, title[0], React.createElement("span", {
+      className: "grad-text"
+    }, title[1]), title[2]), React.createElement("p", {
+      className: "lead reveal d2"
+    }, t(HERO.lead)), React.createElement("div", {
+      className: "hero-ctas reveal d3"
+    }, React.createElement("a", {
+      href: "#contacto",
+      className: "btn btn-primary"
+    }, t(UI.book), " ", React.createElement(Icon, {
+      name: "arrow"
+    })), React.createElement("a", {
+      href: "#servicios",
+      className: "btn btn-ghost"
+    }, t(UI.explore))), React.createElement("div", {
+      className: "hero-stats reveal d4"
+    }, HERO.stats.map((s, i) => React.createElement("div", {
+      key: i
+    }, React.createElement("b", null, s.n), React.createElement("span", null, t(s.l)))))), React.createElement("div", {
+      className: "reveal d2",
+      "aria-hidden": "true"
+    }, React.createElement("div", {
+      className: "orbit"
+    }, React.createElement("div", {
+      className: "ring"
+    }), React.createElement("div", {
+      className: "ring r2"
+    }), React.createElement("div", {
+      className: "ring r3"
+    }), React.createElement("div", {
+      className: "core"
+    }, React.createElement("div", null, React.createElement("small", null, t(HERO.core)), React.createElement("b", null, "S/4HANA"))), React.createElement("div", {
+      className: "spin"
+    }, HERO.nodes.map((n, i) => React.createElement("div", {
+      key: i,
+      className: "node",
+      style: { "--a": n.a }
+    }, React.createElement("span", {
+      className: "chip-n"
+    }, React.createElement(Icon, {
+      name: n.icon
+    }), t(n.l))))), React.createElement("div", {
+      className: "glass"
+    }, React.createElement("b", null, t(HERO.glassT)), React.createElement("span", null, t(HERO.glassS)), React.createElement("div", {
+      className: "bars"
+    }, React.createElement("i", {
+      className: "on"
+    }), React.createElement("i", {
+      className: "on"
+    }), React.createElement("i", {
+      className: "on"
+    }), React.createElement("i", null)))))));
+  };
+  const Marquee = () => {
+    const t = useT();
+    const items = MARQUEE.concat(MARQUEE);
+    return React.createElement("div", {
+      className: "marquee",
+      "aria-hidden": "true"
+    }, React.createElement("div", {
+      className: "track"
+    }, items.map((m, i) => React.createElement("span", {
+      key: i
+    }, t(m)))));
+  };
+  const SectionHead = ({ k, title, sub, center }) => {
+    const t = useT();
+    return React.createElement("div", {
+      className: "section-head reveal" + (center ? " center" : "")
+    }, React.createElement("span", {
+      className: "kicker"
+    }, t(k)), React.createElement("h2", null, t(title)), sub && React.createElement("p", {
+      className: "sub"
+    }, t(sub)));
+  };
+  const StartHere = () => {
+    const t = useT();
+    return React.createElement("section", {
+      className: "section",
+      id: "empieza"
+    }, React.createElement("div", {
+      className: "container"
+    }, React.createElement(SectionHead, {
+      k: START.kicker,
+      title: START.title,
+      sub: START.sub,
+      center: true
+    }), React.createElement("div", {
+      className: "offers"
+    }, START.offers.map((o, i) => React.createElement("article", {
+      key: i,
+      className: "offer reveal d" + (i + 1)
+    }, React.createElement("div", {
+      className: "offer-top"
+    }, React.createElement("span", {
+      className: "tag"
+    }, t(o.tag)), React.createElement("span", {
+      className: "num"
+    }, "0", i + 1)), React.createElement("h3", null, t(o.title)), React.createElement("p", {
+      className: "for"
+    }, t(o.for)), React.createElement("ul", {
+      className: "checks"
+    }, o.items.map((it, j) => React.createElement("li", {
+      key: j
+    }, React.createElement(Icon, {
+      name: "check"
+    }), React.createElement("span", null, t(it))))), React.createElement("p", {
+      className: "next"
+    }, t(o.next)), React.createElement("a", {
+      href: "#contacto",
+      className: "link-arrow"
+    }, t(START.cta), " ", React.createElement(Icon, {
+      name: "arrow"
+    }))))), React.createElement("p", {
+      className: "fine reveal"
+    }, t(START.fine))));
+  };
+  const Services = () => {
+    const t = useT();
+    const [active, setActive] = useState("sap");
+    const fam = SERVICES.families.find((f) => f.id === active) || SERVICES.families[0];
+    const onKey = (e, idx) => {
+      const n = SERVICES.families.length;
+      let next = null;
+      if (e.key === "ArrowRight")
+        next = (idx + 1) % n;
+      if (e.key === "ArrowLeft")
+        next = (idx - 1 + n) % n;
+      if (next !== null) {
+        e.preventDefault();
+        setActive(SERVICES.families[next].id);
+        const el = document.getElementById("tab-" + SERVICES.families[next].id);
+        if (el)
+          el.focus();
+      }
+    };
+    return React.createElement("section", {
+      className: "section dark",
+      id: "servicios"
+    }, React.createElement("div", {
+      className: "container"
+    }, React.createElement(SectionHead, {
+      k: SERVICES.kicker,
+      title: SERVICES.title,
+      sub: SERVICES.sub
+    }), React.createElement("div", {
+      className: "tabs reveal",
+      role: "tablist",
+      "aria-label": t(SERVICES.kicker)
+    }, SERVICES.families.map((f, i) => React.createElement("button", {
+      key: f.id,
+      id: "tab-" + f.id,
+      type: "button",
+      role: "tab",
+      className: "tab",
+      "aria-selected": active === f.id,
+      "aria-controls": "svc-panel",
+      tabIndex: active === f.id ? 0 : -1,
+      onClick: () => setActive(f.id),
+      onKeyDown: (e) => onKey(e, i)
+    }, React.createElement(Icon, {
+      name: f.icon
+    }), t(f.name)))), React.createElement("div", {
+      className: "svc-panel",
+      id: "svc-panel",
+      role: "tabpanel",
+      "aria-labelledby": "tab-" + fam.id,
+      key: fam.id
+    }, React.createElement("div", {
+      className: "svc-intro"
+    }, React.createElement("span", {
+      className: "big-icon"
+    }, React.createElement(Icon, {
+      name: fam.icon
+    })), React.createElement("h3", null, t(fam.name)), React.createElement("p", null, t(fam.blurb)), React.createElement("span", {
+      className: "count"
+    }, String(fam.items.length).padStart(2, "0"), " ", t(SERVICES.countLabel))), React.createElement("div", {
+      className: "svc-grid"
+    }, fam.items.map((it, i) => React.createElement("div", {
+      key: i,
+      className: "svc"
+    }, React.createElement("span", {
+      className: "idx"
+    }, String(i + 1).padStart(2, "0")), React.createElement("h4", null, t(it[0])), React.createElement("p", null, t(it[1]))))))));
+  };
+  const Industries = () => {
+    const t = useT();
+    return React.createElement("section", {
+      className: "section",
+      id: "industrias"
+    }, React.createElement("div", {
+      className: "container"
+    }, React.createElement(SectionHead, {
+      k: INDUSTRIES.kicker,
+      title: INDUSTRIES.title,
+      sub: INDUSTRIES.sub
+    }), React.createElement("div", {
+      className: "ind-grid"
+    }, INDUSTRIES.items.map((it, i) => React.createElement("article", {
+      key: i,
+      className: "ind reveal d" + (i % 3 + 1)
+    }, React.createElement("span", {
+      className: "ic"
+    }, React.createElement(Icon, {
+      name: it.icon
+    })), React.createElement("h3", null, t(it.t)), React.createElement("p", {
+      className: "ch"
+    }, React.createElement("span", {
+      className: "mini"
+    }, t(INDUSTRIES.challenge)), t(it.c)), React.createElement("p", {
+      className: "hp"
+    }, React.createElement("span", {
+      className: "mini"
+    }, t(INDUSTRIES.help)), t(it.h)))))));
+  };
+  const Approach = () => {
+    const t = useT();
+    return React.createElement("section", {
+      className: "section soft",
+      id: "metodologia"
+    }, React.createElement("div", {
+      className: "container"
+    }, React.createElement(SectionHead, {
+      k: APPROACH.kicker,
+      title: APPROACH.title,
+      sub: APPROACH.sub
+    }), React.createElement("div", {
+      className: "steps"
+    }, APPROACH.steps.map((s, i) => React.createElement("div", {
+      key: i,
+      className: "step reveal d" + (i + 1)
+    }, React.createElement("span", {
+      className: "dot"
+    }, "0", i + 1), React.createElement("h3", null, t(s[0])), React.createElement("p", null, t(s[1]))))), React.createElement("div", {
+      className: "gov reveal"
+    }, React.createElement("span", {
+      className: "ic"
+    }, React.createElement(Icon, {
+      name: "target"
+    })), React.createElement("p", null, t(APPROACH.gov)))));
+  };
+  const Region = () => {
+    const t = useT();
+    const [sel, setSel] = useState("gt");
+    const byId = {};
+    REGION.countries.forEach((c) => {
+      byId[c.id] = c;
+    });
+    const c = byId[sel];
+    const spine = REGION.spine.map((id, i) => (i ? "L" : "M") + byId[id].x + " " + byId[id].y).join(" ");
+    return React.createElement("section", {
+      className: "section dark",
+      id: "region"
+    }, React.createElement("div", {
+      className: "container"
+    }, React.createElement(SectionHead, {
+      k: REGION.kicker,
+      title: REGION.title,
+      sub: REGION.sub
+    }), React.createElement("div", {
+      className: "region"
+    }, React.createElement("div", {
+      className: "reveal"
+    }, React.createElement("div", {
+      className: "map"
+    }, React.createElement("svg", {
+      viewBox: "0 0 580 430",
+      "aria-hidden": "true"
+    }, React.createElement("path", {
+      className: "isthmus",
+      d: spine + " M" + byId.gt.x + " " + byId.gt.y + " L" + byId.bz.x + " " + byId.bz.y
+    }), REGION.links.map((l, i) => React.createElement("line", {
+      key: i,
+      className: "link",
+      x1: byId[l[0]].x,
+      y1: byId[l[0]].y,
+      x2: byId[l[1]].x,
+      y2: byId[l[1]].y
+    })), REGION.countries.map((k) => React.createElement("g", {
+      key: k.id,
+      className: "cnode" + (k.id === sel ? " sel" : ""),
+      onClick: () => setSel(k.id)
+    }, React.createElement("circle", {
+      className: "halo",
+      cx: k.x,
+      cy: k.y,
+      r: "16"
+    }), React.createElement("circle", {
+      cx: k.x,
+      cy: k.y,
+      r: "22",
+      fill: "transparent"
+    }), React.createElement("circle", {
+      className: "core-dot",
+      cx: k.x,
+      cy: k.y,
+      r: "8"
+    }), React.createElement("text", {
+      x: k.x + k.lx,
+      y: k.y + (k.ly || 5),
+      textAnchor: k.anchor
+    }, t(k.name)))))), React.createElement("div", {
+      className: "chips",
+      role: "group",
+      "aria-label": t(REGION.pick)
+    }, REGION.countries.map((k) => React.createElement("button", {
+      key: k.id,
+      type: "button",
+      className: "chip",
+      "aria-pressed": k.id === sel,
+      onClick: () => setSel(k.id)
+    }, t(k.name))))), React.createElement("div", {
+      className: "cpanel",
+      key: sel,
+      "aria-live": "polite"
+    }, React.createElement("span", {
+      className: "mini"
+    }, t(REGION.focus)), React.createElement("h3", null, t(c.name)), React.createElement("div", {
+      className: "topics"
+    }, c.topics.map((tp, i) => React.createElement("span", {
+      key: i,
+      className: "topic"
+    }, t(tp)))), React.createElement("div", {
+      className: "startbox"
+    }, React.createElement("span", {
+      className: "mini"
+    }, t(REGION.start)), React.createElement("p", null, t(c.start))), React.createElement("p", {
+      className: "region-note"
+    }, t(REGION.note))))));
+  };
+  const About = () => {
+    const t = useT();
+    return React.createElement("section", {
+      className: "section",
+      id: "nosotros"
+    }, React.createElement("div", {
+      className: "container about"
+    }, React.createElement("div", {
+      className: "reveal"
+    }, React.createElement("span", {
+      className: "kicker"
+    }, t(ABOUT.kicker)), React.createElement("h2", null, t(ABOUT.title)), React.createElement("p", {
+      className: "quote"
+    }, t(ABOUT.quote)), React.createElement("p", {
+      className: "about-body"
+    }, t(ABOUT.body))), React.createElement("div", {
+      className: "principles"
+    }, ABOUT.principles.map((p, i) => React.createElement("div", {
+      key: i,
+      className: "pr reveal d" + (i % 2 + 1)
+    }, React.createElement("span", {
+      className: "n"
+    }, "0", i + 1), React.createElement("h4", null, t(p[0])), React.createElement("p", null, t(p[1])))))));
+  };
+  const Faq = () => {
+    const t = useT();
+    const [open, setOpen] = useState(0);
+    return React.createElement("section", {
+      className: "section soft",
+      id: "preguntas"
+    }, React.createElement("div", {
+      className: "container"
+    }, React.createElement(SectionHead, {
+      k: FAQ.kicker,
+      title: FAQ.title,
+      center: true
+    }), React.createElement("div", {
+      className: "faq reveal"
+    }, FAQ.items.map((q, i) => React.createElement("div", {
+      key: i,
+      className: "qa",
+      "data-open": open === i
+    }, React.createElement("button", {
+      type: "button",
+      "aria-expanded": open === i,
+      "aria-controls": "ans-" + i,
+      id: "q-" + i,
+      onClick: () => setOpen(open === i ? -1 : i)
+    }, React.createElement("span", null, t(q[0])), React.createElement("span", {
+      className: "pm",
+      "aria-hidden": "true"
+    }, React.createElement(Icon, {
+      name: "plus"
+    }))), React.createElement("div", {
+      className: "ans",
+      id: "ans-" + i,
+      role: "region",
+      "aria-labelledby": "q-" + i
+    }, React.createElement("div", null, React.createElement("p", null, t(q[1])))))))));
+  };
+  const Contact = () => {
+    const t = useT();
+    const [sent, setSent] = useState(false);
+    const f = CONTACT.f;
+    const onSubmit = (e) => {
+      e.preventDefault();
+      setSent(true);
+    };
+    return React.createElement("section", {
+      className: "section dark contact",
+      id: "contacto"
+    }, React.createElement("div", {
+      className: "container contact-wrap"
+    }, React.createElement("div", {
+      className: "reveal"
+    }, React.createElement("span", {
+      className: "kicker"
+    }, t(CONTACT.kicker)), React.createElement("h2", null, t(CONTACT.title)), React.createElement("p", {
+      className: "sub"
+    }, t(CONTACT.sub)), React.createElement("ul", {
+      className: "expect"
+    }, CONTACT.expect.map((x, i) => React.createElement("li", {
+      key: i
+    }, React.createElement(Icon, {
+      name: "check"
+    }), React.createElement("span", null, t(x)))))), React.createElement("div", {
+      className: "form reveal d2"
+    }, sent ? React.createElement("div", {
+      className: "sent",
+      role: "status"
+    }, React.createElement("div", {
+      className: "ok"
+    }, React.createElement(Icon, {
+      name: "check"
+    })), React.createElement("h3", null, t(CONTACT.okT)), React.createElement("p", null, t(CONTACT.okS)), React.createElement("button", {
+      type: "button",
+      onClick: () => setSent(false)
+    }, t(CONTACT.again))) : React.createElement("form", {
+      onSubmit
+    }, React.createElement("div", {
+      className: "form-grid"
+    }, React.createElement("div", {
+      className: "field"
+    }, React.createElement("label", {
+      htmlFor: "f-name"
+    }, t(f.name)), React.createElement("input", {
+      id: "f-name",
+      name: "name",
+      required: true,
+      autoComplete: "name"
+    })), React.createElement("div", {
+      className: "field"
+    }, React.createElement("label", {
+      htmlFor: "f-company"
+    }, t(f.company)), React.createElement("input", {
+      id: "f-company",
+      name: "company",
+      autoComplete: "organization"
+    })), React.createElement("div", {
+      className: "field"
+    }, React.createElement("label", {
+      htmlFor: "f-email"
+    }, t(f.email)), React.createElement("input", {
+      id: "f-email",
+      name: "email",
+      type: "email",
+      required: true,
+      autoComplete: "email"
+    })), React.createElement("div", {
+      className: "field"
+    }, React.createElement("label", {
+      htmlFor: "f-country"
+    }, t(f.country)), React.createElement("select", {
+      id: "f-country",
+      name: "country",
+      defaultValue: ""
+    }, React.createElement("option", {
+      value: ""
+    }, t(f.select)), REGION.countries.map((k) => React.createElement("option", {
+      key: k.id,
+      value: k.id
+    }, t(k.name))), React.createElement("option", {
+      value: "other"
+    }, t(f.other)))), React.createElement("div", {
+      className: "field full"
+    }, React.createElement("label", {
+      htmlFor: "f-interest"
+    }, t(f.interest)), React.createElement("select", {
+      id: "f-interest",
+      name: "interest",
+      defaultValue: ""
+    }, React.createElement("option", {
+      value: ""
+    }, t(f.select)), CONTACT.interests.map((x, i) => React.createElement("option", {
+      key: i,
+      value: "i" + i
+    }, t(x))), React.createElement("option", {
+      value: "other"
+    }, t(f.other)))), React.createElement("div", {
+      className: "field full"
+    }, React.createElement("label", {
+      htmlFor: "f-msg"
+    }, t(f.msg)), React.createElement("textarea", {
+      id: "f-msg",
+      name: "message",
+      placeholder: t(f.msgPh)
+    }))), React.createElement("button", {
+      type: "submit",
+      className: "btn btn-primary"
+    }, t(f.submit), " ", React.createElement(Icon, {
+      name: "arrow"
+    })), React.createElement("p", {
+      className: "form-note"
+    }, t(CONTACT.privacy))))));
+  };
+  const Footer = ({ lang, setLang }) => {
+    const t = useT();
+    return React.createElement("footer", {
+      className: "footer"
+    }, React.createElement("div", {
+      className: "container"
+    }, React.createElement("div", {
+      className: "f-grid"
+    }, React.createElement("div", null, React.createElement(Logo, null), React.createElement("p", {
+      className: "f-tag"
+    }, t(FOOTER.tag)), React.createElement(LangToggle, {
+      lang,
+      setLang
+    })), FOOTER.cols.map((c, i) => React.createElement("div", {
+      key: i
+    }, React.createElement("h5", null, t(c.h)), React.createElement("ul", null, c.links.map((l, j) => React.createElement("li", {
+      key: j
+    }, React.createElement("a", {
+      href: l[1]
+    }, t(l[0])))))))), React.createElement("div", {
+      className: "f-bottom"
+    }, React.createElement("p", {
+      className: "tm"
+    }, t(FOOTER.tm)), React.createElement("span", null, t(FOOTER.rights)))));
+  };
+  const App = () => {
+    const [lang, setLangState] = useState(getInitialLang);
+    const setLang = (l) => {
+      setLangState(l);
+      try {
+        window.localStorage.setItem(LANG_KEY, l);
+      } catch (e) {}
+    };
+    useEffect(() => {
+      document.documentElement.lang = lang;
+      document.title = UI.title[lang];
+    }, [lang]);
+    useEffect(() => {
+      const els = Array.prototype.slice.call(document.querySelectorAll(".reveal:not(.in)"));
+      if (!("IntersectionObserver" in window)) {
+        els.forEach((e) => e.classList.add("in"));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.classList.add("in");
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+      els.forEach((e) => io.observe(e));
+      const showAll = () => document.querySelectorAll(".reveal").forEach((e) => e.classList.add("in"));
+      window.addEventListener("beforeprint", showAll);
+      return () => {
+        io.disconnect();
+        window.removeEventListener("beforeprint", showAll);
+      };
+    }, [lang]);
+    return React.createElement(LangCtx.Provider, {
+      value: lang
+    }, React.createElement("a", {
+      href: "#main",
+      className: "skip"
+    }, UI.skip[lang]), React.createElement(Header, {
+      lang,
+      setLang
+    }), React.createElement("main", {
+      id: "main"
+    }, React.createElement(Hero, null), React.createElement(Marquee, null), React.createElement(StartHere, null), React.createElement(Services, null), React.createElement(Industries, null), React.createElement(Approach, null), React.createElement(Region, null), React.createElement(About, null), React.createElement(Faq, null), React.createElement(Contact, null)), React.createElement(Footer, {
+      lang,
+      setLang
+    }));
+  };
+  ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App, null));
+})();
+
+</script>
+</body>
+</html>

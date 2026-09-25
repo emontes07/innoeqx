@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^node -e 'const http=require\\(\"node:http\"\\),fs=require\\(\"node:fs\"\\),path=require\\(\"node:path\"\\);const root=process\\.cwd\\(\\);const files=new Set\\(\\[\"INNOEQX_Website\\.html\",\"INNOEQX_Executive_Report_EN_ES\\.html\",\"INNOEQX_Service_Opportunity_Report\\.html\",\"index\\.html\"\\]\\);http\\.createServer\\(\\(req,res\\)=>\\{const name=new URL\\(req\\.url,\"http://localhost\"\\)\\.pathname\\.replace\\(/\\^\\\\/preview\\\\//,\"\"\\)\\.replace\\(/\\^\\\\//,\"\"\\)\\|\\|\"index\\.html\";if\\(!files\\.has\\(name\\)\\)\\{res\\.writeHead\\(404\\);res\\.end\\(\"Not found\"\\);return;\\}fs\\.readFile\\(path\\.join\\(root,name\\),\\(err,data\\)=>\\{res\\.writeHead\\(err\\?404:200,\\{\"Content-Type\":\"text/html; charset=utf-8\"\\}\\);res\\.end\\(err\\?\"Not found\":data\\);\\}\\);\\}\\)\\.listen\\(4173,\"127\\.0\\.0\\.1\",\\(\\)=>console\\.log\\(\"Preview: http://127\\.0\\.0\\.1:4173\"\\)\\);'$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
